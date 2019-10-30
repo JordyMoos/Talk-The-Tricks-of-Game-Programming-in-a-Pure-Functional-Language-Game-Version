@@ -613,7 +613,7 @@
     {
       "type": "onTagDied",
       "eventActionData": {
-        "type": "failed",
+        "type": "completed",
         "data": {
           "descriptionProvider": {
             "type": "static",
@@ -621,6 +621,7 @@
               "text": "You died"
             }
           },
+          "nextLevel": "oredev/official-001-with-cheats",
           "entityNames": [
             "explosion"
           ],

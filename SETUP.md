@@ -3,7 +3,7 @@
 
 - [ ] Open hotspot
 - [ ] Start the game engine
-`cd game/dist`
+`cd engine/dist`
 `python3 -m http.server 3000`
 
 ### Open games
@@ -11,6 +11,8 @@
 ```
 http://localhost:3000/?startLevel=oredev/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
+
+### Backup games
 
 ```
 http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
@@ -50,3 +52,12 @@ http://localhost:8004/?startLevel=official/001&hideDebug=1&hideControls=1&hideEd
 Then open file "LevelUpdate.elm"
 
 Make sure font is big
+
+
+### Develop
+
+#### Create production version of the engine
+
+`cd engine`
+`npm install`
+`npm run prod`
