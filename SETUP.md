@@ -61,3 +61,36 @@ Make sure font is big
 `cd engine`
 `npm install`
 `npm run prod`
+
+#### Image resizing cheats
+
+Resize to fixed size
+
+```
+mogrify -resize 64x64 *.png
+```
+
+```
+convert 006.png -resize 150% 006-150.png
+```
+
+Tile image
+
+```
+convert -size 640x384 tile:background.png background-96.png
+convert -size 1920x1152 tile:background.png background-96.png
+```
+
+
+#### Screen resolutions
+
+Resolution is 1920x1080
+96 = 20x11,25
+                
+
+Resolution is 1024x768
+32 = 32x24
+64 = 16x12
+               
+                
+                
