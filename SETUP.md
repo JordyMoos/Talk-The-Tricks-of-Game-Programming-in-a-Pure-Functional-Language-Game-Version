@@ -1,36 +1,19 @@
 
-### Start the game
+# Setup
 
-OPEN HOTSPOT
-
-```
-cd game
-python -m SimpleHTTPServer 8001
-```
-
-```
-cd game-vr
-python -m SimpleHTTPServer 8002
-```
-
-```
-cd game-ar
-python -m SimpleHTTPServer 8003
-```
-
-```
-cd game-3d
-python -m SimpleHTTPServer 8004
-```
+- [ ] Open hotspot
+- [ ] Start the game engine
+`cd game/dist`
+`python3 -m http.server 3000`
 
 ### Open games
 
 ```
-http://localhost:8001/?startLevel=talk/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+http://localhost:3000/?startLevel=oredev/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
 
 ```
-http://localhost:8001/?startLevel=official/001&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
 
 ```
