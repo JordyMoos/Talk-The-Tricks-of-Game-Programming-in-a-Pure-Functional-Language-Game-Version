@@ -1,0 +1,216 @@
+{
+  "entities": {
+    "player": [
+      {"type": "tag", "data": {"name": "player"}},
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["hero"]
+        }
+      }}},
+      {"type": "control", "data": {
+        "settings": {"pushStrength": 50, "walkOverStrength": 50},
+        "control": {
+          "type": "input"
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "collector", "data": {"interestedIn": ["diamond", "dirt"]}},
+      {"type": "rigid"},
+      {"type": "explodable"},
+      {"type": "camera", "data": {"borderSize": 5}},
+      {"type": "physics", "data": {"strength": 10, "shape": "square"}}
+    ],
+    "rock": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["rock"]
+        }
+      }}},
+      {"type": "rigid"},
+      {"type": "control", "data": {
+        "control": {
+          "type": "gravityAi"
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "physics", "data": {"strength": 20, "shape": "circle"}},
+      {"type": "smash-down"}
+    ],
+    "dynamite": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["explosive"]
+        }
+      }}},
+      {"type": "rigid"},
+      {"type": "control", "data": {
+        "control": {
+          "type": "gravityAi"
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "explodable"},
+      {"type": "physics", "data": {"strength": 20, "shape": "circle"}},
+      {"type": "smash-down"}
+    ],
+    "explosion": [
+      {"type": "render", "data": {"type": "pixel", "data": {"colors": [{"red": 204, "green": 0, "blue": 0}, {"red": 206, "green": 92, "blue": 0}, {"red": 237, "green": 212, "blue": 0}], "ticksPerColor": 4}}},
+      {"type": "lifetime", "data": {"remainingTicks": 16}},
+      {"type": "damage", "data": {"damageStrength": 80}}
+    ],
+    "enemy": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["enemy"]
+        }
+      }}},
+      {"type": "rigid"},
+      {"type": "physics", "data": {"strength": 20, "shape": "circle"}},
+      {"type": "control", "data": {
+        "control": {
+          "type": "walkAroundAi",
+          "data": {
+            "previousDirection": "left",
+            "nextDirectionOffsets": [-1, 0, 1, 2]
+          }
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "explodable"},
+      {"type": "trigger-explodable", "data": {"triggerStrength": 20}}
+    ],
+    "pet": [
+      {"type": "render", "data": {"type": "pixel", "data": {"colors": [{"red": 117, "green": 80, "blue": 123}, {"red": 173, "green": 127, "blue": 168}], "ticksPerColor": 8}}},
+      {"type": "rigid"},
+      {"type": "physics", "data": {"strength": 10, "shape": "circle"}},
+      {"type": "control", "data": {
+        "control": {
+          "type": "walkAroundAi",
+          "data": {
+            "previousDirection": "left",
+            "nextDirectionOffsets": [-1, 0, 1, 2]
+          }
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "explodable"}
+    ],
+    "dirt": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["dirt"]
+        }
+      }}},
+      {"type": "collectible", "data": {"name": "dirt"}},
+      {"type": "physics", "data": {"strength": 30, "shape": "square"}}
+    ],
+    "wall": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["wall"]
+        }
+      }}},
+      {"type": "rigid"},
+      {"type": "physics", "data": {"strength": 50, "shape": "square"}}
+    ],
+    "strongwall": [
+      {"type": "render", "data": {"type": "pixel", "data": {"colors": [{"red": 0, "green": 0, "blue": 0}]}}},
+      {"type": "rigid"},
+      {"type": "physics", "data": {"strength": 100, "shape": "square"}}
+    ],
+    "diamond": [
+      {"type": "render", "data": {"type": "image", "data": {
+        "default": {
+          "names": ["diamond"]
+        }
+      }}},
+      {"type": "collectible", "data": {"name": "diamond"}},
+      {"type": "control", "data": {
+        "control": {
+          "type": "gravityAi"
+        }
+      }},
+      {"type": "movement", "data": {"ticksPerImage": 8}},
+      {"type": "physics", "data": {"strength": 20, "shape": "circle"}}
+    ],
+    "failed": [
+      {"type": "render", "data": {"type": "pixel", "data": {"colors": [{"red": 0, "green": 0, "blue": 0}]}}},
+      {"type": "rigid"},
+      {"type": "physics", "data": {"strength": 1000, "shape": "square"}},
+      {"type": "damage", "data": {"damageStrength": 1000}}
+    ]
+  },
+  "signs": {
+    "p": "player",
+    "o": "rock",
+    "=": "dynamite",
+    "x": "explosion",
+    "e": "enemy",
+    "c": "pet",
+    ".": "dirt",
+    "|": "wall",
+    "#": "strongwall",
+    "*": "diamond"
+  },
+  "images": {
+    "hero": "./images/itch.io/hero.png",
+    "diamond": "./images/itch.io/diamond.png",
+    "dirt": "./images/itch.io/dirt.png",
+    "enemy": "./images/itch.io/enemy.png",
+    "explosive": "./images/itch.io/explosive.png",
+    "rock": "./images/itch.io/rock.png",
+    "wall": "./images/itch.io/wall.png",
+    "background": "./images/itch.io/background.png",
+    "background-big": "./images/itch.io/background-big.png"
+  },
+  "background": {
+    "type": "image",
+    "data": {
+      "default": {
+        "names": ["background-big"]
+      }
+    }
+  },
+  "scene": [
+    "#########################################",
+    "#.......................................#",
+    "#.................******e   ............#",
+    "#|||||||||........******    ............#",
+    "#|**| o  o..............................#",
+    "#|**| || |....ooooooooo.p...............#",
+    "#|**| || |....ooooooooo.......*.........#",
+    "#|**| || |....oooooooo..................#",
+    "#|**| ||=|...................*..........#",
+    "#|**| ||||...           ................#",
+    "#|**| ||*|...           .........*......#",
+    "#|**|e||*|...           ................#",
+    "#|||||||||...           ................#",
+    "#.......................................#",
+    "#....*......    e       .......*........#",
+    "#............*..........................#",
+    "#.......................................#",
+    "#########################################"
+  ],
+  "subscribers": [
+    {
+      "type": "onTagDied",
+      "eventActionData": {
+        "type": "failed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {"text": "You died"}
+          },
+          "entityNames": ["explosion"],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "tagDiedData": {
+        "tagName": "player",
+        "limit": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,1243 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The Tricks of Game Programming in a Pure Functional Language</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/solarized.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<script src="js/jquery-1.12.0.min.js"></script>
+		<script src="js/countUp.js"></script>
+
+		<style>
+
+			img.we-are-pbwebmedia {
+				width: 1400px;
+				height: auto; }
+			.reveal img.reading-owl {
+				height: 1300px; }
+
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>The Tricks of Game Programming in a Pure Functional Language</h2>
+					<aside class="notes">
+						Welcome all to my talk about game programming in a functional language.
+					</aside>
+				</section>
+
+				<section>
+					<img class="we-are-pbwebmedia plain" src="img/pbwebmedia-logo.png">
+					<img class="reading-owl plain" src="img/pbwebmedia-uil-2.png">
+					<aside class="notes">
+						I work for Pbweb Media which is located in the Netherlands.<br>
+						And we have some kind of affiliate websites.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/pbwebmedia-tafelmetlunch.jpg" class="stretch plain">
+					<aside class="notes">
+						It's a pretty small company.<br>
+						Where I'm one of the 6 developers.
+					</aside>
+				</section>
+
+				<section>
+					<table>
+						<tr>
+							<td>Elasticsearch</td>
+							<td style="text-align: right; width: 50%"><h2>6,000</h2></td>
+						</tr>
+						<tr>
+							<td>Couchbase</td>
+							<td style="text-align: right"><h2>25,000</h2></td>
+						</tr>
+						<tr>
+							<td>Images</td>
+							<td style="text-align: right"><h2>60,000</h2></td>
+						</tr>
+					</table>
+					<aside class="notes">
+						With our affiliate sites we handle about 6,000 elasticsearch searches.<br>
+						25,000 couchbase requests<br>
+						And serve over 60,000 images<br>
+					</aside>
+				</section>
+
+				<section data-state="counters-pbweb">
+					<table>
+						<tr>
+							<td>Elasticsearch</td>
+							<td style="text-align: right; width: 50%"><h2 id="counter-elasticsearch"></h2></td>
+						</tr>
+						<tr>
+							<td>Couchbase</td>
+							<td style="text-align: right"><h2 id="counter-couchbase"></h2></td>
+						</tr>
+						<tr>
+							<td>Images</td>
+							<td style="text-align: right"><h2 id="counter-images"></h2></td>
+						</tr>
+					</table>
+					<script>
+						$(document).ready(function () {
+							var options = {
+								useEasing: false
+							};
+							var counterElasticsearch = new CountUp("counter-elasticsearch", 6000, 360000, 0, 59, options);
+							var counterCouchbase = new CountUp("counter-couchbase", 25000, 1500000, 0, 59, options);
+							var counterImages = new CountUp("counter-images", 60000, 3600000, 0, 59, options);
+							var drawCounters = function () {
+								counterElasticsearch.reset();
+								counterCouchbase.reset();
+								counterImages.reset();
+
+								counterElasticsearch.start();
+								counterCouchbase.start();
+								counterImages.start();
+							};
+							Reveal.addEventListener("counters-pbweb", drawCounters, false);
+						});
+					</script>
+					<aside class="notes">
+						And these numbers are per second<br>
+						I found that pretty awesome.<br>
+						But there are so many people here from big companies like Google, Facebook, Uber.<br>
+						And those people will be like: Mhe these are rookie numbers
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/jordy-moos.png" class="plain">
+					<h2>Jordy Moos</h2>
+					<aside class="notes">
+						I'm Jordy Moos<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/programming-since-the-age-of-12.png" class="stretch plain">
+					<aside class="notes">
+						I have been programming since about the age of 12.<br>
+						Well messing around with stuff on the computer.<br>
+						Can not really call that programming I suppose.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/shadow-battle-2.png" class="stretch plain">
+					<aside class="notes">
+						Even though I learned web languages first, I always found a way to turn it into something game related<br>
+						Like we build this zelda themed browser game inspired by the game criminals.<br>
+						Not sure if anyone knows the game?<br>
+						This was actually version 2. You should have seen version 1
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/shadow-battle-1.png" class="stretch plain">
+					<aside class="notes">
+						Ahh there it is. Horrible right
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/super-deal.png" class="stretch plain">
+					<aside class="notes">
+						And a few year ago when Elder Scrolls Online came out I created an Action House addon<br>
+						That allowed me to trade easily
+					</aside>
+				</section>
+
+				<section data-background-image="./img/elder-scrolls-online-rich.jpg">
+					<aside class="notes">
+						Which made me pretty rich which is nice.<br>
+						Well in-game of course.
+					</aside>
+				</section>
+
+				<section data-background-image="./img/game-books.jpg">
+					<aside class="notes">
+						Even though I'm a web backend developer. I really enjoy reading books about game programming.<br>
+						Games can be really big and complicated programs. And I like reading about how stuff is done.
+					</aside>
+				</section>
+
+				<section data-background-image="./img/led-table.jpg">
+					<aside class="notes">
+						I wanted to build a led table like this for years.<br>
+						So I could make games and play them together with friends on my table<br>
+						Which I thought would be really cool.
+					</aside>
+				</section>
+
+				<section data-background-image="./img/think.jpeg">
+					<aside class="notes">
+						But the problem with me is that I always go for the challenge.<br>
+						When the challenges are done I'm getting bored and not really interested in finishing the product<br>
+					</aside>
+				</section>
+
+				<section data-background-image="./img/challenge-2.png">
+					<aside class="notes">
+						And I will find new challenges elsewhere. I just want to learn too much
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/previous-gametables.png" class="stretch plain">
+					<aside class="notes">
+						This is a bit problematic..<br>
+						I kinda build the game engine twice already<br>
+						But I never build the table
+					</aside>
+				</section>
+
+				<section data-background-image="./img/genius-idea.jpg">
+					<aside class="notes">
+						At some point, I had this genius idea.<br>
+						I should invite someone else.<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/build-together.jpeg" class="stretch plain">
+					<aside class="notes">
+						If I invite someone, with the same level of enthusiasm as I have.<br>
+						But a different level of programming experience, just a few years<br>
+						Then we can find our own challenges in the project, and probably stimulate each other to actually finish it<br>
+						So I found this victim, and we where like all happy<br>
+						And because of the years of programming experience differences, we decided to make it in python on the raspberry pi<br>
+						The victim did not really had enough time at that moment<br>
+						So we had to postpone starting until a later date
+					</aside>
+				</section>
+
+				<section data-background-image="./img/energic.jpg">
+					<aside class="notes">
+						But offcourse I had this enthausiasm, I had this energy<br>
+						That I was finally finally gonna build this table<br>
+						But I could not really start working on it, I had to wait until the vacation was over and stuff<br>
+						So I needed to do something with this energy
+					</aside>
+				</section>
+
+				<section data-background-image="./img/game-programming.png">
+					<aside class="notes">
+						And then again, i felt back into game programming.<br>
+						I decided to pick the most difficult game from the list of games that I would like for the table<br>
+						And to build it in a language that is not really custom for game programming<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/boulder-dash-nes.jpg" class="stretch plain">
+					<aside class="notes">
+						I though if I could make Boulder Dash in Elm, a pure functional language. Then I can probably make any of those games in python<br>
+						Who has played this game?<br>
+						It was on the Commodore and PC 20 years ago<br>
+						The idea of the game is pretty simple<br>
+						You are this little hero - Rockford<br>
+						And you need to collect the diamonds
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=talk/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1" target="_blank">Demo</a>
+					<aside class="notes">
+						Remember we are building a game for a 12 by 12 led table. This is all the graphics you can get.<br>
+						The green dot in the middle is our hero. Brown is dirt which we can walk through.<br>
+						Grey are rocks which fall down<br> Blue are the diamonds we need to collect<br>
+						And red is going to hurt us ;(
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=official/001&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1" target="_blank">Demo Images</a>
+					<aside class="notes">
+						When I showed this, people where like mhe.<br>
+						People where not seeing what I was seeing.<br>
+						Behaviourwise I saw Boulder Dash as I remembered<br>
+						So I added a image renderer to make it visually a bit more appealing
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-logo.png" class="plain">
+					<aside class="notes">
+						Every game programming book I have is in an imperative programming style.<br>
+						Most of them in c++ but other languages like Java follow the same patterns.<br>
+						I was learning the functional paradigm and played with Elm for a few years.<br>
+						And I wanted to try to see how it would be to create a game in Elm.<br>
+						To learn from an experiment.<br>
+						Who has used elm?
+					</aside>
+				</section>
+
+				<section data-background-image="./img/formula-1-chinese-gp-2019-afte-2.jpg">
+					<aside class="notes">
+						To better understand how the game written and to understand the samples we are going to take a crash course into Elm.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-logo.png" class="plain">
+					<aside class="notes">
+						Elm is a bit different then javascript, where Elm transpiles to.<br>
+						Which sometimes scare people off.<br>
+						But I actually found Elm one of the easiest languages to learn.
+					</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li>Pure Functional language</li>
+						<li class="fragment">Statically Typed</li>
+						<li class="fragment">Strongly Typed</li>
+						<li class="fragment">Friendly Compiler</li>
+						<li class="fragment">Frontend only</li>
+					</ul>
+					<aside class="notes">
+						Some of the characteristics of Elm is that it is a Pure Functional language, Its statically and stronly typed.<br>
+						Which allows the compiler to complain when I'm doing things wrong again<br>
+						But its complains are often so clear that you can learn a lot from the compiler<br>
+						And its a Frontend only language
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-syntax-01.png" class="plain">
+					<aside class="notes">
+						A simple function in elm looks like this<br>
+						We have the name of the function `add`<br>
+						The arguments `x` and `y`<br>
+						And then on the right side of the equal sign is the body of the function
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-syntax-02.png" class="plain">
+					<aside class="notes">
+						Now everything in Elm is typed and you can annotate the function with its types<br>
+						Here we say the type of `add` is:<br>
+						We take a number, and a number. And then we will return a number.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-syntax-03.png" class="plain">
+					<aside class="notes">
+						Applying functions is done by spaces.<br>
+						And function arguments are also separated by spaces<br>
+						Therefor we call `add` like this
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-syntax-04.png" class="plain">
+					<aside class="notes">
+						Everything in Elm is curried. Therefor you can call a function with less then all arguments<br>
+						And you will get back a function that requires the remaining arguments.<br>
+						Calling `add` with just `5` will give us a function that requires another argument before computing a result
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-syntax-05.png" class="plain">
+					<aside class="notes">
+						Making these result into the same
+					</aside>
+				</section>
+
+				<section data-background-image="./img/architecture.jpg">
+					<aside class="notes">
+						The more important thing we need to known about Elm is its architecture<br>
+						Its something that enforces the flow of your application
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture-1.png" class="plain">
+					<aside class="notes">
+						In Elm you always have a Model, which is the state of your application<br>
+						update which is a function that creates new states<br>
+						And a view. Which is a function to visualize your state.<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture-2.png" class="plain">
+					<aside class="notes">
+						In this case we define to be just an integer
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture-3.png" class="plain">
+					<aside class="notes">
+						To update your state, or to create a new model, you need to have some intend<br>
+						These you define as messages in Elm.<br>
+						This example is a little counter which you can increment and decrement
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture-4.png" class="plain">
+					<aside class="notes">
+						A produced message together with your model will be given to the defined `update` function.<br>
+						Which will return a new model<br>
+						As we can see in the type of the update function as well.<br>
+						Given a msg and a model will return a model
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture-5.png" class="plain">
+					<aside class="notes">
+						To visualize your state. You have the view function.<br>
+						Which received the model and returns some sort of html.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-architecture.jpg" class="stretch plain">
+					<aside class="notes">
+						To visualize the architecture in one picture<br>
+						The puppets and their orientation is your Model<br>
+						The theater is the result of the view<br>
+						That is what you would see in the browser<br>
+						The kids are producing messages<br>
+						Which the `Update` person received and it adjust the model as requested<br>
+					</aside>
+				</section>
+
+				<section>
+					<h2>Game Programming</h2>
+					<aside class="notes">
+						Game Programming
+					</aside>
+				</section>
+
+				<section data-background-image="./img/movie-scene.jpg">
+					<aside class="notes">
+						When you create games you can look at it as if you are directing movies.<br>
+						This is the scene of a movie. Or a scene in your game.<br>
+						And those are Actors. Which will be Actors in the game as well.<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-scene-1.png" class="plain">
+					<aside class="notes">
+						To put it into perspective for the boulder dash game<br>
+						This is a scene with our hero and an enemy<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-scene-2.png" class="plain">
+					<aside class="notes">
+						I did not like the white background therefor I added a background image.<br>
+						Makes it look like a game already<br>
+						Its a pretty boring game, just those two actors standing there.
+					</aside>
+				</section>
+
+				<section data-background-image="./img/time.jpeg">
+					<aside class="notes">
+						And that is because the game is missing some notion of time<br>
+						To make the game come alive, you need to add some notion of time
+					</aside>
+				</section>
+
+				<section>
+					<h2>Game Loop</h2>
+					<aside class="notes">
+						And that is what we call the Game Loop<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/game-loop-1.png" class="plain">
+					<aside class="notes">
+						A very simplistic one is this, update the game, and then sleep for some time<br>
+						And keep doing that forever<br>
+						Code samples with white background are pseudo code in a C like style<br>
+						<br>
+						This update function will be called once a second.<br>
+						In which you will then update your game state.
+					</aside>
+				</section>
+
+				<section data-state="game-loop-1-section">
+					<video id="game-loop-1-video" controls autoplay>
+						<source src="./img/game-loop-1.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<script>
+						$(document).ready(function () {
+							Reveal.addEventListener("game-loop-1-section", function () {
+								$('#game-loop-1-video').currentTime = 0;
+								$('#game-loop-1-video').load();
+							}, false);
+						});
+					</script>
+					<aside class="notes">
+						Now if we let the actors move one tile each update then that will look like this
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/game-loop-2.png" class="plain">
+					<aside class="notes">
+						The game moves very slow and we can fix that to lower the sleep time.<br>
+						17 milliseconds will give us about 60 updates per second
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/game-loop-3.png" class="plain">
+					<aside class="notes">
+						Now we are not really calling update every 17ms.<br>
+						We forgot to take into account the time it took to run `update`<br>
+						If update takes about 10ms then together with sleep we only call update about once in the 27ms<br>
+						You can fix that by subtracting the time it took from the sleep
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/game-loop-4.png" class="plain">
+					<aside class="notes">
+						Another option would be to check how much time has passed since the last update<br>
+						And use that as some kind of delta time in update<br>
+						Than within update you check how much actors must move based on the delta time<br>
+						An disadvantage of this is that too much time might have passed. And actor might jump pass walls
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/game-loop-5.png" class="plain">
+					<aside class="notes">
+						A safer bet is to have a stable update call. Which makes it unable for your game to make giant jumps on slow computers<br>
+						If you split the update and view. You can do multiple update ticks in case too much time has passed the last loop.<br>
+						To let the game `catch up`. At the cost of drawing the game less frequent. Which we will see as "frame drops"<br>
+						But at least the hero did not cheat by running past a wall
+					</aside>
+				</section>
+
+				<section>
+				  	<img src="./img/elm-game-loop-1.png" class="plain">
+					<aside class="notes">
+						Elm is a pure functional language and asking for the time is an impure operation.<br>
+						Time has this habit of changing a lot<br>
+						In order to get some time information you need to setup something called "Subscriptions"<br>
+						Which allows mechanisms outside of your app to send `Messages` which you can handle in a pure fashion.<br>
+						We define a message, setup a subscription to get that message every 17 milliseconds<br>
+						And handle the message
+					</aside>
+				</section>
+
+				<section>
+          			<img src="./img/elm-game-loop-2.png" class="plain">
+					<aside class="notes">
+						We are running in the browser and the browser has some mechanism to redraw the screen.<br>
+						And to make animations look smoother we can kinda hook into that redraw mechanism<br>
+						We can do something similar as we did with time but then based on the browsers animation frame<br>
+						This time we get the amount of milliseconds passed instead of a "stable 17ms" like we had with time<br>
+						And therefor we should be doing some math instead of calling the update function everytime
+					</aside>
+				</section>
+
+				<section>
+          			<img src="./img/game-loop-5.png" class="plain">
+					<aside class="notes">
+						Remembering our game loop. We would like to update on a stable 17 millisecond.<br>
+						For as many 17 milliseconds since we did our last loop<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-game-loop-3.png" class="plain">
+					<aside class="notes">
+						You do not have for loops in Elm but we can create a List of a certain length and iterate over it<br>
+						Which we do with List.repeat<br>
+						We determine how often the 17ms has passed and create a list of the same length<br>
+						Because we need to update the game based on the previous update. We can fold over our list and use our model as the accumulator<br>
+						This will give us the sketched game loop
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-game-loop-4.png" class="plain">
+					<aside class="notes">
+						We can improve the game loop by limiting the amount of updates per "view".<br>
+						We do this to not make it look like our hero jumped far because of a game hickup<br>
+						This is easy by just taking x elements from our repeated list
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-game-loop-5.png" class="plain">
+					<aside class="notes">
+						Finally we should keep track of how many time we had left. Like 3ms if the timeSinceLast was 20ms.<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-game-loop-6.png" class="plain">
+					<aside class="notes">
+						After the `update` function returned our new model, elm will call our view function again<br>
+						In which we will render the game
+					</aside>
+				</section>
+
+				<section>
+					<h2>Actors</h2>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-1.png" class="plain">
+					<aside class="notes">
+						You will have actors for about everything in the game<br>
+						Like we have a Hero and an Enemy<br>
+						Which both have an `update` function.<br>
+						Which should be called from the main loop
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-2.png" class="plain">
+					<aside class="notes">
+						You add all the behaviours in those classes like walking and collection diamonds for our hero.<br>
+						And walking and killing heroes for the enemy
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-3.png" class="plain">
+					<aside class="notes">
+						After a while you will end up with more and more actors<br>
+						Like a butterfly, which is an AI just like our Enemy but then being super cute instead of trying to kill the hero
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-4.png" class="plain">
+					<aside class="notes">
+						This goes on and on and you end up with lots of actors which update functions get really big and messy<br>
+						Also you will notice you get lots of duplicate behaviour among your actors.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-5.png" class="plain">
+					<aside class="notes">
+						A solution in the object oriented world could be to introduce some form of inheritance<br>
+						Which is actually not really reusable and might give us "Diamonds of deaths"<br>
+						Like I have no clue how this update function would look like
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/actor-component-6.png" class="plain">
+					<aside class="notes">
+						Another more reusable approach would be to put the behavior in separate places, which we called components here<br>
+						And assign components to actors. Like our hero has the WalkComponent and CollectComponent or whatever<br>
+						And we would give our enemy the KillComponent.<br>
+						This way we can easily mix and match components and thereby create new actors with less effort
+					</aside>
+				</section>
+
+				<section>
+					<h3>Composition over Inheritance</h3>
+					<img src="./img/composition-over-inheritance.png" class="plain">
+					<aside class="notes">
+						The benefits of Composition over Inheritance<br>
+						This is nice because we do not have inheritance in Elm anyway hehe<br>
+						Elm can do the composition which we call the Actor Component system in game programming<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-actor-component-1.png" class="plain">
+					<aside class="notes">
+						In Elm we can create our own type which we call Component<br>
+						And Component can by any of those specified options<br>
+						Its a bit like an Enum.<br>
+						Components can hold data like we give a String to TagComponent to represent the tag name<br>
+						And its can also have custom type or type aliases. Like we create some TransformComponentData record with x and y positions for the transform.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-actor-component-2.png" class="plain">
+					<aside class="notes">
+						Once we have our components we can mix and match them to create actors.<br>
+						We define an actor as just a list of components and we create our hero and enemy.<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-actor-component-3.png" class="plain">
+					<aside class="notes">
+						Now a little sidetrack<br>
+						ControllerInputComponent and WalkAiComponent kinda do the same thing. They control the actors movement etc<br>
+						Those components just do it in their own way, via collected input or some ai logic<br>
+						We could group them together under one ControlComponent to make it clearer that you should not have both<br>
+						Also you can keep giving data to your types like we give some AiSettings to ControlType
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-actor-component-4.png" class="plain">
+					<aside class="notes">
+						Constructing those components would then look like this<br>
+						You could still add the same component type with different settings off course<br>
+						But there is no helping against yourself mechanism here
+					</aside>
+				</section>
+
+				<section>
+					<h2>Implementing behaviour</h2>
+					<aside class="notes">
+						Types in Elm are just data. They are not like objects which can have function and behaviour<br>
+						In other words, our components do not do anything yet.<br>
+						We need to add functions for their behaviours<br>
+						Now the fun stuff begins
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-1.png" class="plain">
+					<aside class="notes">
+						Here we have a very naive walking implementation for the WalkAiComponent<br>
+						Which will just make the actor move to the right<br>
+						We receive the actor that holds this component and we will need to fetch the transformComponent from the actor<br>
+						Because the transform holds its current position<br>
+						After that we will walk one position to the right. Which will create a new transform component<br>
+						Which in turn needs to overwrite the current transform component of the actor<br>
+						Finally if the actor did not have a transform component then we will return the actor as we received it
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-2.png" class="plain">
+					<aside class="notes">
+						This function will try to get the TransformComponentData from the actor. But he might not have any therefor we return a Maybe.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-4.png" class="plain">
+					<aside class="notes">
+						walkRight will just create a new TransformData based on the current one but with x increased by one<br>
+						Affectively moving the actor one position to the right
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-5.png" class="plain">
+					<aside class="notes">
+						After that we need to update the actors transform component which we do by removing the old one and adding the new one<br>
+						This concludes the behaviour of the component<br>
+						but we still need to invoke it
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-6.png" class="plain">
+					<aside class="notes">
+						Every game tick we would like to iterate over the actors to glue the actor component system with the main loop.<br>
+						Because components can change their actor we need to do some folding<br>
+						We fold over all the actors and let them call updateActor on each<br>
+						Then we call the corresponding update for all components on the actor<br>
+						Those components might have changed the actor therefor we need to update the actor in the accumulator, which is the list of actors
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-7.png" class="plain">
+					<aside class="notes">
+						I have added the actors to our model<br>
+						That way we can update the actors each game tick<br>
+						Give that `updateActors` function the actors and store the updated actors with the rest of our model, forming a new model<br>
+						<br>
+						This will actually work and we now have actors moving to the right which have that WalkAiComponent<br>
+						It might look like a lot of work but I can tell you.... It will get worse
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-8.png" class="plain">
+					<aside class="notes">
+						The kill component will find al neighbor actors and remove them from ehhh<br>
+						Remove them from where?
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-component-implementation-9.png" class="plain">
+					<aside class="notes">
+						To be able to do that we would need to give them the actors<br>
+						Adding another level of folding in our main loop
+					</aside>
+				</section>
+
+				<section>
+					<h3>LevelUpdate -> LifetimeComponent</h3>
+					<aside class="notes">
+						To better show how the folding goes
+					</aside>
+				</section>
+
+				<section data-state="secret-enemy-section">
+					<video id="secret-enemy-video" controls autoplay>
+						<source src="./img/secret-enemy.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<script>
+						$(document).ready(function () {
+							Reveal.addEventListener("secret-enemy-section", function () {
+								$('#secret-enemy-video').currentTime = 0;
+								$('#secret-enemy-video').load();
+							}, false);
+						});
+					</script>
+					<aside class="notes">
+						If we build the actor component system nicely then you can easily create an enemy that disguises as a pet<br>
+						But sometimes his "disguise" weirs off<br>
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=talk/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1" target="_blank">Demo</a>
+					<aside class="notes">
+						Or you can control the hero manually<br>
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=talk/game-loop-walking-4&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1" target="_blank">Demo move more</a>
+					<aside class="notes">
+						There is no logic in the code that we can just move our hero. Its all in the components<br>
+						We should as well be able to move all actors
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=talk/game-loop-walking-5&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1" target="_blank">Demo move all</a>
+					<aside class="notes">
+						I actually meant all actors. Wall are are actors too
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=test/game-of-life&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&width=20&height=16" target="_blank">Demo Game of Life</a>
+					<aside class="notes">
+						If you are getting the hand of this component system<br>
+						Then you can make all sorts of things<br>
+						You can watch game of life<br>
+						With game of life all "cells" base their decision on the same version of the field<br>
+						Which is an easy in with immutable data, you can just hold on to the level as it was before the game tick
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=advent/official&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&width=25&height=25" target="_blank">Demo Advent of Code</a>
+					<aside class="notes">
+						You can also solve days 15 challenge of advent of code from previous year<br>
+						Where goblins and elves where fighting each other and you had to calculate some score
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/advent-answer.png" class="plain">
+					<aside class="notes">
+						And that answer was correct.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Serialization</h2>
+					<aside class="notes">
+						The components we created are just types. They are just data.<br>
+						And data is serializable<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/serialization-1.png" class="plain">
+					<aside class="notes">
+						This simplifies tuning and changing the game<br>
+						This is a screen shot from the secret enemy we just saw
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/serialization-2.png" class="plain">
+					<aside class="notes">
+						Not only can we configure the actors and their behaviour<br>
+						But we can do that for the scene as well
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/serialization-3.png" class="stretch plain">
+					<aside class="notes">
+						And because our game is now in a serializable format<br>
+						We can use or create other tools to simplify the creation of that format even more<br>
+						Like there is this little level builder where you can create your own levels
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/serialization-4.png" class="stretch plain">
+					<aside class="notes">
+						Which you then upload and share on github!
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/serialization-5.png" class="stretch plain">
+					<aside class="notes">
+						In Elm deserialization this is not really interesting<br>
+						Its just a big file with json decoders<br>
+						There are plenty of articles online how to decode a json in elm
+					</aside>
+				</section>
+
+				<section>
+					<h2>Rendering</h2>
+					<aside class="notes">
+						We have not talked about rendering yet but its surprisingly easy.<br>
+						The rendering is about 400 lines of code which is not that much compared to the 7500 of code the whole game is.<br>
+						Luckily for me because I changed "output engine" a few times already
+					</aside>
+				</section>
+
+				<section data-state="first-renderer-section">
+					<video id="first-renderer-video" controls autoplay>
+						<source src="./img/first-renderer.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<script>
+						$(document).ready(function () {
+							Reveal.addEventListener("first-renderer-section", function () {
+								$('#first-renderer-video').currentTime = 0;
+								$('#first-renderer-video').load();
+							}, false);
+						});
+					</script>
+					<aside class="notes">
+						The first renderer was this ascii renderer<br>
+						Which maybe I should reintroduce
+					</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li>Ascii</li>
+						<li>Canvas</li>
+					</ul>
+					<aside class="notes">
+						After that came the Canvas renderer. Which looked the same as the game looks now<br>
+						But it had two issues. One is performace, I had to redraw the whole scene every frame from scratch<br>
+						Or came up with some awesome algorithm to reduce the amount of drawings needed or something<br>
+						And problem two was that a technique used by the canvas library was deprecated and got removed in elm 0.19
+					</aside>
+				</section>
+
+				<section>
+					<ul>
+						<li>Ascii</li>
+						<li>Canvas</li>
+						<li>Svg</li>
+					</ul>
+					<aside class="notes">
+						The third time I wrote it with Svg which outperformed canvas insanely<br>
+						When I was using canvas I configured the game at 12 fps<br>
+						And you still had frame drops on mobile<br>
+						And currently with svg it can hit 60fps
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/renderer-1.png" class="stretch plain">
+					<aside class="notes">
+						I still recreate all the visible actors as result of the `view` function<br>
+						But between frames mostly only a few svg elements really changed<br>
+						Elm runtime or the browser can take advantage of that html nodes did not change
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/renderer-2.png" class="plain">
+					<aside class="notes">
+						Code wise all you have to do is create a new component which holds your rendering information<br>
+						Like pixel color, images etc
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/renderer-3.png" class="plain">
+					<aside class="notes">
+						And the Elm architecture already provided us with a view function<br>
+						Where we can call the svg level rendering giving it information about the level<br>
+						There you just iterate over the actors and create svg elements
+					</aside>
+				</section>
+
+				<section>
+					<h3>4th renderer?</h3>
+					<aside class="notes">
+						We are going to have a little sidetrack again. This sidetrack was not planned for the talk.<br>
+						Yesterday I attended the workshop of Nikolai which was about Augmented Reality in Haskell.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/renderer-4.png" class="plain">
+					<aside class="notes">
+						The augment reality part was handled by the javascript library called A-Frame
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/renderer-5.png" class="plain">
+					<aside class="notes">
+						And the cool thing about A-Frame is that you just create html elements.<br>
+						Which the library than transforms into the 3d space.<br>
+						These html elements is the same idea that svg uses.<br>
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8002/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1" target="_blank">Demo Virtual Reality</a>
+					<aside class="notes">
+						What I meant to say is: What about a VR renderer powered by A-Frame.<br>
+						And on your mobile you will actually get the two screens.
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8003/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1" target="_blank">Demo Augmented Reality</a>
+					<aside class="notes">
+						And the bridge from Virtual Reality towards Augmented Reality is not that far.<br>
+						And this is even more awesome on the mobile<br>
+						I have to admit, I need to work on the controls a bit.<br>
+						And also this is kinda useless, but so is the whole project
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8004/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1&" target="_blank">Demo 3D</a>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<h2>Performance</h2>
+					<aside class="notes">
+						That was the end of the sidetrack.<br>
+						Lets continue with the last mayor chapter which is performance<br>
+						How to make sure the game actually runs at a decent frame rate.<br>
+						One optimization we already discussed, which was using a better renderer.
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-1.png" class="plain">
+					<aside class="notes">
+						I'm doing a lot of looking up actors therefor I gave the actors an Id<br>
+						And stored them in a Dict with their id as the key<br>
+						Instead of as a list
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-2.png" class="plain">
+					<aside class="notes">
+						I did the same for components which makes updating a certain component easier<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-3.png" class="plain">
+					<aside class="notes">
+						And I really often need to search actors by a position<br>
+						Therefor I created indices which are dicts from position to actor id<br>
+						Now all of these changes are to minimize the time needed searching for actors<br>
+						A dict loopup is faster then iterating over a large list
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-4.png" class="plain">
+					<aside class="notes">
+						An other way to optimize performance is to not give "update ticks" to all actors<br>
+						In the main loop I'm only updating actors which are in the view and some additional actors just outside the view
+					</aside>
+				</section>
+
+				<section>
+					<a href="http://localhost:8001/?startLevel=talk/optimization-1&hideDebug=1&hideControls=1&hideEdit=1&additionalViewBorder=10" target="_blank">Demo update narrow actors</a>
+					<aside class="notes">
+
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-5.png" class="plain">
+					<aside class="notes">
+						To `update` even less actors<br> Actors are split into two types. Static actors and dynamic actors<br>
+						Where the difference is that dynamic actors hold components that needs update ticks<br>
+						While static actors does not.<br>
+						In the boulder game things like dirt and wall are static. While rocks and the hero are dynamic actors
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-6.png" class="plain">
+					<aside class="notes">
+						This is somewhere inside the game loop where I'm only getting actors which are dynamic
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-7.png" class="plain">
+					<aside class="notes">
+						Another performance optimization is that I'm not actually creating the view, when the view method of elm gets called<br>
+						This view will get called by "the elm engine" every time that the model changes<br>
+						But I know that certain messages do not change the game state and therefor not the visual output<br>
+						Messages like key inputs<br>
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-8.png" class="plain">
+					<aside class="notes">
+						Therefor I create the view myself whenever I know it changed and store that as part of my model.<br>
+						To be clear this happens in the elm `update` function
+					</aside>
+				</section>
+
+				<section>
+					<img src="./img/elm-performance-9.png" class="plain">
+					<aside class="notes">
+						And the last one, if someone comes up with a faster implementation for an operation you use a lot<br>
+						Then you proudly copy his implementation for your game
+					</aside>
+				</section>
+
+				<section>
+					<h2>Toughest Lesson Learned</h2>
+					<aside class="notes">
+						To close I would like to share the toughest lesson learned which was most definitely keeping track of what your "newest" actor/level or model is<br>
+						I have had a few times that I was like wtf is going on why is not this working<br>
+						And then the conclusion was that I did not update the actor in the accumulated level and there for changes where lost etc<br>
+						These are nifty bugs to find
+					</aside>
+				</section>
+
+				<section>
+					<h1>Thank you</h1>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h2>Elm Pixel Boulder Game</h2>
+					<p>
+						<a href="https://github.com/JordyMoos/elm-pixel-boulder-game">https://github.com/JordyMoos/elm-pixel-boulder-game</a>
+					</p>
+					<p>
+						<a href="https://jordymoos.github.io/elm-pixel-boulder-game/?hideDebug=1">https://jordymoos.github.io/elm-pixel-boulder-game/?hideDebug=1</a>
+					</p>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<h3>About me</h3>
+					<p>
+						<a href="https://www.linkedin.com/in/jordy-moos-8a809754/">https://www.linkedin.com/in/jordy-moos-8a809754/</a><br>
+					</p>
+					<p>
+						<a href="https://twitter.com/jordymoos">https://twitter.com/jordymoos</a><br>
+					</p>
+					<p>
+						<a href="https://github.com/jordymoos">https://github.com/jordymoos</a>
+					</p>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section style="font-size: 12px">
+					https://www.elderscrollsonline.com/en-us/updates/dlc/thievesguild<br>
+					https://hackster.imgix.net/uploads/attachments/341676/20170822_012800_iwgpFxyWBr.jpg?auto=compress%2Cformat&w=900&h=675&fit=min<br>
+					https://medium.economist.com/can-we-know-what-animals-are-thinking-83991bc994c4<br>
+					https://i2.wp.com/tuminds.com/wp-content/uploads/2016/06/Copy-of-Copy-of-the-wild.png?w=1024&ssl=1<br>
+					https://www.cjnews.com/news/business/next-einstein-competition-looking-for-a-genius-idea<br>
+					https://twitter.com/i/web/status/1089183825329115136<br>
+					http://www.benmvp.com/learning-es6-promises/<br>
+					https://www.praktijknieuwemaan.net/training-een-energiek-en-onrustig-kind-opvoeden/<br>
+					https://oldgameshelf.com/roms/nes/boulder-dash/images/nes_boulder_dash_2.jpg<br>
+					https://nl.motorsport.com/f1/news/verslag-derde-training-grand-prix-china-bottas-snelste-albon-crash/4369433/<br>
+					https://www.trendir.com/modernist-architecture/<br>
+					https://twitter.com/01k/status/986528602635358208?s=20<br>
+					http://thegioivanhoa.com.vn/kham-pha-hau-truong-dung-canh-thu-vi-cua-nhung-bo-phim-bom-tan-hollywood/<br>
+					https://www.deccanchronicle.com/science/science/300417/model-for-viable-time-machine-developed.html<br>
+					https://javarevisited.blogspot.com/2013/06/why-favor-composition-over-inheritance-java-oops-design.html?m=1<br>
+					https://discourse.elm-lang.org/t/2-3x-faster-list-concat-implementation/3533<br>
+					<aside class="notes">
+					</aside>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				transition: 'fade',
+				pdfMaxPagesPerSlide: 1,
+				pdfSeparateFragments: false,
+				transitionSpeed: 'fast',
+				controls: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				],
+			});
+		</script>
+	</body>
+</html>
