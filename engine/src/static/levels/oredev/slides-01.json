@@ -91,12 +91,16 @@
         }
       },
       {
+        "type": "trigger-activator"
+      },
+      {
         "type": "control",
         "data": {
           "settings": {
             "pushStrength": 50,
             "walkOverStrength": 50
           },
+          "steps": 5,
           "control": {
             "type": "input",
             "data": {
@@ -121,7 +125,6 @@
         "data": {
           "interestedIn": [
             "diamond",
-            "alt-diamond",
             "dirt"
           ]
         }
@@ -135,7 +138,10 @@
       {
         "type": "camera",
         "data": {
-          "borderSize": 5
+          "borderLeft": 2,
+          "borderUp": 10,
+          "borderRight": 13,
+          "borderDown": 1
         }
       },
       {
@@ -609,23 +615,6 @@
         }
       }
     ],
-    "fake-strongwall": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "image",
-            "data": {
-              "default": {
-                "names": [
-                  "strong-wall"
-                ]
-              }
-            }
-          }
-        }
-      }
-    ],
     "diamond": [
       {
         "type": "render",
@@ -651,59 +640,6 @@
         "type": "collectible",
         "data": {
           "name": "diamond"
-        }
-      },
-      {
-        "type": "control",
-        "data": {
-          "control": {
-            "type": "gravityAi"
-          }
-        }
-      },
-      {
-        "type": "movement",
-        "data": {
-          "movingTicks": 8
-        }
-      },
-      {
-        "type": "physics",
-        "data": {
-          "strength": 20,
-          "shape": "circle"
-        }
-      }
-    ],
-    "alt-diamond": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "image",
-            "data": {
-              "default": {
-                "names": [
-                  "alt-diamond-0",
-                  "alt-diamond-1",
-                  "alt-diamond-2",
-                  "alt-diamond-3",
-                  "alt-diamond-4",
-                  "alt-diamond-5",
-                  "alt-diamond-6",
-                  "alt-diamond-7"
-                ],
-                "ticksPerImage": 8
-              }
-            }
-          },
-          "layer": 3
-        }
-      },
-      {
-        "type": "collectible",
-        "data": {
-          "name": "alt-diamond"
         }
       },
       {
@@ -798,19 +734,28 @@
         }
       }
     ],
-    "alt-diamond-spawner": [
+    "trigger-1": [
       {
-        "type": "spawn",
+        "type": "trigger",
         "data": {
-          "entityName": "alt-diamond",
-          "position": {
-            "x": 38,
-            "y": 6
-          },
-          "delayTicks": 400,
-          "repeat": {
-            "times": "never",
-            "delayTicks": 100
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Hint: Walk to the right\n\nWatch out for the rock!"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-2": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Here you should talk about:\n\n[1] The blabla\n\n[2] Dont forget bleble!"
+            }
           }
         }
       }
@@ -828,10 +773,9 @@
     ".": "dirt",
     "|": "wall",
     "#": "strongwall",
-    "@": "fake-strongwall",
     "*": "diamond",
-    "a": "alt-diamond",
-    "s": "alt-diamond-spawner"
+    "1": "trigger-1",
+    "2": "trigger-2"
   },
   "images": {
     "hero-00": {
@@ -911,46 +855,6 @@
     },
     "diamond-3": {
       "path": "./images/spriters-resource.com/diamond-3.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-0": {
-      "path": "./images/spriters-resource.com/alt-diamond-0.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-1": {
-      "path": "./images/spriters-resource.com/alt-diamond-1.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-2": {
-      "path": "./images/spriters-resource.com/alt-diamond-2.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-3": {
-      "path": "./images/spriters-resource.com/alt-diamond-3.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-4": {
-      "path": "./images/spriters-resource.com/alt-diamond-4.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-5": {
-      "path": "./images/spriters-resource.com/alt-diamond-5.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-6": {
-      "path": "./images/spriters-resource.com/alt-diamond-6.png",
-      "width": 32,
-      "height": 32
-    },
-    "alt-diamond-7": {
-      "path": "./images/spriters-resource.com/alt-diamond-7.png",
       "width": 32,
       "height": 32
     },
@@ -1116,28 +1020,25 @@
   ],
   "updateBorder": 3,
   "scene": [
-    "#########################################s",
-    "#.................o.....o...............#",
-    "#...........*.....o.....o......o..   ...#",
-    "#.....p.....o.....o.....o...............#",
-    "#...................... o   .......o....#",
-    "#||||||||||||||||||||||||   ....*.o.....#",
-    "#........................   .....ooooo .@                     a",
-    "#.....o..................   ..*...o.....#                    ###",
-    "#.. ...............*...............o....#",
-    "#..  ......|||||||||||||||||||||||||||||#",
-    "#.. .....*..........               e....#                #          #",
-    "#.......ooo.................*...........#                ############",
-    "#........*.................***..........#",
-    "#..o.......... .....  ......*...........#",
     "#.......................................#",
+    "#.......................................#",
+    "#.......................................#",
+    "#.......................................#",
+    "#.......................................#",
+    "#.......................................#",
+    "#...............o........................#",
+    "#.......................................#",
+    "#......o.....o. ..o........................#",
+    "#...... .. ....o............................#",
+    "#...........  o....  ..o...o.........   ...#",
+    "#.....p...1.... ...2...............*.#",
     "#########################################"
   ],
   "subscribers": [
     {
       "type": "onTagDied",
       "eventActionData": {
-        "type": "completed",
+        "type": "failed",
         "data": {
           "descriptionProvider": {
             "type": "static",
@@ -1145,7 +1046,6 @@
               "text": "You died"
             }
           },
-          "nextLevel": "oredev/slides-01",
           "entityNames": [
             "explosion"
           ],
@@ -1170,7 +1070,7 @@
               "text": "Level Completed"
             }
           },
-          "nextLevel": "oredev/slides-01",
+          "nextLevel": "official/002",
           "entityNames": [
             "finish_diamond"
           ],
@@ -1181,33 +1081,17 @@
       },
       "inventoryUpdatedData": {
         "interestedIn": "diamond",
-        "minimumQuantity": 11
+        "minimumQuantity": 1
       }
     },
     {
-      "type": "onInventoryUpdated",
-      "eventActionData": {
-        "type": "completed",
-        "data": {
-          "descriptionProvider": {
-            "type": "static",
-            "data": {
-              "text": "Back to the talk"
-            }
-          },
-          "nextLevel": "oredev/slides-01",
-          "entityNames": [
-            "alt-diamond"
-          ],
-          "animation": {
-            "type": "currentTick"
-          }
-        }
-      },
-      "inventoryUpdatedData": {
-        "interestedIn": "alt-diamond",
-        "minimumQuantity": 1
-      }
+      "type": "onTriggerActivated"
     }
-  ]
+  ],
+  "config": {
+    "width": 16,
+    "height": 12,
+    "pixelSize": 64,
+    "additionalViewBorder": 0
+  }
 }
