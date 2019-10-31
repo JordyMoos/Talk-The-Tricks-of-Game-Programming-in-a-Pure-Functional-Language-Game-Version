@@ -255,15 +255,27 @@ function runElm() {
       socket.send(data);
     });
 
-    let trackedKeys = ['ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'a', 's', 'z', 'x'];
+    let keyMap = {
+      'PageUp': 'ArrowLeft',
+      'PageDown': 'ArrowRight',
+      'ArrowLeft': 'ArrowLeft',
+      'ArrowUp': 'ArrowUp',
+      'ArrowRight': 'ArrowRight',
+      'ArrowDown': 'ArrowDown',
+      'a': 'a',
+      's': 's',
+      'z': 'z',
+      'x': 'x'
+    };
+    let trackedKeys = ['PageUp', 'PageDown', 'ArrowLeft', 'ArrowUp', 'ArrowRight', 'ArrowDown', 'a', 's', 'z', 'x'];
     window.addEventListener('keydown', function(event) {
       if (trackedKeys.includes(event.key)) {
-        app.ports.keyDown.send(event.key);
+        app.ports.keyDown.send(keyMap[event.key]);
         event.preventDefault();
       }
     }, true);window.addEventListener('keyup', function(event) {
       if (trackedKeys.includes(event.key)) {
-        app.ports.keyUp.send(event.key);
+        app.ports.keyUp.send(keyMap[event.key]);
         event.preventDefault();
       }
     }, true);
