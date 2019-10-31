@@ -19,6 +19,10 @@ http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hi
 ```
 
 ```
+http://localhost:3000/?startLevel=oredev/slides-01&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+```
+
+```
 http://localhost:8001/?startLevel=talk/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
 
@@ -81,11 +85,22 @@ convert -size 640x384 tile:background.png background-96.png
 convert -size 1920x1152 tile:background.png background-96.png
 ```
 
+Resize image up to given max
+```
+convert image.png -resize 1344x768\> result.png
+```
+
 
 #### Screen resolutions
 
 Resolution is 1920x1080
 96 = 20x11,25
+
+max image sizes
+14x8 = 1344x768
+Misschien beter halve kleiner?
+13x7 = 1248x672
+
                 
 
 Resolution is 1024x768
