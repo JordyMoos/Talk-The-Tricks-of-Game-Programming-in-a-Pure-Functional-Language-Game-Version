@@ -48,7 +48,7 @@ getXOffset config tick letters =
             max 0 (lineLength - config.width)
 
         tickSpeedCorrection =
-            tick // 8
+            tick // 6
 
         offset =
             modBy totalLength tickSpeedCorrection - beforeLength
