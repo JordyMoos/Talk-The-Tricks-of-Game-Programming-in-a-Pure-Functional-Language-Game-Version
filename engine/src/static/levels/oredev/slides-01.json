@@ -776,6 +776,24 @@
         }
       }
     ],
+    "slide-crash-course-elm": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "slide-crash-course-elm"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
     "slide-demo-image-1": [
       {
         "type": "render",
@@ -811,6 +829,114 @@
           "layer": 20
         }
       }
+    ],
+    "slide-elm-characteristics": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "slide-elm-characteristics"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-1": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-01"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-2": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-02"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-3": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-03"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-4": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-04"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-5": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-05"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
     ]
   },
   "signLength": 3,
@@ -829,6 +955,14 @@
     "T01": "trigger-1",
     "T02": "trigger-2",
     "S01": "slide-elm-logo",
+    "S02": "slide-crash-course-elm",
+    "S03": "slide-elm-logo",
+    "S04": "slide-elm-characteristics",
+    "S05": "slide-elm-syntax-1",
+    "S06": "slide-elm-syntax-2",
+    "S07": "slide-elm-syntax-3",
+    "S08": "slide-elm-syntax-4",
+    "S09": "slide-elm-syntax-5",
     "S98": "slide-demo-image-1",
     "S99": "slide-demo-image-2"
   },
@@ -1072,10 +1206,59 @@
     },
     "slide-elm-logo": {
       "path": "./images/oredev/slides/elm-logo.png",
-      "width": 400,
-      "height": 400,
-      "xOffset": -10,
-      "yOffset": -10
+      "width": 600,
+      "height": 600,
+      "xOffset": -110,
+      "yOffset": -110
+    },
+    "slide-crash-course-elm": {
+      "path": "./images/oredev/slides/crash-course-elm-border.jpg",
+      "width": 1262,
+      "height": 752,
+      "xOffset": -441,
+      "yOffset": -227
+    },
+    "slide-elm-characteristics": {
+      "path": "./images/oredev/slides/elm-characteristics-border.png",
+      "width": 909,
+      "height": 544,
+      "xOffset": -264,
+      "yOffset": -127
+    },
+    "elm-syntax-01": {
+      "path": "./images/oredev/slides/elm-syntax-01-border.png",
+      "width": 1248,
+      "height": 535,
+      "xOffset": -434,
+      "yOffset": -127
+    },
+    "elm-syntax-02": {
+      "path": "./images/oredev/slides/elm-syntax-02-border.png",
+      "width": 1248,
+      "height": 382,
+      "xOffset": -434,
+      "yOffset": -127
+    },
+    "elm-syntax-03": {
+      "path": "./images/oredev/slides/elm-syntax-03-border.png",
+      "width": 1248,
+      "height": 574,
+      "xOffset": -434,
+      "yOffset": -127
+    },
+    "elm-syntax-04": {
+      "path": "./images/oredev/slides/elm-syntax-04-border.png",
+      "width": 1248,
+      "height": 389,
+      "xOffset": -434,
+      "yOffset": -127
+    },
+    "elm-syntax-05": {
+      "path": "./images/oredev/slides/elm-syntax-05-border.png",
+      "width": 1248,
+      "height": 322,
+      "xOffset": -434,
+      "yOffset": -127
     }
   },
   "backgrounds": [
@@ -1145,13 +1328,13 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                     .................................                  ",
-      "                     ...S89                        ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     .................................                  ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S02                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
       "                                                                        ",
       "                                                                        ",
       "########################################################################",
@@ -1166,13 +1349,139 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                     .................................                  ",
-      "                     ...S99                        ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     ...                           ...                  ",
-      "                     .................................                  ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S03                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S04                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S05                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S06                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S07                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S08                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S09                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
       "                                                                        ",
       "                                                                        ",
       "########################################################################",

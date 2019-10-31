@@ -86,8 +86,26 @@ convert -size 1920x1152 tile:background.png background-96.png
 ```
 
 Resize image up to given max
+
 ```
 convert image.png -resize 1344x768\> result.png
+```
+
+```
+convert slides/img/*.png -resize 1248x672\> -set filename:base "%[basename]" engine/src/static/images/oredev/slides/"%[filename:base].png"
+```
+
+```
+convert *.png -resize 1248x672\> -set filename:base "%[basename]" "%[filename:base].png"
+```
+
+Add border
+
+```
+convert \
+    \( crash-course-elm.jpg -resize 1248x672 -bordercolor none -gravity center -border 40x40 \) \
+    \( -clone 0 -tile dirt.png -draw "color 0,0 reset" \) \
+    +swap -compose over -composite crash-course-elm-border.jpg
 ```
 
 
@@ -101,11 +119,19 @@ max image sizes
 Misschien beter halve kleiner?
 13x7 = 1248x672
 
-                
-
 Resolution is 1024x768
 32 = 32x24
 64 = 16x12
-               
-                
-                
+
+World one slide xoffset calculator
+(width - 380) / 2 * -1
+
+
+960 - height
+
+
+
+convert \
+    \( elm-syntax-01.png -resize 1248x672 -bordercolor none -gravity center -border 40x40 \) \
+    \( -clone 0 -tile dirt.png -draw "color 0,0 reset" \) \
+    +swap -compose over -composite elm-syntax-01-big-border.png
