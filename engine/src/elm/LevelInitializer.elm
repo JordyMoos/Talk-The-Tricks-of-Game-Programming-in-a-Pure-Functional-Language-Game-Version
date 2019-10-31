@@ -1,6 +1,6 @@
 module LevelInitializer exposing (initLevel)
 
-import Actor.Actor as Actor
+import Actor.Actor as Actor exposing (Scene, SceneChunk)
 import Actor.Common as Common
 import Actor.Decoder
 import Data.Config exposing (Config)
@@ -52,7 +52,7 @@ setEventManager levelConfig level =
 
 setActors : Actor.LevelConfig -> Actor.Level -> Actor.Level
 setActors levelConfig level =
-    levelConfig.scene
+    sceneToSingleSceneChunk levelConfig.scene
         |> List.indexedMap Tuple.pair
         |> List.foldl
             (\( y, line ) accLevel ->
@@ -80,3 +80,19 @@ setActors levelConfig level =
                         accLevel
             )
             level
+
+
+sceneToSingleSceneChunk : Scene -> SceneChunk
+sceneToSingleSceneChunk =
+    List.foldr
+        (\chunk acc ->
+            Dict.merge
+                Dict.insert
+                (\key valueA valueB -> Dict.insert key (valueA ++ valueB))
+                Dict.insert
+                (Dict.fromList <| List.indexedMap Tuple.pair chunk)
+                acc
+                Dict.empty
+        )
+        Dict.empty
+        >> Dict.values

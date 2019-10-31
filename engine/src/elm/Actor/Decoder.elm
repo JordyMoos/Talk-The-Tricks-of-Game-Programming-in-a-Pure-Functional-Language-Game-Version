@@ -62,6 +62,7 @@ import Actor.Actor as Actor
         , RenderType(..)
         , Renderer(..)
         , Scene
+        , SceneChunk
         , Shape(..)
         , Signs
         , SpawnComponentData
@@ -809,6 +810,11 @@ signsDecoder =
 
 sceneDecoder : Decoder Scene
 sceneDecoder =
+    Decode.list sceneChunkDecoder
+
+
+sceneChunkDecoder : Decoder SceneChunk
+sceneChunkDecoder =
     Decode.list Decode.string
 
 

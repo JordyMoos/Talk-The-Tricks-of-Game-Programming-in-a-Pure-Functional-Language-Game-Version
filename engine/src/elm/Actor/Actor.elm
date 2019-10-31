@@ -72,6 +72,7 @@ module Actor.Actor exposing
     , RenderType(..)
     , Renderer(..)
     , Scene
+    , SceneChunk
     , Shape(..)
     , Signs
     , SpawnComponentData
@@ -161,6 +162,10 @@ type alias Signs =
 
 
 type alias Scene =
+    List SceneChunk
+
+
+type alias SceneChunk =
     List String
 
 
