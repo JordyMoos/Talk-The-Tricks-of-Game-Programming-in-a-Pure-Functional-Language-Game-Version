@@ -115,7 +115,7 @@
       {
         "type": "movement",
         "data": {
-          "movingTicks": 0
+          "movingTicks": 2
         }
       },
       {
@@ -794,42 +794,6 @@
         }
       }
     ],
-    "slide-demo-image-1": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "image",
-            "data": {
-              "default": {
-                "names": [
-                  "slide-demo-image-1"
-                ]
-              }
-            }
-          },
-          "layer": 20
-        }
-      }
-    ],
-    "slide-demo-image-2": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "image",
-            "data": {
-              "default": {
-                "names": [
-                  "slide-demo-image-2"
-                ]
-              }
-            }
-          },
-          "layer": 20
-        }
-      }
-    ],
     "slide-elm-characteristics": [
       {
         "type": "render",
@@ -1114,9 +1078,7 @@
     "S14": "slide-elm-architecture-4",
     "S15": "slide-elm-architecture-5",
     "S16": "slide-elm-architecture",
-    "S17": "slide-game-programming",
-    "S98": "slide-demo-image-1",
-    "S99": "slide-demo-image-2"
+    "S17": "slide-game-programming"
   },
   "images": {
     "hero-00": {
@@ -1344,18 +1306,6 @@
       "width": 1920,
       "height": 1152
     },
-    "slide-demo-image-1": {
-      "path": "./images/slides/006.png",
-      "width": 864,
-      "height": 541,
-      "xOffset": 0,
-      "yOffset": -40
-    },
-    "slide-demo-image-2": {
-      "path": "./images/slides/008.png",
-      "width": 800,
-      "height": 583
-    },
     "slide-elm-logo": {
       "path": "./images/oredev/world-1/elm-logo.png",
       "width": 600,
@@ -1462,9 +1412,9 @@
       "yOffset": -227
     },
     "game-programming": {
-      "path": "./images/oredev/world-1/game-programming-border.jpg",
+      "path": "./images/oredev/world-1/goto-game-programming-border.png",
       "width": 1248,
-      "height": 752,
+      "height": 526,
       "xOffset": -434,
       "yOffset": -227
     }
@@ -1480,10 +1430,11 @@
             ]
           }
         }
-      }
+      },
+      "layer": -10
     }
   ],
-  "updateBorder": 3,
+  "updateBorder": 2,
   "scene": [
     [
       "############                                                         ",
@@ -1838,7 +1789,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                  **1                                                   ",
+      "                                                                        ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1859,7 +1810,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "                  **1                                                   ",
       "########################################################################",
       "########################################################################"
     ]

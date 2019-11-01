@@ -295,7 +295,6 @@ function runElm() {
 
   } catch (e) {
     console.dir(e);
-    document.getElementById('elm').innerText = 'Error: ' + e.message;
   }
 }
 
