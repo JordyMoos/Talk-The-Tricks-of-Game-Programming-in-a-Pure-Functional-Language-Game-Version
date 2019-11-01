@@ -2,7 +2,7 @@
 
 convert -size 671x32 tile:top.png top-long.png
 
-
+671x561
 
 convert -size 703x32 tile:top.png temp/top-long.png
 convert -size 703x32 tile:bottom.png temp/bottom-long.png
