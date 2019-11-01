@@ -45,3 +45,6 @@ convert \
 -layers merge lena_new.jpg
 
 
+
+convert serialization-5.png -bordercolor "#2b2b2b" -border 20 serialization-5.png
+
