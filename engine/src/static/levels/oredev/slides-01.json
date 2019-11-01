@@ -937,6 +937,24 @@
           "layer": 20
         }
       }
+    ],
+    "slide-elm-architecture": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
     ]
   },
   "signLength": 3,
@@ -963,6 +981,7 @@
     "S07": "slide-elm-syntax-3",
     "S08": "slide-elm-syntax-4",
     "S09": "slide-elm-syntax-5",
+    "S10": "slide-elm-architecture",
     "S98": "slide-demo-image-1",
     "S99": "slide-demo-image-2"
   },
@@ -1259,6 +1278,13 @@
       "height": 322,
       "xOffset": -434,
       "yOffset": -127
+    },
+    "elm-architecture": {
+      "path": "./images/oredev/slides/elm-architecture-border.jpg",
+      "width": 1155,
+      "height": 752,
+      "xOffset": -388,
+      "yOffset": -227
     }
   },
   "backgrounds": [
@@ -1478,6 +1504,27 @@
       "                                                                        ",
       "                                                                        ",
       "                              S09                                       ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                              S10                                       ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
