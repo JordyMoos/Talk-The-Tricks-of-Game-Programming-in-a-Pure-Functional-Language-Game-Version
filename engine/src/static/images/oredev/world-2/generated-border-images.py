@@ -42,18 +42,16 @@ def create_image(input_file_path, destination_file_path):
     os.system(merge_command)
 
 
-#
-# counter = 0
-#
-# files = [f for f in os.listdir('./') if os.path.isfile(f) and (".png" in f or ".jpg" in f) and ("border" not in f)]
-# for f in files:
-#     input_file_path = f
-#     destination_file_path = input_file_path.replace(".png", "-border.png", 1).replace(".jpg", "-border.jpg", 1)
-#     if not os.path.exists(destination_file_path):
-#         counter = counter + 1
-#         create_image(input_file_path, destination_file_path)
-#
-#
-# print("\n\n")
-# print("Created %s images" % counter)
-create_image("./composition-over-inheritance.png", "./composition-over-inheritance-border.png")
+counter = 0
+
+files = [f for f in os.listdir('./') if os.path.isfile(f) and (".png" in f or ".jpg" in f) and ("border" not in f)]
+for f in files:
+    input_file_path = f
+    destination_file_path = input_file_path.replace(".png", "-border.png", 1).replace(".jpg", "-border.jpg", 1)
+    if not os.path.exists(destination_file_path):
+        counter = counter + 1
+        create_image(input_file_path, destination_file_path)
+
+
+print("\n\n")
+print("Created %s images" % counter)
