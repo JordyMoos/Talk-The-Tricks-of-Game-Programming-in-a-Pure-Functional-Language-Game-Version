@@ -286,18 +286,20 @@
     }
   },
   "backgrounds": [
-    {
-      "renderType": {
-        "type": "image",
-        "data": {
-          "default": {
-            "names": [
-              "background-big"
-            ]
+    [
+      {
+        "renderType": {
+          "type": "image",
+          "data": {
+            "default": {
+              "names": [
+                "background-big"
+              ]
+            }
           }
         }
       }
-    }
+    ]
   ],
   "scene": [
     "p    e",
