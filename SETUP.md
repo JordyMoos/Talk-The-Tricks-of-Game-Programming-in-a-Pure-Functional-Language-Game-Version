@@ -132,6 +132,6 @@ World one slide xoffset calculator
 
 
 convert \
-    \( elm-syntax-01.png -resize 1248x672 -bordercolor none -gravity center -border 40x40 \) \
+    \( architecture.jpg -resize 1168x672 -bordercolor none -gravity center -border 40x40 \) \
     \( -clone 0 -tile dirt.png -draw "color 0,0 reset" \) \
-    +swap -compose over -composite elm-syntax-01-big-border.png
+    +swap -compose over -composite architecture-border.jpg
