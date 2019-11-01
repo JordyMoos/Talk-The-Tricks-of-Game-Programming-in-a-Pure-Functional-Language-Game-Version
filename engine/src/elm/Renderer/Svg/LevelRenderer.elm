@@ -27,7 +27,8 @@ renderLevel currentTick level { images } =
     Util.fastConcat
         [ [ drawLoadImages level.config level.view images ]
         , drawBackgrounds currentTick level.config images level.backgrounds
-        , drawLevel currentTick level images
+            |> drawLevel currentTick level images
+            |> toSortedList
         ]
         |> Svg.svg
             [ Attributes.width <| String.fromInt <| (level.config.width + (level.config.additionalViewBorder * 2)) * level.config.pixelSize
@@ -89,16 +90,16 @@ drawLoadImage config view ( name, image ) =
                 []
 
 
-drawBackgrounds : Int -> Config -> Actor.Images -> List Actor.RenderComponentData -> List (Svg msg)
+drawBackgrounds : Int -> Config -> Actor.Images -> List Actor.RenderComponentData -> LayeredSvg msg
 drawBackgrounds tick config images backgrounds =
-    List.map
+    List.foldr
         (drawBackground tick config images)
+        Dict.empty
         backgrounds
-        |> Maybe.Extra.values
 
 
-drawBackground : Int -> Config -> Actor.Images -> Actor.RenderComponentData -> Maybe (Svg msg)
-drawBackground tick config images backgroundData =
+drawBackground : Int -> Config -> Actor.Images -> Actor.RenderComponentData -> LayeredSvg msg -> LayeredSvg msg
+drawBackground tick config images backgroundData acc =
     let
         xy =
             config.additionalViewBorder * config.pixelSize
@@ -113,14 +114,16 @@ drawBackground tick config images backgroundData =
                 , Attributes.fill <| Color.toCssString <| getColor tick data
                 ]
                 []
-                |> Just
+                |> addToLayeredSvgFlipped backgroundData.layer acc
 
         Actor.ImageRenderType data ->
             getImageName tick data.default
                 |> Maybe.andThen (imageNameToSvg xy xy images)
+                |> Maybe.map (addToLayeredSvgFlipped backgroundData.layer acc)
+                |> Maybe.withDefault acc
 
         Actor.ObjectRenderType _ ->
-            Nothing
+            acc
 
 
 computeOffsets : Config -> Actor.View -> Actor.PositionOffsets -> Vec3
@@ -198,8 +201,8 @@ imageNameToSvg x y images imageName =
             )
 
 
-drawLevel : Int -> Level -> Actor.Images -> List (Svg msg)
-drawLevel tick level images =
+drawLevel : Int -> Level -> Actor.Images -> LayeredSvg msg -> LayeredSvg msg
+drawLevel tick level images drawLevelAcc =
     let
         view =
             level.view
@@ -284,10 +287,9 @@ drawLevel tick level images =
                 givenAcc
                 (List.range yBasePosition yEndPosition)
     in
-    Dict.empty
+    drawLevelAcc
         |> drawEnvironment
         |> drawOtherActors
-        |> toSortedList
 
 
 type alias RenderRequirements =

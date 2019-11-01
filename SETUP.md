@@ -19,7 +19,11 @@ http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hi
 ```
 
 ```
-http://localhost:3000/?startLevel=oredev/slides-01&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+http://localhost:3000/?startLevel=oredev/world-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+```
+
+```
+http://localhost:3000/?startLevel=oredev/world-2&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
 
 ```

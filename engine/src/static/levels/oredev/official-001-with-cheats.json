@@ -1147,7 +1147,7 @@
               "text": "You died"
             }
           },
-          "nextLevel": "oredev/slides-01",
+          "nextLevel": "oredev/world-1",
           "entityNames": [
             "explosion"
           ],
@@ -1172,7 +1172,7 @@
               "text": "Level Completed"
             }
           },
-          "nextLevel": "oredev/slides-01",
+          "nextLevel": "oredev/world-1",
           "entityNames": [
             "finish_diamond"
           ],
@@ -1197,7 +1197,7 @@
               "text": "Back to the talk"
             }
           },
-          "nextLevel": "oredev/slides-01",
+          "nextLevel": "oredev/world-1",
           "entityNames": [
             "alt-diamond"
           ],
