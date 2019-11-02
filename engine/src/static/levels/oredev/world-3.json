@@ -77,53 +77,129 @@
         }
       }
     ],
-    "slide-movie-scene": [
-      {
-        "data": {
-          "layer": 1,
-          "renderType": {
-            "data": {
-              "default": {
-                "names": [
-                  "movie-scene"
-                ]
-              }
-            },
-            "type": "image"
-          }
-        },
-        "type": "render"
-      }
-    ],
-    "slide-actor-scene-1": [
-      {
-        "data": {
-          "layer": 20,
-          "renderType": {
-            "data": {
-              "default": {
-                "names": [
-                  "actor-scene-1"
-                ]
-              }
-            },
-            "type": "image"
-          }
-        },
-        "type": "render"
-      }
-    ],
-    "slide-1-plane": [
+    "slide-elm-performance-1-border": [
       {
         "type": "render",
         "data": {
           "renderType": {
             "type": "object",
             "data": {
-              "default": "slide-1-plane"
+              "default": "elm-performance-1-border"
             }
           },
-          "layer": 10
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-2-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-2-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-3-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-3-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-4-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-4-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-5-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-5-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-6-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-6-border"
+            }
+          },
+          "layer": 16
+        }
+      }
+    ],
+    "slide-elm-performance-7-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-7-border"
+            }
+          },
+          "layer": 17
+        }
+      }
+    ],
+    "slide-elm-performance-8-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-8-border"
+            }
+          },
+          "layer": 18
+        }
+      }
+    ],
+    "slide-elm-performance-9-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-9-border"
+            }
+          },
+          "layer": 19
         }
       }
     ]
@@ -131,8 +207,62 @@
   "signLength": 3,
   "signs": {
     "PLA": "player",
-    "S01": "slide-1-plane",
-    "S02": "slide-actor-scene-1"
+    "S01": "slide-elm-performance-1-border",
+    "S02": "slide-elm-performance-2-border",
+    "S03": "slide-elm-performance-3-border",
+    "S04": "slide-elm-performance-4-border",
+    "S05": "slide-elm-performance-5-border",
+    "S06": "slide-elm-performance-6-border",
+    "S07": "slide-elm-performance-7-border",
+    "S08": "slide-elm-performance-8-border",
+    "S09": "slide-elm-performance-9-border"
+  },
+  "images": {
+    "image-elm-performance-1-border": {
+      "path": "./images/oredev/world-3/elm-performance-1-border.png",
+      "width": 1232,
+      "height": 713
+    },
+    "image-elm-performance-2-border": {
+      "path": "./images/oredev/world-3/elm-performance-2-border.png",
+      "width": 1226,
+      "height": 736
+    },
+    "image-elm-performance-3-border": {
+      "path": "./images/oredev/world-3/elm-performance-3-border.png",
+      "width": 1232,
+      "height": 344
+    },
+    "image-elm-performance-4-border": {
+      "path": "./images/oredev/world-3/elm-performance-4-border.png",
+      "width": 1232,
+      "height": 446
+    },
+    "image-elm-performance-5-border": {
+      "path": "./images/oredev/world-3/elm-performance-5-border.png",
+      "width": 1232,
+      "height": 597
+    },
+    "image-elm-performance-6-border": {
+      "path": "./images/oredev/world-3/elm-performance-6-border.png",
+      "width": 1232,
+      "height": 243
+    },
+    "image-elm-performance-7-border": {
+      "path": "./images/oredev/world-3/elm-performance-7-border.png",
+      "width": 1232,
+      "height": 508
+    },
+    "image-elm-performance-8-border": {
+      "path": "./images/oredev/world-3/elm-performance-8-border.png",
+      "width": 1232,
+      "height": 277
+    },
+    "image-elm-performance-9-border": {
+      "path": "./images/oredev/world-3/elm-performance-9-border.png",
+      "width": 1232,
+      "height": 625
+    }
   },
   "objects": {
     "assets": {
@@ -412,11 +542,243 @@
           ]
         }
       },
-      "slide-1-plane": {
+      "elm-performance-1-border": {
         "settings": {
-          "geometry": "primitive: plane; height: 7.3; width: 12.0",
-          "material": " src: ./images/oredev/world-2/movie-scene-border.png; transparent: true",
-          "shadow": "receive: false;",
+          "geometry": "primitive: plane; width: 12.32; height: 7.13;",
+          "material": "src: #image-image-elm-performance-1-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-2-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.26; height: 7.36;",
+          "material": "src: #image-image-elm-performance-2-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-3-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 3.44;",
+          "material": "src: #image-image-elm-performance-3-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-4-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.46;",
+          "material": "src: #image-image-elm-performance-4-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-5-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.97;",
+          "material": "src: #image-image-elm-performance-5-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-6-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 2.43;",
+          "material": "src: #image-image-elm-performance-6-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-7-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.08;",
+          "material": "src: #image-image-elm-performance-7-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-8-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 2.77;",
+          "material": "src: #image-image-elm-performance-8-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-9-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 6.25;",
+          "material": "src: #image-image-elm-performance-9-border; transparent: true",
+          "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
         },
@@ -441,23 +803,6 @@
           ]
         }
       }
-    }
-  },
-  "images": {
-    "movie-scene": {
-      "yOffset": -500,
-      "path": "./images/oredev/world-2/movie-scene-border.png",
-      "xOffset": 353,
-      "height": 736,
-      "width": 1202,
-      "zOffset": 800
-    },
-    "actor-scene-1": {
-      "yOffset": -227,
-      "path": "./images/oredev/world-2/actor-scene-1-border.png",
-      "xOffset": 573,
-      "height": 736,
-      "width": 762
     }
   },
   "backgrounds": [
@@ -551,7 +896,154 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "               S01                                                      ",
+      "               S02                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S03                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S04                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S05                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S06                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S07                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S08                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S09                                                      ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
