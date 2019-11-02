@@ -75,6 +75,8 @@ actors = {}
 images = {}
 signs = {}
 scenes = []
+trigger_actors = {}
+trigger_signs = {}
 
 counter = 0
 for image in files:
@@ -82,6 +84,8 @@ for image in files:
     name = image.replace("-border.png", "")
     actor_name = "slide-" + name
     sign = "S%02d" % counter
+    trigger_key = "T%02d" % counter
+    trigger_name = "trigger-%02d" % counter
     (image_width, image_height) = Image.open(image).size
     xOffset = math.floor((1909 - image_width) / 2)
     yOffset = -227
@@ -133,11 +137,24 @@ for image in files:
               "                                                                        ",
               "                                                                        ",
               "                                                                        ",
-              "                                                                        ",
+              "%s                                                                     " % trigger_key,
               "                                                                        ",
               "                                                                        "
             ]
     )
+
+    trigger_actors[trigger_name] = [{
+        "type": "trigger",
+        "data": {
+            "action": {
+                "type": "send-text",
+                "data": {
+                    "message": ""
+                }
+            }
+        }
+    }]
+    trigger_signs[trigger_key] = trigger_name
 
 
 
@@ -149,4 +166,8 @@ print("\n\n\n")
 print(json.dumps(OrderedDict(sorted(images.items()))))
 print("\n\n\n")
 print(json.dumps(scenes))
+print("\n\n\n")
+print(json.dumps(OrderedDict(sorted(trigger_actors.items()))))
+print("\n\n\n")
+print(json.dumps(OrderedDict(sorted(trigger_signs.items()))))
 print("\n\n\n")
