@@ -74,34 +74,38 @@ print("\n")
 actors = {}
 images = {}
 signs = {}
+scenes = []
 
 counter = 0
 for image in files:
     counter = counter + 1
     name = image.replace("-border.png", "")
     actor_name = "slide-" + name
+    sign = "S%02d" % counter
     (image_width, image_height) = Image.open(image).size
     xOffset = math.floor((1909 - image_width) / 2)
     yOffset = -227
 
     # Add to actors
-    actors[actor_name] = { "type": "render"
+    actors[actor_name] = [{
+        "type": "render"
         , "data": {
-                "renderType": {
-                    "type": "image"
-                    ,  "data": {
-                        "default": {
-                            "names": [
-                                name
-                            ]
-                        }
+            "renderType": {
+                "type": "image"
+                ,  "data": {
+                    "default": {
+                        "names": [
+                            name
+                        ]
                     }
                 }
             }
+            , "layer": 20
         }
+    }]
 
     # Add to signs
-    signs["S%02d" % counter] = actor_name
+    signs[sign] = actor_name
 
     # Add to the images
     images[name] = { "path": "./images/oredev/world-2/" + image
@@ -109,6 +113,31 @@ for image in files:
         , "height": image_height
         , "xOffset": xOffset
         , "yOffset": yOffset }
+
+    # Add to the scene
+    scenes.append(
+        [
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "      %s                                                               " % sign,
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        ",
+              "                                                                        "
+            ]
+    )
 
 
 
@@ -118,4 +147,6 @@ print("\n\n\n")
 print(json.dumps(OrderedDict(sorted(signs.items()))))
 print("\n\n\n")
 print(json.dumps(OrderedDict(sorted(images.items()))))
+print("\n\n\n")
+print(json.dumps(scenes))
 print("\n\n\n")
