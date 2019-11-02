@@ -6,6 +6,7 @@ import Actor.Actor as Actor
         , Component(..)
         , DownSmashComponentData
         , Level
+        , Entities
         , MovingDownState(..)
         )
 import Actor.Cheats as Cheats
@@ -17,8 +18,10 @@ import Data.Position as Position exposing (Position)
 import Dict
 
 
-updateDownSmashComponent : DownSmashComponentData -> Actor -> Level -> Level
-updateDownSmashComponent downSmashData actor level =
+
+
+updateDownSmashComponent : Entities -> DownSmashComponentData -> Actor -> Level -> Level
+updateDownSmashComponent entities downSmashData actor level =
     Common.getTransformComponent actor
         |> Maybe.andThen
             (\transformData ->
@@ -35,7 +38,7 @@ updateDownSmashComponent downSmashData actor level =
                             |> List.foldr
                                 (\downActor accLevel ->
                                     accLevel
-                                        |> Cheats.addBigExplosion (Position.addPosition position <| Position.getOffsetFromDirection Direction.Down)
+                                        |> Cheats.addBigExplosion entities downSmashData.explosionEntityName (Position.addPosition position <| Position.getOffsetFromDirection Direction.Down)
                                         |> Common.removeActor downActor
                                 )
                                 level

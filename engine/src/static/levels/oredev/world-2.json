@@ -2,6 +2,12 @@
   "entities": {
     "player": [
       {
+        "type": "tag",
+        "data": {
+          "name": "player"
+        }
+      },
+      {
         "type": "render",
         "data": {
           "renderType": {
@@ -98,8 +104,21 @@
           "strength": 100,
           "shape": "square"
         }
+      },
+      {
+        "type": "explodable"
       }
     ],
+    "kill-trigger": [
+      {
+        "type": "trigger-explodable",
+        "data": {
+          "triggerStrength": 1000,
+          "explosionEntityName": "unit-actor"
+        }
+      }
+    ],
+    "unit-actor": [],
     "slide-4th-renderer": [
       {
         "data": {
@@ -1238,6 +1257,7 @@
   "signLength": 3,
   "signs": {
     "PLA": "player",
+    "KIL": "kill-trigger",
     "S01": "slide-movie-scene",
     "S02": "slide-actor-scene-1",
     "S03": "slide-actor-scene-2",
@@ -2100,7 +2120,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "                     KIL                                                ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -3381,7 +3401,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "            KIL                                                         ",
       "                                                                        ",
       "                                                                        "
     ]
@@ -3390,16 +3410,17 @@
     {
       "type": "onTagDied",
       "eventActionData": {
-        "type": "failed",
+        "type": "completed",
         "data": {
           "descriptionProvider": {
             "type": "static",
             "data": {
-              "text": "You died"
+              "text": "Level Completed"
             }
           },
+          "nextLevel": "oredev/world-3",
           "entityNames": [
-            "explosion"
+            "diamond"
           ],
           "animation": {
             "type": "currentTick"
@@ -3422,7 +3443,7 @@
               "text": "Level Completed"
             }
           },
-          "nextLevel": "oredev/slides-02",
+          "nextLevel": "oredev/world-3",
           "entityNames": [
             "diamond"
           ],

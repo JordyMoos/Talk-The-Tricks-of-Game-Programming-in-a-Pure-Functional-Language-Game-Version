@@ -21,6 +21,7 @@ import Actor.Actor as Actor
         , ControlType(..)
         , CounterComponentData
         , DamageComponentData
+        , DownSmashComponentData
         , Entities
         , EventAction(..)
         , GameOfLifeAiAction
@@ -254,7 +255,7 @@ componentDecoder =
                         Decode.map TriggerExplodableComponent <| Decode.field "data" triggerExplodableDataDecoder
 
                     "smash-down" ->
-                        Decode.succeed <| DownSmashComponent { movingDownState = NotMovingDown }
+                        Decode.map DownSmashComponent <| Decode.field "data" downSmashDataDecoder
 
                     "spawn" ->
                         Decode.map SpawnComponent <| Decode.field "data" spawnDataDecoder
@@ -590,10 +591,18 @@ damageDataDecoder =
         |> JDP.required "damageStrength" Decode.int
 
 
+downSmashDataDecoder : Decoder DownSmashComponentData
+downSmashDataDecoder =
+    Decode.succeed DownSmashComponentData
+        |> JDP.hardcoded NotMovingDown
+        |> JDP.required "explosionEntityName" Decode.string
+
+
 triggerExplodableDataDecoder : Decoder TriggerExplodableComponentData
 triggerExplodableDataDecoder =
     Decode.succeed TriggerExplodableComponentData
         |> JDP.required "triggerStrength" Decode.int
+        |> JDP.required "explosionEntityName" Decode.string
 
 
 collectibleDecoder : Decoder CollectibleComponentData

@@ -114,7 +114,7 @@ updateComponent currentTick levelConfig levelBeforeUpdate controllerInput compon
             Damage.updateDamageComponent damageData actor level
 
         Actor.DownSmashComponent downSmash ->
-            DownSmash.updateDownSmashComponent downSmash actor level
+            DownSmash.updateDownSmashComponent levelConfig.entities downSmash actor level
 
         Actor.LifetimeComponent lifetimeData ->
             Lifetime.updateLifetimeComponent lifetimeData actor levelConfig.entities level
@@ -129,7 +129,7 @@ updateComponent currentTick levelConfig levelBeforeUpdate controllerInput compon
             TriggerActivator.updateTriggerActivatorComponent triggerData actor level
 
         Actor.TriggerExplodableComponent triggerData ->
-            TriggerExplodable.updateTriggerExplodableComponent triggerData actor level
+            TriggerExplodable.updateTriggerExplodableComponent levelConfig.entities triggerData actor level
 
         _ ->
             level

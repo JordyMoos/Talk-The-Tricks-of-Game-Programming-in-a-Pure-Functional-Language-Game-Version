@@ -11,7 +11,6 @@ import Actor.Actor as Actor
         , SpawnRepeatTimes(..)
         )
 import Actor.Common as Common
-import Actor.Component.MovementComponent as MovementComponent
 import Dict
 
 

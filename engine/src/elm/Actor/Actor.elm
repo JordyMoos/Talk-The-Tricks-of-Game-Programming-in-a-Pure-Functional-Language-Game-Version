@@ -92,7 +92,6 @@ module Actor.Actor exposing
     , View
     , WalkAroundAiControlData
     , emptyEventManager
-    , emptyVec3
     )
 
 import Color exposing (Color)
@@ -194,14 +193,6 @@ type alias Vec3 =
     { x : Float
     , y : Float
     , z : Float
-    }
-
-
-emptyVec3 : Vec3
-emptyVec3 =
-    { x = 0.0
-    , y = 0.0
-    , z = 0.0
     }
 
 
@@ -518,6 +509,7 @@ type alias CameraComponentData =
 
 type alias TriggerExplodableComponentData =
     { triggerStrength : Int
+    , explosionEntityName : String
     }
 
 
@@ -645,6 +637,7 @@ type SpawnRepeatTimes
 
 type alias DownSmashComponentData =
     { movingDownState : MovingDownState
+    , explosionEntityName : String
     }
 
 

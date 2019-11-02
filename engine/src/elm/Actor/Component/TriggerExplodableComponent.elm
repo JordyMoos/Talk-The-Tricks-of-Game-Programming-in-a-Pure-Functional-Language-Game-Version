@@ -1,6 +1,6 @@
 module Actor.Component.TriggerExplodableComponent exposing (updateTriggerExplodableComponent)
 
-import Actor.Actor as Actor exposing (Actor, Level, TriggerExplodableComponentData)
+import Actor.Actor as Actor exposing (Actor, Entities, Level, TriggerExplodableComponentData)
 import Actor.Cheats as Cheats
 import Actor.Common as Common
 import Actor.Component.ExplodableComponent as Explodable
@@ -11,8 +11,8 @@ import Maybe.Extra
 import Util.Util as Util
 
 
-updateTriggerExplodableComponent : TriggerExplodableComponentData -> Actor -> Level -> Level
-updateTriggerExplodableComponent triggerData actor level =
+updateTriggerExplodableComponent : Entities -> TriggerExplodableComponentData -> Actor -> Level -> Level
+updateTriggerExplodableComponent entities triggerData actor level =
     Common.getTransformComponent actor
         |> Maybe.Extra.toList
         |> Util.fastConcatMap
@@ -37,7 +37,7 @@ updateTriggerExplodableComponent triggerData actor level =
         |> List.foldr
             (\( position, explodableActor ) accLevel ->
                 accLevel
-                    |> Cheats.addBigExplosion position
+                    |> Cheats.addBigExplosion entities triggerData.explosionEntityName position
                     |> Common.removeActor explodableActor
             )
             level

@@ -57,10 +57,10 @@
       {
         "type": "camera",
         "data": {
-          "borderLeft": 2,
-          "borderUp": 10,
-          "borderRight": 13,
-          "borderDown": 1
+          "borderLeft": 3,
+          "borderUp": 9,
+          "borderRight": 16,
+          "borderDown": 2
         }
       },
       {
@@ -486,23 +486,26 @@
       "layer": 0
     }
   ],
-  "scene": [[
-    "      h"
-  ]],
+  "updateBorder": 3,
+  "scene": [
+    [
+      "      h"
+    ]
+  ],
   "config": {
-    "width": 16,
+    "width": 20,
     "height": 12,
-    "pixelSize": 64,
-    "additionalViewBorder": 4
+    "pixelSize": 96,
+    "additionalViewBorder": 0
   },
   "renderer": {
     "type": "aframe",
     "data": {
       "camera": {
         "rotation": {
-          "x" : 10,
-          "y" : 0,
-          "z" : 0
+          "x": 10,
+          "y": 0,
+          "z": 0
         },
         "offsets": {
           "x": [

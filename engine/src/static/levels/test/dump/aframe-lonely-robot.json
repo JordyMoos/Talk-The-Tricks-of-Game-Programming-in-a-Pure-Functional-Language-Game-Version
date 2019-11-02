@@ -112,9 +112,9 @@
   "images":{
   },
   "backgrounds":[],
-  "scene":[
+  "scene":[[
     "h"
-  ],
+  ]],
   "config":{
     "width":16,
     "height":12,
