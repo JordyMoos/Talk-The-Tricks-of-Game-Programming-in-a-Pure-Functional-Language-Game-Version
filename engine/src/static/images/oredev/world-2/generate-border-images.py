@@ -10,7 +10,7 @@ def create_image(input_file_path, destination_file_path):
     temp_input = "./border/temp/input.png"
 
     # Resize the image
-    os.system("convert %s -resize %sx%s\> %s""" % (input_file_path, max_width, max_height, temp_input))
+    os.system("convert %s -resize %sx%s %s""" % (input_file_path, max_width, max_height, temp_input))
 
     # Get new image size
     (base_width, base_height) = Image.open(temp_input).size

@@ -1470,8 +1470,12 @@
           "offsets": {
             "x": [
               {
+                "type": "fixed",
+                "data": 170
+              },
+              {
                 "type": "view_x_multiplier",
-                "data": -0.7
+                "data": -0.9
               }
             ],
             "y": [
@@ -1527,445 +1531,445 @@
       "yOffset": 17
     },
     "4th-renderer": {
-      "xOffset": 626,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/4th-renderer-border.png",
-      "width": 656,
-      "height": 349,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 626,
+      "width": 1232
     },
     "actor-component-1": {
-      "xOffset": 622,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-1-border.png",
-      "width": 664,
-      "height": 447,
-      "yOffset": -227
+      "xOffset": 396,
+      "height": 736,
+      "width": 1117
     },
     "actor-component-2": {
-      "xOffset": 622,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-2-border.png",
-      "width": 665,
-      "height": 504,
-      "yOffset": -227
+      "xOffset": 463,
+      "height": 736,
+      "width": 982
     },
     "actor-component-3": {
-      "xOffset": 623,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-3-border.png",
-      "width": 662,
+      "xOffset": 623,
       "height": 736,
-      "yOffset": -227
+      "width": 662
     },
     "actor-component-4": {
-      "xOffset": 636,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-4-border.png",
-      "width": 637,
+      "xOffset": 636,
       "height": 736,
-      "yOffset": -227
+      "width": 637
     },
     "actor-component-5": {
-      "xOffset": 622,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-5-border.png",
-      "width": 664,
-      "height": 388,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 695,
+      "width": 1232
     },
     "actor-component-6": {
-      "xOffset": 622,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-component-6-border.png",
-      "width": 664,
-      "height": 591,
-      "yOffset": -227
+      "xOffset": 540,
+      "height": 736,
+      "width": 829
     },
     "actor-scene-1": {
-      "xOffset": 724,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-scene-1-border.png",
-      "width": 460,
-      "height": 445,
-      "yOffset": -227
+      "xOffset": 573,
+      "height": 736,
+      "width": 762
     },
     "actor-scene-2": {
-      "xOffset": 731,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/actor-scene-2-border.png",
-      "width": 447,
-      "height": 446,
-      "yOffset": -227
+      "xOffset": 585,
+      "height": 736,
+      "width": 738
     },
     "advent-answer": {
-      "xOffset": 466,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/advent-answer-border.png",
-      "width": 977,
-      "height": 340,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 417,
+      "width": 1232
     },
     "ascii-canvas": {
-      "xOffset": 652,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/ascii-canvas-border.png",
-      "width": 604,
-      "height": 397,
-      "yOffset": -227
+      "xOffset": 377,
+      "height": 736,
+      "width": 1154
     },
     "composition-over-inheritance": {
-      "xOffset": 680,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/composition-over-inheritance-border.png",
-      "width": 548,
-      "height": 323,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 689,
+      "width": 1232
     },
     "demo": {
-      "xOffset": 616,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-border.png",
-      "width": 677,
-      "height": 357,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 622,
+      "width": 1232
     },
     "demo-3d": {
-      "xOffset": 672,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-3d-border.png",
-      "width": 565,
-      "height": 342,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 712,
+      "width": 1232
     },
     "demo-advent": {
-      "xOffset": 556,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-advent-border.png",
-      "width": 797,
-      "height": 311,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 458,
+      "width": 1232
     },
     "demo-ar": {
-      "xOffset": 527,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-ar-border.png",
-      "width": 854,
-      "height": 345,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 479,
+      "width": 1232
     },
     "demo-gol": {
-      "xOffset": 587,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-gol-border.png",
-      "width": 735,
-      "height": 334,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 534,
+      "width": 1232
     },
     "demo-move-all": {
-      "xOffset": 587,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-move-all-border.png",
-      "width": 734,
-      "height": 365,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 589,
+      "width": 1232
     },
     "demo-move-more": {
-      "xOffset": 564,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-move-more-border.png",
-      "width": 780,
-      "height": 354,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 537,
+      "width": 1232
     },
     "demo-vr": {
-      "xOffset": 586,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/demo-vr-border.png",
-      "width": 736,
-      "height": 318,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 505,
+      "width": 1232
     },
     "elm-actor-component-1": {
-      "xOffset": 563,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-actor-component-1-border.png",
-      "width": 783,
-      "height": 511,
-      "yOffset": -227
+      "xOffset": 382,
+      "height": 736,
+      "width": 1145
     },
     "elm-actor-component-2": {
-      "xOffset": 567,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-actor-component-2-border.png",
-      "width": 775,
-      "height": 665,
-      "yOffset": -227
+      "xOffset": 525,
+      "height": 736,
+      "width": 859
     },
     "elm-actor-component-3": {
-      "xOffset": 637,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-actor-component-3-border.png",
-      "width": 634,
-      "height": 452,
-      "yOffset": -227
+      "xOffset": 429,
+      "height": 736,
+      "width": 1051
     },
     "elm-actor-component-4": {
-      "xOffset": 380,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-actor-component-4-border.png",
-      "width": 1148,
-      "height": 621,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 664,
+      "width": 1232
     },
     "elm-component-implementation-1": {
-      "xOffset": 538,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-1-border.png",
-      "width": 832,
-      "height": 308,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 435,
+      "width": 1232
     },
     "elm-component-implementation-2": {
-      "xOffset": 440,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-2-border.png",
-      "width": 1029,
-      "height": 514,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 609,
+      "width": 1232
     },
     "elm-component-implementation-3": {
-      "xOffset": 403,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-3-border.png",
-      "width": 1103,
-      "height": 454,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 502,
+      "width": 1232
     },
     "elm-component-implementation-4": {
-      "xOffset": 472,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-4-border.png",
-      "width": 964,
-      "height": 228,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 277,
+      "width": 1232
     },
     "elm-component-implementation-5": {
-      "xOffset": 444,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-5-border.png",
-      "width": 1020,
-      "height": 511,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 610,
+      "width": 1232
     },
     "elm-component-implementation-6": {
-      "xOffset": 561,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-6-border.png",
-      "width": 786,
-      "height": 615,
-      "yOffset": -227
+      "xOffset": 482,
+      "height": 736,
+      "width": 945
     },
     "elm-component-implementation-7": {
-      "xOffset": 536,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-7-border.png",
-      "width": 836,
-      "height": 549,
-      "yOffset": -227
+      "xOffset": 387,
+      "height": 736,
+      "width": 1134
     },
     "elm-component-implementation-8": {
-      "xOffset": 549,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-8-border.png",
-      "width": 810,
-      "height": 270,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 387,
+      "width": 1232
     },
     "elm-component-implementation-9": {
-      "xOffset": 504,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-component-implementation-9-border.png",
-      "width": 900,
-      "height": 255,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 331,
+      "width": 1232
     },
     "elm-game-loop-1": {
-      "xOffset": 605,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-1-border.png",
-      "width": 698,
-      "height": 496,
-      "yOffset": -227
+      "xOffset": 429,
+      "height": 736,
+      "width": 1050
     },
     "elm-game-loop-2": {
-      "xOffset": 576,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-2-border.png",
-      "width": 757,
-      "height": 470,
-      "yOffset": -227
+      "xOffset": 349,
+      "height": 736,
+      "width": 1211
     },
     "elm-game-loop-3": {
-      "xOffset": 455,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-3-border.png",
-      "width": 998,
-      "height": 647,
-      "yOffset": -227
+      "xOffset": 384,
+      "height": 736,
+      "width": 1141
     },
     "elm-game-loop-4": {
-      "xOffset": 424,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-4-border.png",
-      "width": 1060,
-      "height": 695,
-      "yOffset": -227
+      "xOffset": 392,
+      "height": 736,
+      "width": 1125
     },
     "elm-game-loop-5": {
-      "xOffset": 461,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-5-border.png",
-      "width": 987,
-      "height": 360,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 439,
+      "width": 1232
     },
     "elm-game-loop-6": {
-      "xOffset": 679,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/elm-game-loop-6-border.png",
-      "width": 550,
-      "height": 228,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 458,
+      "width": 1232
     },
     "game-loop-1": {
-      "xOffset": 678,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/game-loop-1-border.png",
-      "width": 552,
-      "height": 362,
-      "yOffset": -227
+      "xOffset": 372,
+      "height": 736,
+      "width": 1164
     },
     "game-loop-2": {
-      "xOffset": 678,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/game-loop-2-border.png",
-      "width": 552,
-      "height": 361,
-      "yOffset": -227
+      "xOffset": 370,
+      "height": 736,
+      "width": 1168
     },
     "game-loop-3": {
-      "xOffset": 678,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/game-loop-3-border.png",
-      "width": 553,
-      "height": 361,
-      "yOffset": -227
+      "xOffset": 369,
+      "height": 736,
+      "width": 1170
     },
     "game-loop-4": {
-      "xOffset": 679,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/game-loop-4-border.png",
-      "width": 551,
-      "height": 331,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 704,
+      "width": 1232
     },
     "game-loop-5": {
-      "xOffset": 679,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/game-loop-5-border.png",
-      "width": 551,
-      "height": 388,
-      "yOffset": -227
+      "xOffset": 417,
+      "height": 736,
+      "width": 1074
     },
     "goto-actors": {
-      "xOffset": 599,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/goto-actors-border.png",
-      "width": 711,
-      "height": 454,
-      "yOffset": -227
+      "xOffset": 365,
+      "height": 736,
+      "width": 1179
     },
     "goto-implementing-behaviour": {
-      "xOffset": 426,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/goto-implementing-behaviour-border.png",
-      "width": 1057,
-      "height": 408,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 469,
+      "width": 1232
     },
     "goto-performance": {
-      "xOffset": 606,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/goto-performance-border.png",
-      "width": 696,
-      "height": 369,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 628,
+      "width": 1232
     },
     "goto-rendering": {
-      "xOffset": 632,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/goto-rendering-border.png",
-      "width": 644,
-      "height": 366,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 672,
+      "width": 1232
     },
     "goto-serialization": {
-      "xOffset": 586,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/goto-serialization-border.png",
-      "width": 736,
-      "height": 362,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 582,
+      "width": 1232
     },
     "level-update": {
-      "xOffset": 422,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/level-update-border.png",
-      "width": 1065,
-      "height": 468,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 535,
+      "width": 1232
     },
     "movie-scene": {
-      "xOffset": 353,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/movie-scene-border.png",
-      "width": 1202,
+      "xOffset": 353,
       "height": 736,
-      "yOffset": -227
+      "width": 1202
     },
     "renderer-1": {
-      "xOffset": 696,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/renderer-1-border.png",
-      "width": 516,
-      "height": 367,
-      "yOffset": -227
+      "xOffset": 421,
+      "height": 736,
+      "width": 1066
     },
     "renderer-2": {
-      "xOffset": 551,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/renderer-2-border.png",
-      "width": 807,
-      "height": 300,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 435,
+      "width": 1232
     },
     "renderer-3": {
-      "xOffset": 662,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/renderer-3-border.png",
-      "width": 584,
-      "height": 324,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 648,
+      "width": 1232
     },
     "renderer-4": {
-      "xOffset": 387,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/renderer-4-border.png",
-      "width": 1135,
+      "xOffset": 387,
       "height": 736,
-      "yOffset": -227
+      "width": 1135
     },
     "renderer-5": {
-      "xOffset": 505,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/renderer-5-border.png",
-      "width": 899,
-      "height": 379,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 505,
+      "width": 1232
     },
     "serialization-1": {
-      "xOffset": 491,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/serialization-1-border.png",
-      "width": 927,
+      "xOffset": 491,
       "height": 736,
-      "yOffset": -227
+      "width": 927
     },
     "serialization-2": {
-      "xOffset": 714,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/serialization-2-border.png",
-      "width": 481,
+      "xOffset": 714,
       "height": 736,
-      "yOffset": -227
+      "width": 481
     },
     "serialization-3": {
-      "xOffset": 665,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/serialization-3-border.png",
-      "width": 579,
+      "xOffset": 665,
       "height": 736,
-      "yOffset": -227
+      "width": 579
     },
     "serialization-4": {
-      "xOffset": 768,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/serialization-4-border.png",
-      "width": 373,
-      "height": 163,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 438,
+      "width": 1232
     },
     "serialization-5": {
-      "xOffset": 338,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/serialization-5-border.png",
-      "width": 1232,
+      "xOffset": 338,
       "height": 457,
-      "yOffset": -227
+      "width": 1232
     },
     "svg": {
-      "xOffset": 630,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/svg-border.png",
-      "width": 649,
-      "height": 411,
-      "yOffset": -227
+      "xOffset": 356,
+      "height": 736,
+      "width": 1197
     },
     "time": {
-      "xOffset": 522,
+      "yOffset": -227,
       "path": "./images/oredev/world-2/time-border.png",
-      "width": 864,
-      "height": 512,
-      "yOffset": -227
+      "xOffset": 338,
+      "height": 718,
+      "width": 1232
     }
   },
   "backgrounds": [
