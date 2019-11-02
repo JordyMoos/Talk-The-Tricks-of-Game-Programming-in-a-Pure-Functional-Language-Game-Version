@@ -841,6 +841,7 @@ imageDecoder =
         |> JDP.optional "imageType" imageTypeDecoder defaultImageType
         |> JDP.optional "xOffset" Decode.int 0
         |> JDP.optional "yOffset" Decode.int 0
+        |> JDP.optional "zOffset" Decode.int 0
 
 
 imageTypeDecoder : Decoder ImageType

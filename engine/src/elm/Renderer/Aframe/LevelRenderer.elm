@@ -97,8 +97,8 @@ drawCamera aframeRenderData level viewPositionCoordinate viewPixelOffset acc =
             node "a-entity"
                 [ attribute "position" <|
                     String.join " "
-                        [ String.fromFloat x
-                        , String.fromFloat (y * -1)
+                        [ String.fromFloat (x + computedOffsets.x)
+                        , String.fromFloat ((y * -1) + computedOffsets.y)
                         , String.fromFloat computedOffsets.z
                         ]
                 , attribute "rotation" <|
@@ -520,7 +520,7 @@ renderImage renderRequirements pixelSize x y z images imageName acc =
                                 String.join " "
                                     [ String.fromFloat <| x + (toFloat image.xOffset / pixelSize) + (toFloat image.width / pixelSize / 2.0)
                                     , String.fromFloat <| (y + (toFloat image.yOffset / pixelSize) + (toFloat image.height / pixelSize / 2.0)) * -1.0
-                                    , String.fromFloat z
+                                    , String.fromFloat <| z + (toFloat image.zOffset / pixelSize)
                                     ]
                             , attribute "geometry" <|
                                 String.join ""

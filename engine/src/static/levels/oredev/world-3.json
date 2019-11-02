@@ -1,6 +1,12 @@
 {
   "entities": {
-    "hero": [
+    "player": [
+      {
+        "type": "tag",
+        "data": {
+          "name": "player"
+        }
+      },
       {
         "type": "render",
         "data": {
@@ -70,10 +76,49 @@
           "shape": "square"
         }
       }
+    ],
+    "slide-movie-scene": [
+      {
+        "data": {
+          "layer": 1,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "movie-scene"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-scene-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-scene-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
     ]
   },
+  "signLength": 3,
   "signs": {
-    "h": "hero"
+    "PLA": "player",
+    "S01": "slide-movie-scene",
+    "S02": "slide-actor-scene-1"
   },
   "objects": {
     "assets": {
@@ -96,21 +141,27 @@
         "settings": {
           "gltf-model": "url(./objects/demo/robot/robot.glb)",
           "animation-mixer": "clip: RobotArmature|Robot_Running;",
-          "rotation": "0 90 -20",
-          "scale": "1 1 1",
+          "rotation": "0 90 0",
+          "scale": "0.2 0.2 0.2",
           "shadow": "receive: true: cast: true"
         },
         "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
           "y": [
             {
               "type": "fixed",
-              "data": 0.45
+              "data": -3.0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 1.0
+              "data": 13.0
             }
           ]
         }
@@ -119,21 +170,27 @@
         "settings": {
           "gltf-model": "url(./objects/demo/robot/robot.glb)",
           "animation-mixer": "clip: RobotArmature|Robot_Running;",
-          "rotation": "0 -70 20",
-          "scale": "1 1 1",
+          "rotation": "0 -90 0",
+          "scale": "0.2 0.2 0.2",
           "shadow": "receive: true: cast: true"
         },
         "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
           "y": [
             {
               "type": "fixed",
-              "data": 0.45
+              "data": -3.0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 1.0
+              "data": 13.0
             }
           ]
         }
@@ -143,50 +200,57 @@
           "gltf-model": "url(./objects/demo/robot/robot.glb)",
           "animation-mixer": "clip: RobotArmature|Robot_Idle;",
           "rotation": "0 90 0",
-          "scale": "1 1 1",
+          "scale": "0.2 0.2 0.2",
           "shadow": "receive: false: cast: true; type: pcfsoft"
         },
         "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
           "y": [
             {
               "type": "fixed",
-              "data": -2.45
+              "data": -3.0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 1.0
+              "data": 13.0
             }
           ]
         }
       },
       "light-ambient": {
         "settings": {
-          "light": "type: ambient; color: #fff;"
+          "light": "type: ambient; color: #ccc;"
         }
       },
       "light-spot": {
         "settings": {
-          "light": "type: spot; angle: 60; castShadow: true;"
+          "light": "type: spot; angle: 180; castShadow: true;",
+          "rotation": "0 20 0"
         },
         "offsets": {
           "x": [
             {
               "type": "fixed",
-              "data": 0
+              "data": 15
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": -10
+              "data": -8
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 30
+              "data": 20
             }
           ]
         }
@@ -202,7 +266,7 @@
       },
       "ground": {
         "settings": {
-          "geometry": "primitive: circle; radius: 50",
+          "geometry": "primitive: plane; height: 100; width: 1000",
           "material": "side: double; color: #e3c29d",
           "shadow": "receive: true; cast: false;",
           "rotation": "90 0 0"
@@ -217,7 +281,7 @@
           "y": [
             {
               "type": "fixed",
-              "data": 4.8
+              "data": 0
             }
           ],
           "z": [
@@ -239,69 +303,13 @@
           "y": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": -3.0
-            }
-          ]
-        }
-      },
-      "aloe-2": {
-        "settings": {
-          "gltf-model": "url(./objects/demo/environment/aloe.glb)",
-          "rotation": "0 0 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 8
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": 5
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": -6.0
-            }
-          ]
-        }
-      },
-      "aloe-3": {
-        "settings": {
-          "gltf-model": "url(./objects/demo/environment/aloe.glb)",
-          "rotation": "0 0 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": -5
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": 5
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": -12.0
+              "data": 0
             }
           ]
         }
@@ -317,19 +325,19 @@
           "x": [
             {
               "type": "fixed",
-              "data": -6
+              "data": 0
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": -18.0
+              "data": 0
             }
           ]
         }
@@ -345,19 +353,19 @@
           "x": [
             {
               "type": "fixed",
-              "data": 10
+              "data": 0
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": -30.0
+              "data": 0
             }
           ]
         }
@@ -373,19 +381,19 @@
           "x": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": -40.0
+              "data": 0
             }
           ]
         }
@@ -393,6 +401,21 @@
     }
   },
   "images": {
+    "movie-scene": {
+      "yOffset": -500,
+      "path": "./images/oredev/world-2/movie-scene-border.png",
+      "xOffset": 353,
+      "height": 736,
+      "width": 1202,
+      "zOffset": 800
+    },
+    "actor-scene-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-scene-1-border.png",
+      "xOffset": 573,
+      "height": 736,
+      "width": 762
+    }
   },
   "backgrounds": [
     {
@@ -430,66 +453,72 @@
         }
       },
       "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "aloe-1"
-        }
-      },
-      "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "aloe-2"
-        }
-      },
-      "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "aloe-3"
-        }
-      },
-      "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "cactus-1"
-        }
-      },
-      "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "cactus-2"
-        }
-      },
-      "layer": 0
-    },
-    {
-      "renderType": {
-        "type": "object",
-        "data": {
-          "default": "rock-1"
-        }
-      },
-      "layer": 0
     }
   ],
   "updateBorder": 3,
   "scene": [
     [
-      "      h"
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "      S01                                                               ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "            PLA                                                      ",
+      "                                                                     ",
+      "                                                                     "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S01                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                  f                      "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S02                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
     ]
   ],
   "config": {
@@ -503,7 +532,7 @@
     "data": {
       "camera": {
         "rotation": {
-          "x": 10,
+          "x": 20,
           "y": 0,
           "z": 0
         },
@@ -511,19 +540,19 @@
           "x": [
             {
               "type": "fixed",
-              "data": 5
+              "data": 0.5
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": 0
+              "data": -1
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 9
+              "data": 15
             }
           ]
         }
