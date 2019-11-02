@@ -30,7 +30,7 @@
             "pushStrength": 50,
             "walkOverStrength": 50
           },
-          "steps": 20,
+          "steps": 24,
           "control": {
             "type": "input",
             "data": {
@@ -112,12 +112,26 @@
         },
         "type": "render"
       }
+    ],
+    "slide-1-plane": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "slide-1-plane"
+            }
+          },
+          "layer": 10
+        }
+      }
     ]
   },
   "signLength": 3,
   "signs": {
     "PLA": "player",
-    "S01": "slide-movie-scene",
+    "S01": "slide-1-plane",
     "S02": "slide-actor-scene-1"
   },
   "objects": {
@@ -143,7 +157,7 @@
           "animation-mixer": "clip: RobotArmature|Robot_Running;",
           "rotation": "0 90 0",
           "scale": "0.2 0.2 0.2",
-          "shadow": "receive: true: cast: true"
+          "shadow": "receive: false; cast: true"
         },
         "offsets": {
           "x": [
@@ -172,7 +186,7 @@
           "animation-mixer": "clip: RobotArmature|Robot_Running;",
           "rotation": "0 -90 0",
           "scale": "0.2 0.2 0.2",
-          "shadow": "receive: true: cast: true"
+          "shadow": "receive: false; cast: true"
         },
         "offsets": {
           "x": [
@@ -201,7 +215,7 @@
           "animation-mixer": "clip: RobotArmature|Robot_Idle;",
           "rotation": "0 90 0",
           "scale": "0.2 0.2 0.2",
-          "shadow": "receive: false: cast: true; type: pcfsoft"
+          "shadow": "receive: false; cast: true;"
         },
         "offsets": {
           "x": [
@@ -226,31 +240,31 @@
       },
       "light-ambient": {
         "settings": {
-          "light": "type: ambient; color: #ccc;"
+          "light": "type: ambient; color: #aaa;"
         }
       },
       "light-spot": {
         "settings": {
-          "light": "type: spot; angle: 180; castShadow: true;",
+          "light": "type: point; angle: 50; castShadow: true; color: #ccc",
           "rotation": "0 20 0"
         },
         "offsets": {
           "x": [
             {
               "type": "fixed",
-              "data": 15
+              "data": 1
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": -8
+              "data": -3
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 20
+              "data": 15
             }
           ]
         }
@@ -259,14 +273,14 @@
         "settings": {
           "geometry": "primitive: sphere; radius: 65",
           "material": "color: #8bcff7; shader: flat; side: back;",
-          "shadow": "receive: true; cast: false;",
+          "shadow": "receive: false; cast: false;",
           "rotation": "90 0 0"
         },
         "offsets": {}
       },
       "ground": {
         "settings": {
-          "geometry": "primitive: plane; height: 100; width: 1000",
+          "geometry": "primitive: plane; height: 100; width: 100",
           "material": "side: double; color: #e3c29d",
           "shadow": "receive: true; cast: false;",
           "rotation": "90 0 0"
@@ -287,7 +301,7 @@
           "z": [
             {
               "type": "fixed",
-              "data": -20
+              "data": 20
             }
           ]
         }
@@ -397,6 +411,35 @@
             }
           ]
         }
+      },
+      "slide-1-plane": {
+        "settings": {
+          "geometry": "primitive: plane; height: 7.3; width: 12.0",
+          "material": " src: ./images/oredev/world-2/movie-scene-border.png; transparent: true",
+          "shadow": "receive: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
       }
     }
   },
@@ -425,7 +468,7 @@
           "default": "light-ambient"
         }
       },
-      "layer": 0
+      "layer": -1
     },
     {
       "renderType": {
@@ -434,7 +477,7 @@
           "default": "light-spot"
         }
       },
-      "layer": 0
+      "layer": -1
     },
     {
       "renderType": {
@@ -443,7 +486,7 @@
           "default": "ground"
         }
       },
-      "layer": 0
+      "layer": -1
     },
     {
       "renderType": {
@@ -452,7 +495,7 @@
           "default": "sky"
         }
       },
-      "layer": 0
+      "layer": -1
     }
   ],
   "updateBorder": 3,
@@ -466,7 +509,7 @@
       "                                                                     ",
       "                                                                     ",
       "                                                                     ",
-      "      S01                                                               ",
+      "               S01                                                   ",
       "                                                                     ",
       "                                                                     ",
       "                                                                     ",
@@ -487,17 +530,17 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "      S01                                                               ",
-      "                                                                        ",
+      "               S01                                                      ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                  f                      "
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
     ],
     [
       "                                                                        ",
@@ -508,9 +551,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "               S01                                                      ",
       "                                                                        ",
       "                                                                        ",
-      "      S02                                                               ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
