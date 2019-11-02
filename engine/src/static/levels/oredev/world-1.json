@@ -192,7 +192,10 @@
         }
       },
       {
-        "type": "smash-down"
+        "type": "smash-down",
+        "data": {
+          "explosionEntityName": "explosion"
+        }
       }
     ],
     "dynamite": [
@@ -242,7 +245,10 @@
         }
       },
       {
-        "type": "smash-down"
+        "type": "smash-down",
+        "data": {
+          "explosionEntityName": "explosion"
+        }
       }
     ],
     "explosion": [
@@ -339,7 +345,8 @@
       {
         "type": "trigger-explodable",
         "data": {
-          "triggerStrength": 20
+          "triggerStrength": 20,
+          "explosionEntityName": "explosion"
         }
       }
     ],
@@ -403,7 +410,8 @@
       {
         "type": "trigger-explodable",
         "data": {
-          "triggerStrength": 80
+          "triggerStrength": 80,
+          "explosionEntityName": "explosion"
         }
       }
     ],
@@ -467,7 +475,8 @@
       {
         "type": "trigger-explodable",
         "data": {
-          "triggerStrength": 20
+          "triggerStrength": 20,
+          "explosionEntityName": "explosion"
         }
       }
     ],

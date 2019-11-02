@@ -114,11 +114,24 @@
         "type": "trigger-explodable",
         "data": {
           "triggerStrength": 1000,
-          "explosionEntityName": "unit-actor"
+          "explosionEntityName": "hidden-explosion"
         }
       }
     ],
-    "unit-actor": [],
+    "hidden-explosion": [
+      {
+        "type": "lifetime",
+        "data": {
+          "remainingTicks": 16
+        }
+      },
+      {
+        "type": "damage",
+        "data": {
+          "damageStrength": 80
+        }
+      }
+    ],
     "slide-4th-renderer": [
       {
         "data": {
@@ -2120,7 +2133,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                     KIL                                                ",
+      "                                                                        ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -3401,7 +3414,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "            KIL                                                         ",
+      "                     KIL                                                ",
       "                                                                        ",
       "                                                                        "
     ]
