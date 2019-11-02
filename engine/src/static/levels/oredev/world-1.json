@@ -741,27 +741,222 @@
         }
       }
     ],
-    "trigger-1": [
+    "trigger-01": [
       {
         "type": "trigger",
         "data": {
           "action": {
             "type": "send-text",
             "data": {
-              "message": "Hint: Walk to the right\n\nWatch out for the rock!"
+              "message": "Every game programming book I have is in an imperative programming style.\n\nMost of them in c++ but other languages like Java follow the same patterns.\n\nI was learning the functional paradigm and played with Elm for a few years.\n\nAnd I wanted to try to see how it would be to create a game in Elm.\n\nTo learn from an experiment.\n\nWho has used elm?"
             }
           }
         }
       }
     ],
-    "trigger-2": [
+    "trigger-02": [
       {
         "type": "trigger",
         "data": {
           "action": {
             "type": "send-text",
             "data": {
-              "message": "Here you should talk about:\n\n[1] The blabla\n\n[2] Dont forget bleble!"
+              "message": "To better understand how the game written and to understand the samples we are going to take a crash course into Elm."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-03": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Elm is a bit different then javascript, where Elm transpiles to.\n\nWhich sometimes scare people off.\n\nBut I actually found Elm one of the easiest languages to learn."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-04": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Some of the characteristics of Elm is that it is a Pure Functional language, Its statically and stronly typed.\n\nWhich allows the compiler to complain when I'm doing things wrong again\n\nBut its complains are often so clear that you can learn a lot from the compiler\n\nAnd its a Frontend only language"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-05": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A simple function in elm looks like this\n\nWe have the name of the function `add`\n\nThe arguments `x` and `y`\n\nAnd then on the right side of the equal sign is the body of the function"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-06": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Now everything in Elm is typed and you can annotate the function with its types\n\nHere we say the type of `add` is:\n\nWe take a number, and a number. And then we will return a number."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-07": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Applying functions is done by spaces.\n\nAnd function arguments are also separated by spaces\n\nTherefor we call `add` like this"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-08": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Everything in Elm is curried. Therefor you can call a function with less then all arguments\n\nAnd you will get back a function that requires the remaining arguments.\n\nCalling `add` with just `5` will give us a function that requires another argument before computing a result"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-09": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Making these result into the same"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-10": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The more important thing we need to known about Elm is its architecture\n\nIts something that enforces the flow of your application"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-11": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In Elm you always have a Model, which is the state of your application\n\nupdate which is a function that creates new states\n\nAnd a view. Which is a function to visualize your state.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-12": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In this case we define to be just an integer"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-13": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To update your state, or to create a new model, you need to have some intend\n\nThese you define as messages in Elm.\n\nThis example is a little counter which you can increment and decrement"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-14": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A produced message together with your model will be given to the defined `update` function.\n\nWhich will return a new model\n\nAs we can see in the type of the update function as well.\n\nGiven a msg and a model will return a model"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-15": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To visualize your state. You have the view function.\n\nWhich received the model and returns some sort of html."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-16": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To visualize the architecture in one picture\n\nThe puppets and their orientation is your Model\n\nThe theater is the result of the view\n\nThat is what you would see in the browser\n\nThe kids are producing messages\n\nWhich the `Update` person received and it adjust the model as requested\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-17": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Game programming"
             }
           }
         }
@@ -1069,8 +1264,23 @@
     "|||": "wall",
     "###": "strongwall",
     "**1": "diamond",
-    "T01": "trigger-1",
-    "T02": "trigger-2",
+    "T01": "trigger-01",
+    "T02": "trigger-02",
+    "T03": "trigger-03",
+    "T04": "trigger-04",
+    "T05": "trigger-05",
+    "T06": "trigger-06",
+    "T07": "trigger-07",
+    "T08": "trigger-08",
+    "T09": "trigger-09",
+    "T10": "trigger-10",
+    "T11": "trigger-11",
+    "T12": "trigger-12",
+    "T13": "trigger-13",
+    "T14": "trigger-14",
+    "T15": "trigger-15",
+    "T16": "trigger-16",
+    "T17": "trigger-17",
     "S01": "slide-elm-logo",
     "S02": "slide-crash-course-elm",
     "S03": "slide-elm-logo",
@@ -1483,7 +1693,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T01                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1504,7 +1714,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T02                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1525,7 +1735,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T03                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1546,7 +1756,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T04                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1567,7 +1777,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T05                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1588,7 +1798,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T06                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1609,7 +1819,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T07                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1630,7 +1840,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T08                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1651,7 +1861,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T09                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1672,7 +1882,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T10                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1693,7 +1903,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T11                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1714,7 +1924,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T12                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1735,7 +1945,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T13                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1756,7 +1966,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T14                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1777,7 +1987,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T15                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1798,7 +2008,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T16                                                                     ",
       "########################################################################",
       "########################################################################"
     ],
@@ -1819,7 +2029,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                  **1                                                   ",
+      "T17               **1                                                   ",
       "########################################################################",
       "########################################################################"
     ]

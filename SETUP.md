@@ -5,12 +5,12 @@
 - [ ] Start speaker notes
 ```
 cd speaker-notes
-python3 echo.py
+python3.6 echo.py
 ```
 - [ ] Start the game engine
 ```
 cd engine/dist
-python3 -m http.server 3000
+python3.6 -m http.server 3000
 ```
 - [ ] Start the slides
 ```
