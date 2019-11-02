@@ -157,7 +157,7 @@
               "default": "elm-performance-6-border"
             }
           },
-          "layer": 16
+          "layer": -20
         }
       }
     ],
@@ -171,7 +171,7 @@
               "default": "elm-performance-7-border"
             }
           },
-          "layer": 17
+          "layer": -20
         }
       }
     ],
@@ -185,7 +185,7 @@
               "default": "elm-performance-8-border"
             }
           },
-          "layer": 18
+          "layer": -20
         }
       }
     ],
@@ -199,7 +199,105 @@
               "default": "elm-performance-9-border"
             }
           },
-          "layer": 19
+          "layer": -20
+        }
+      }
+    ],
+    "slide-demo-update-narrow-actors-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "demo-update-narrow-actors-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-toughest-lesson-learned-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "toughest-lesson-learned-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-github-source-code-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "github-source-code-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-about-me-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "about-me-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-design-thanks-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "design-thanks-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-thank-you-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "thank-you-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-image-sources-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "image-sources-border"
+            }
+          },
+          "layer": -20
         }
       }
     ]
@@ -215,7 +313,14 @@
     "S06": "slide-elm-performance-6-border",
     "S07": "slide-elm-performance-7-border",
     "S08": "slide-elm-performance-8-border",
-    "S09": "slide-elm-performance-9-border"
+    "S09": "slide-elm-performance-9-border",
+    "S10": "slide-demo-update-narrow-actors-border",
+    "S11": "slide-toughest-lesson-learned-border",
+    "S12": "slide-github-source-code-border",
+    "S13": "slide-about-me-border",
+    "S14": "slide-design-thanks-border",
+    "S15": "slide-thank-you-border",
+    "S16": "slide-image-sources-border"
   },
   "images": {
     "image-elm-performance-1-border": {
@@ -262,6 +367,41 @@
       "path": "./images/oredev/world-3/elm-performance-9-border.png",
       "width": 1232,
       "height": 625
+    },
+    "image-demo-update-narrow-actors-border": {
+      "path": "./images/oredev/world-3/demo-update-narrow-actors-border.png",
+      "width": 1232,
+      "height": 489
+    },
+    "image-toughest-lesson-learned-border": {
+      "path": "./images/oredev/world-3/toughest-lesson-learned-border.png",
+      "width": 1232,
+      "height": 395
+    },
+    "image-github-source-code-border": {
+      "path": "./images/oredev/world-3/github-source-code-border.png",
+      "width": 1232,
+      "height": 462
+    },
+    "image-about-me-border": {
+      "path": "./images/oredev/world-3/about-me-border.png",
+      "width": 1232,
+      "height": 508
+    },
+    "image-design-thanks-border": {
+      "path": "./images/oredev/world-3/design-thanks-border.png",
+      "width": 1232,
+      "height": 724
+    },
+    "image-thank-you-border": {
+      "path": "./images/oredev/world-3/thank-you-border.png",
+      "width": 1232,
+      "height": 583
+    },
+    "image-image-sources-border": {
+      "path": "./images/oredev/world-3/image-sources-border.png",
+      "width": 1232,
+      "height": 540
     }
   },
   "objects": {
@@ -545,7 +685,7 @@
       "elm-performance-1-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 7.13;",
-          "material": "src: #image-image-elm-performance-1-border; transparent: true",
+          "material": "src: #image-image-elm-performance-1-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -574,7 +714,7 @@
       "elm-performance-2-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.26; height: 7.36;",
-          "material": "src: #image-image-elm-performance-2-border; transparent: true",
+          "material": "src: #image-image-elm-performance-2-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -603,7 +743,7 @@
       "elm-performance-3-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 3.44;",
-          "material": "src: #image-image-elm-performance-3-border; transparent: true",
+          "material": "src: #image-image-elm-performance-3-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -632,7 +772,7 @@
       "elm-performance-4-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 4.46;",
-          "material": "src: #image-image-elm-performance-4-border; transparent: true",
+          "material": "src: #image-image-elm-performance-4-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -661,7 +801,7 @@
       "elm-performance-5-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 5.97;",
-          "material": "src: #image-image-elm-performance-5-border; transparent: true",
+          "material": "src: #image-image-elm-performance-5-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -690,7 +830,7 @@
       "elm-performance-6-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 2.43;",
-          "material": "src: #image-image-elm-performance-6-border; transparent: true",
+          "material": "src: #image-image-elm-performance-6-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -719,7 +859,7 @@
       "elm-performance-7-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 5.08;",
-          "material": "src: #image-image-elm-performance-7-border; transparent: true",
+          "material": "src: #image-image-elm-performance-7-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -748,7 +888,7 @@
       "elm-performance-8-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 2.77;",
-          "material": "src: #image-image-elm-performance-8-border; transparent: true",
+          "material": "src: #image-image-elm-performance-8-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -777,7 +917,210 @@
       "elm-performance-9-border": {
         "settings": {
           "geometry": "primitive: plane; width: 12.32; height: 6.25;",
-          "material": "src: #image-image-elm-performance-9-border; transparent: true",
+          "material": "src: #image-image-elm-performance-9-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "demo-update-narrow-actors-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.89;",
+          "material": "src: #image-image-demo-update-narrow-actors-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "toughest-lesson-learned-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 3.95;",
+          "material": "src: #image-image-toughest-lesson-learned-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "github-source-code-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.62;",
+          "material": "src: #image-image-github-source-code-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "about-me-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.08;",
+          "material": "src: #image-image-about-me-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "design-thanks-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 7.24;",
+          "material": "src: #image-image-design-thanks-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "thank-you-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.83;",
+          "material": "src: #image-image-thank-you-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "image-sources-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.40;",
+          "material": "src: #image-image-image-sources-border; roughness: 0.9; transparent: true",
           "shadow": "receive: false; cast: false;",
           "rotation": "20 0 0",
           "scale": "0.9 0.9 0.9"
@@ -959,6 +1302,27 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "               S10                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
       "               S05                                                      ",
       "                                                                        ",
       "                                                                        ",
@@ -1044,6 +1408,132 @@
       "                                                                        ",
       "                                                                        ",
       "               S09                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S11                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S12                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S13                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S14                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S15                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S16                                                      ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
