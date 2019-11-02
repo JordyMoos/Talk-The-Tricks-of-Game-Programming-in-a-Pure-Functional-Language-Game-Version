@@ -670,5 +670,11 @@
         "minimumQuantity": 11
       }
     }
-  ]
+  ],
+  "config": {
+    "width": 12,
+    "height": 12,
+    "pixelSize": 90,
+    "additionalViewBorder": 0
+  }
 }
