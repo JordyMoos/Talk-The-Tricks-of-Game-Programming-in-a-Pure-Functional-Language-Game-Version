@@ -2,17 +2,27 @@
 # Setup
 
 - [ ] Open hotspot
+- [ ] Start speaker notes
+```
+cd speaker-notes
+python3 echo.py
+```
 - [ ] Start the game engine
-`cd engine/dist`
-`python3 -m http.server 3000`
+```
+cd engine/dist
+python3 -m http.server 3000
+```
+- [ ] Start the slides
+```
+cd slides
+npm start
+```
 
-### Open games
+### Backup games
 
 ```
 http://localhost:3000/?startLevel=oredev/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
-
-### Backup games
 
 ```
 http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1

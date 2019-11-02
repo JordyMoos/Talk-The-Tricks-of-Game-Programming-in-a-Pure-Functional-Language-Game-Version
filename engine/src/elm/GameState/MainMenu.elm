@@ -32,18 +32,21 @@ init config =
             { items =
                 { before = []
                 , selected =
-                    { text = Text.stringToLetters "Json"
-                    , action = LoadFlags
+                    { text = Text.stringToLetters "Pixel"
+                    , action = LoadLevel "oredev/official-001-in-pixel"
                     }
                 , after =
-                    [ { text = Text.stringToLetters "Official levels"
-                      , action = LoadLevel "official/001"
+                    [ { text = Text.stringToLetters "Image"
+                      , action = LoadLevel "oredev/official-001-with-cheats"
                       }
-                    , { text = Text.stringToLetters "Advent levels"
-                      , action = LoadLevel "advent/official"
+                    , { text = Text.stringToLetters "1: World 1"
+                      , action = LoadLevel "oredev/world-1"
                       }
-                    , { text = Text.stringToLetters "Credits"
-                      , action = ShowCredits
+                    , { text = Text.stringToLetters "2: World 2"
+                      , action = LoadLevel "oredev/world-2"
+                      }
+                    , { text = Text.stringToLetters "3: World 3"
+                      , action = LoadLevel "oredev/world-3"
                       }
                     ]
                 }
