@@ -1381,35 +1381,35 @@
     "elm-architecture-1": {
       "path": "./images/oredev/world-1/elm-architecture-1-border.png",
       "width": 1248,
-      "height": 693,
+      "height": 740,
       "xOffset": -434,
       "yOffset": -227
     },
     "elm-architecture-2": {
       "path": "./images/oredev/world-1/elm-architecture-2-border.png",
-      "width": 1248,
-      "height": 714,
-      "xOffset": -434,
+      "width": 1214,
+      "height": 752,
+      "xOffset": -417,
       "yOffset": -227
     },
     "elm-architecture-3": {
       "path": "./images/oredev/world-1/elm-architecture-3-border.png",
       "width": 1248,
-      "height": 643,
+      "height": 727,
       "xOffset": -434,
       "yOffset": -227
     },
     "elm-architecture-4": {
       "path": "./images/oredev/world-1/elm-architecture-4-border.png",
-      "width": 1216,
+      "width": 1155,
       "height": 752,
-      "xOffset": -418,
+      "xOffset": -388,
       "yOffset": -227
     },
     "elm-architecture-5": {
       "path": "./images/oredev/world-1/elm-architecture-5-border.png",
       "width": 1248,
-      "height": 435,
+      "height": 476,
       "xOffset": -434,
       "yOffset": -227
     },
