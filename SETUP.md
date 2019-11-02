@@ -130,9 +130,17 @@ Resolution is 1024x768
 World one slide xoffset calculator
 (width - 380) / 2 * -1
 
-
 960 - height
 
+
+
+world 2
+
+total w: 1909
+width: 1202
+offset: 353
+
+(1909-1202) / 2
 
 
 convert \

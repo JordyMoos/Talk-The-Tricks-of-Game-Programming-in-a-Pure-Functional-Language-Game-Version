@@ -190,7 +190,7 @@
         }
       }
     ],
-    "slide-006": [
+    "slide-actor-scene-1": [
       {
         "type": "render",
         "data": {
@@ -199,25 +199,7 @@
             "data": {
               "default": {
                 "names": [
-                  "slide-006"
-                ]
-              }
-            }
-          },
-          "layer": 20
-        }
-      }
-    ],
-    "slide-008": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "image",
-            "data": {
-              "default": {
-                "names": [
-                  "slide-008"
+                  "actor-scene-1"
                 ]
               }
             }
@@ -286,7 +268,9 @@
     "PLA": "player",
     "---": "floor-1",
     "===": "floor-2",
-    "S01": "slide-movie-scene"
+    "S01": "slide-movie-scene",
+    "S02": "slide-actor-scene-1",
+    "S99": ""
   },
   "images": {
     "girl-00": {
@@ -523,10 +507,17 @@
       "yOffset": 17
     },
     "movie-scene": {
-      "path": "./images/oredev/world-2/movie-scene-border.jpg",
+      "path": "./images/oredev/world-2/movie-scene-border.png",
       "width": 1202,
       "height": 736,
-      "xOffset": 350,
+      "xOffset": 353,
+      "yOffset": -227
+    },
+    "actor-scene-1": {
+      "path": "./images/oredev/world-2/actor-scene-1-border.png",
+      "width": 460,
+      "height": 445,
+      "xOffset": 724,
       "yOffset": -227
     }
   },
@@ -652,7 +643,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "      S01                                                               ",
+      "      S02                                                               ",
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
