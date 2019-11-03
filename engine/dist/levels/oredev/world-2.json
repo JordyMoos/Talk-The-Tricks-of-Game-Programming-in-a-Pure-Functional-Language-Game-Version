@@ -1,0 +1,4686 @@
+{
+  "entities": {
+    "player": [
+      {
+        "type": "tag",
+        "data": {
+          "name": "player"
+        }
+      },
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "girl-00",
+                  "girl-01",
+                  "girl-02",
+                  "girl-03",
+                  "girl-04"
+                ],
+                "ticksPerImage": 10
+              },
+              "direction": {
+                "right": {
+                  "names": [
+                    "girl-05",
+                    "girl-06",
+                    "girl-07",
+                    "girl-08",
+                    "girl-09",
+                    "girl-10"
+                  ],
+                  "ticksPerImage": 6
+                },
+                "left": {
+                  "names": [
+                    "girl-11",
+                    "girl-12",
+                    "girl-13",
+                    "girl-14",
+                    "girl-15",
+                    "girl-16"
+                  ],
+                  "ticksPerImage": 6
+                }
+              }
+            }
+          },
+          "layer": 50
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "settings": {
+            "pushStrength": 50,
+            "walkOverStrength": 50
+          },
+          "steps": 24,
+          "control": {
+            "type": "input",
+            "data": {
+              "allowedDirections": [
+                "left",
+                "right"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 2
+        }
+      },
+      {
+        "type": "collector",
+        "data": {
+          "interestedIn": [
+            "diamond",
+            "dirt"
+          ]
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "camera",
+        "data": {
+          "borderLeft": 3,
+          "borderUp": 9,
+          "borderRight": 16,
+          "borderDown": 2
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 100,
+          "shape": "square"
+        }
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "trigger-activator"
+      }
+    ],
+    "kill-trigger": [
+      {
+        "type": "trigger-explodable",
+        "data": {
+          "triggerStrength": 1000,
+          "explosionEntityName": "hidden-explosion"
+        }
+      }
+    ],
+    "hidden-explosion": [
+      {
+        "type": "lifetime",
+        "data": {
+          "remainingTicks": 16
+        }
+      },
+      {
+        "type": "damage",
+        "data": {
+          "damageStrength": 80
+        }
+      }
+    ],
+    "slide-4th-renderer": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "4th-renderer"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-component-6": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-component-6"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-scene-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-scene-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-actor-scene-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "actor-scene-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-advent-answer": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "advent-answer"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-ascii-canvas": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "ascii-canvas"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-composition-over-inheritance": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "composition-over-inheritance"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-3d": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-3d"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-advent": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-advent"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-ar": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-ar"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-gol": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-gol"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-move-all": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-move-all"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-move-more": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-move-more"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-demo-vr": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "demo-vr"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-actor-component-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-actor-component-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-actor-component-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-actor-component-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-actor-component-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-actor-component-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-actor-component-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-actor-component-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-6": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-6"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-7": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-7"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-8": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-8"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-component-implementation-9": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-component-implementation-9"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-elm-game-loop-6": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "elm-game-loop-6"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-ascii": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "ascii"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-goto-actors": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "goto-actors"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-goto-implementing-behaviour": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "goto-implementing-behaviour"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-goto-performance": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "goto-performance"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-game-loop": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "game-loop"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-goto-rendering": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "goto-rendering"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-goto-serialization": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "goto-serialization"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-level-update": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "level-update"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-movie-scene": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "movie-scene"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-renderer-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "renderer-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-renderer-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "renderer-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-renderer-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "renderer-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-renderer-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "renderer-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-renderer-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "renderer-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-serialization-1": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "serialization-1"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-serialization-2": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "serialization-2"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-serialization-3": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "serialization-3"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-serialization-4": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "serialization-4"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-serialization-5": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "serialization-5"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-svg": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "svg"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-time": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "time"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "slide-simple-game-loop-demo": [
+      {
+        "data": {
+          "layer": 20,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "simple-game-loop-demo"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "house-01": [
+      {
+        "data": {
+          "layer": 21,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "house-01"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "house-02": [
+      {
+        "data": {
+          "layer": 51,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "house-02"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "trigger-01": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "When you create games you can look at it as if you are directing movies.\n\nThis is the scene of a movie. Or a scene in your game.\n\nAnd those are Actors. Which will be Actors in the game as well.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-02": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To put it into perspective for the boulder dash game\n\nThis is a scene with our hero and an enemy\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-03": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I did not like the white background therefor I added a background image.\n\nMakes it look like a game already\n\nIts a pretty boring game, just those two actors standing there."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-04": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And that is because the game is missing some notion of time\n\nTo make the game come alive, you need to add some notion of time"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-05": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A very simplistic one is this, update the game, and then sleep for some time\n\nAnd keep doing that forever\n\nCode samples with white background are pseudo code in a C like style\n\n\n\nThis update function will be called once a second.\n\nIn which you will then update your game state."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-06": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The game moves very slow and we can fix that to lower the sleep time.\n\n17 milliseconds will give us about 60 updates per second"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-07": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Now we are not really calling update every 17ms.\n\nWe forgot to take into account the time it took to run `update`\n\nIf update takes about 10ms then together with sleep we only call update about once in the 27ms\n\nYou can fix that by subtracting the time it took from the sleep"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-08": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Another option would be to check how much time has passed since the last update\n\nAnd use that as some kind of delta time in update\n\nThan within update you check how much actors must move based on the delta time\n\nAn disadvantage of this is that too much time might have passed. And actor might jump pass walls"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-09": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A safer bet is to have a stable update call. Which makes it unable for your game to make giant jumps on slow computers\n\nIf you split the update and view. You can do multiple update ticks in case too much time has passed the last loop.\n\nTo let the game `catch up`. At the cost of drawing the game less frequent. Which we will see as \"frame drops\"\n\nBut at least the hero did not cheat by running past a wall"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-10": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Elm is a pure functional language and asking for the time is an impure operation.\n\nTime has this habit of changing a lot\n\nIn order to get some time information you need to setup something called \"Subscriptions\"\n\nWhich allows mechanisms outside of your app to send `Messages` which you can handle in a pure fashion.\n\nWe define a message, setup a subscription to get that message every 17 milliseconds\n\nAnd handle the message"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-11": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "We are running in the browser and the browser has some mechanism to redraw the screen.\n\nAnd to make animations look smoother we can kinda hook into that redraw mechanism\n\nWe can do something similar as we did with time but then based on the browsers animation frame\n\nThis time we get the amount of milliseconds passed instead of a \"stable 17ms\" like we had with time\n\nAnd therefor we should be doing some math instead of calling the update function everytime"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-12": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "You do not have for loops in Elm but we can create a List of a certain length and iterate over it\n\nWhich we do with List.repeat\n\nWe determine how often the 17ms has passed and create a list of the same length\n\nBecause we need to update the game based on the previous update. We can fold over our list and use our model as the accumulator\n\nThis will give us the sketched game loop"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-13": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "We can improve the game loop by limiting the amount of updates per \"view\".\n\nWe do this to not make it look like our hero jumped far because of a game hickup\n\nThis is easy by just taking x elements from our repeated list"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-14": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Finally we should keep track of how many time we had left. Like 3ms if the timeSinceLast was 20ms.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-15": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "After the `update` function returned our new model, elm will call our view function again\n\nIn which we will render the game"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-16": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-17": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "You will have actors for about everything in the game\n\nLike we have a Hero and an Enemy\n\nWhich both have an `update` function.\n\nWhich should be called from the main loop"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-18": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "You add all the behaviours in those classes like walking and collection diamonds for our hero.\n\nAnd walking and killing heroes for the enemy"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-19": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "After a while you will end up with more and more actors\n\nLike a butterfly, which is an AI just like our Enemy but then being super cute instead of trying to kill the hero"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-20": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "This goes on and on and you end up with lots of actors which update functions get really big and messy\n\nAlso you will notice you get lots of duplicate behaviour among your actors."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-21": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A solution in the object oriented world could be to introduce some form of inheritance\n\nWhich is actually not really reusable and might give us \"Diamonds of deaths\"\n\nLike I have no clue how this update function would look like"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-22": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Another more reusable approach would be to put the behavior in separate places, which we called components here\n\nAnd assign components to actors. Like our hero has the WalkComponent and CollectComponent or whatever\n\nAnd we would give our enemy the KillComponent.\n\nThis way we can easily mix and match components and thereby create new actors with less effort"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-23": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The benefits of Composition over Inheritance\n\nThis is nice because we do not have inheritance in Elm anyway hehe\n\nElm can do the composition which we call the Actor Component system in game programming\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-24": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In Elm we can create our own type which we call Component\n\nAnd Component can by any of those specified options\n\nIts a bit like an Enum.\n\nComponents can hold data like we give a String to TagComponent to represent the tag name\n\nAnd its can also have custom type or type aliases. Like we create some TransformComponentData record with x and y positions for the transform."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-25": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Once we have our components we can mix and match them to create actors.\n\nWe define an actor as just a list of components and we create our hero and enemy.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-26": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Now a little sidetrack\n\nControllerInputComponent and WalkAiComponent kinda do the same thing. They control the actors movement etc\n\nThose components just do it in their own way, via collected input or some ai logic\n\nWe could group them together under one ControlComponent to make it clearer that you should not have both\n\nAlso you can keep giving data to your types like we give some AiSettings to ControlType"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-27": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Constructing those components would then look like this\n\nYou could still add the same component type with different settings off course\n\nBut there is no helping against yourself mechanism here"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-28": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Types in Elm are just data. They are not like objects which can have function and behaviour\n\nIn other words, our components do not do anything yet.\n\nWe need to add functions for their behaviours\n\nNow the fun stuff begins"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-29": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Here we have a very naive walking implementation for the WalkAiComponent\n\nWhich will just make the actor move to the right\n\nWe receive the actor that holds this component and we will need to fetch the transformComponent from the actor\n\nBecause the transform holds its current position\n\nAfter that we will walk one position to the right. Which will create a new transform component\n\nWhich in turn needs to overwrite the current transform component of the actor\n\nFinally if the actor did not have a transform component then we will return the actor as we received it"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-30": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "This function will try to get the TransformComponentData from the actor. But he might not have any therefor we return a Maybe."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-31": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-32": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "walkRight will just create a new TransformData based on the current one but with x increased by one\n\nAffectively moving the actor one position to the right"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-33": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "After that we need to update the actors transform component which we do by removing the old one and adding the new one\n\nThis concludes the behaviour of the component\n\nbut we still need to invoke it"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-34": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Every game tick we would like to iterate over the actors to glue the actor component system with the main loop.\n\nBecause components can change their actor we need to do some folding\n\nWe fold over all the actors and let them call updateActor on each\n\nThen we call the corresponding update for all components on the actor\n\nThose components might have changed the actor therefor we need to update the actor in the accumulator, which is the list of actors"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-35": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I have added the actors to our model\n\nThat way we can update the actors each game tick\n\nGive that `updateActors` function the actors and store the updated actors with the rest of our model, forming a new model\n\n\n\nThis will actually work and we now have actors moving to the right which have that WalkAiComponent\n\nIt might look like a lot of work but I can tell you.... It will get worse"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-36": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The kill component will find al neighbor actors and remove them from ehhh\n\nRemove them from where?"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-37": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To be able to do that we would need to give them the actors\n\nAdding another level of folding in our main loop"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-38": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To better show how the folding goes"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-39": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Or you can control the hero manually\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-40": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "There is no logic in the code that we can just move our hero. Its all in the components\n\nWe should as well be able to move all actors"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-41": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I actually meant all actors. Wall are are actors too"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-42": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "If you are getting the hand of this component system\n\nThen you can make all sorts of things\n\nYou can watch game of life\n\nWith game of life all \"cells\" base their decision on the same version of the field\n\nWhich is an easy in with immutable data, you can just hold on to the level as it was before the game tick"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-43": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "You can also solve days 15 challenge of advent of code from previous year\n\nWhere goblins and elves where fighting each other and you had to calculate some score"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-44": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And that answer was correct."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-45": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The components we created are just types. They are just data.\n\nAnd data is serializable\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-46": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "This simplifies tuning and changing the game\n\nThis is a screen shot from the secret enemy we just saw"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-47": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Not only can we configure the actors and their behaviour\n\nBut we can do that for the scene as well"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-48": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And because our game is now in a serializable format\n\nWe can use or create other tools to simplify the creation of that format even more\n\nLike there is this little level builder where you can create your own levels"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-49": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Which you then upload and share on github!"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-50": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In Elm deserialization this is not really interesting\n\nIts just a big file with json decoders\n\nThere are plenty of articles online how to decode a json in elm"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-51": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "We have not talked about rendering yet but its surprisingly easy.\n\nThe rendering is about 400 lines of code which is not that much compared to the 7500 of code the whole game is.\n\nLuckily for me because I changed \"output engine\" a few times already"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-52": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "After that came the Canvas renderer. Which looked the same as the game looks now\n\nBut it had two issues. One is performace, I had to redraw the whole scene every frame from scratch\n\nOr came up with some awesome algorithm to reduce the amount of drawings needed or something\n\nAnd problem two was that a technique used by the canvas library was deprecated and got removed in elm 0.19"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-53": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The third time I wrote it with Svg which outperformed canvas insanely\n\nWhen I was using canvas I configured the game at 12 fps\n\nAnd you still had frame drops on mobile\n\nAnd currently with svg it can hit 60fps"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-54": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I still recreate all the visible actors as result of the `view` function\n\nBut between frames mostly only a few svg elements really changed\n\nElm runtime or the browser can take advantage of that html nodes did not change"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-55": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Code wise all you have to do is create a new component which holds your rendering information\n\nLike pixel color, images etc"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-56": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And the Elm architecture already provided us with a view function\n\nWhere we can call the svg level rendering giving it information about the level\n\nThere you just iterate over the actors and create svg elements"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-57": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "We are going to have a little sidetrack again. This sidetrack was not planned for the talk.\n\nYesterday I attended the workshop of Nikolai which was about Augmented Reality in Haskell."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-58": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The augment reality part was handled by the javascript library called A-Frame"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-59": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And the cool thing about A-Frame is that you just create html elements.\n\nWhich the library than transforms into the 3d space.\n\nThese html elements is the same idea that svg uses.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-60": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "What I meant to say is: What about a VR renderer powered by A-Frame.\n\nAnd on your mobile you will actually get the two screens."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-61": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And the bridge from Virtual Reality towards Augmented Reality is not that far.\n\nAnd this is even more awesome on the mobile\n\nI have to admit, I need to work on the controls a bit.\n\nAnd also this is kinda useless, but so is the whole project"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-62": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-63": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "That was the end of the sidetrack.\n\nLets continue with the last mayor chapter which is performance\n\nHow to make sure the game actually runs at a decent frame rate.\n\nOne optimization we already discussed, which was using a better renderer."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-64": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And that is what we call the Game Loop\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-65": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Now if we let the actors move one tile each update then that will look like this"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-66": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Remembering our game loop. We would like to update on a stable 17 millisecond.\n\nFor as many 17 milliseconds since we did our last loop\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-67": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "If we build the actor component system nicely then you can easily create an enemy that disguises as a pet\n\nBut sometimes his \"disguise\" weirs off\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-68": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The first renderer was this ascii renderer\n\nWhich maybe I should reintroduce"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "signLength": 3,
+  "signs": {
+    "PLA": "player",
+    "KIL": "kill-trigger",
+    "E01": "house-01",
+    "E02": "house-02",
+    "T01": "trigger-01",
+    "T02": "trigger-02",
+    "T03": "trigger-03",
+    "T04": "trigger-04",
+    "T05": "trigger-05",
+    "T06": "trigger-06",
+    "T07": "trigger-07",
+    "T08": "trigger-08",
+    "T09": "trigger-09",
+    "T10": "trigger-10",
+    "T11": "trigger-11",
+    "T12": "trigger-12",
+    "T13": "trigger-13",
+    "T14": "trigger-14",
+    "T15": "trigger-15",
+    "T16": "trigger-16",
+    "T17": "trigger-17",
+    "T18": "trigger-18",
+    "T19": "trigger-19",
+    "T20": "trigger-20",
+    "T21": "trigger-21",
+    "T22": "trigger-22",
+    "T23": "trigger-23",
+    "T24": "trigger-24",
+    "T25": "trigger-25",
+    "T26": "trigger-26",
+    "T27": "trigger-27",
+    "T28": "trigger-28",
+    "T29": "trigger-29",
+    "T30": "trigger-30",
+    "T31": "trigger-31",
+    "T32": "trigger-32",
+    "T33": "trigger-33",
+    "T34": "trigger-34",
+    "T35": "trigger-35",
+    "T36": "trigger-36",
+    "T37": "trigger-37",
+    "T38": "trigger-38",
+    "T39": "trigger-39",
+    "T40": "trigger-40",
+    "T41": "trigger-41",
+    "T42": "trigger-42",
+    "T43": "trigger-43",
+    "T44": "trigger-44",
+    "T45": "trigger-45",
+    "T46": "trigger-46",
+    "T47": "trigger-47",
+    "T48": "trigger-48",
+    "T49": "trigger-49",
+    "T50": "trigger-50",
+    "T51": "trigger-51",
+    "T52": "trigger-52",
+    "T53": "trigger-53",
+    "T54": "trigger-54",
+    "T55": "trigger-55",
+    "T56": "trigger-56",
+    "T57": "trigger-57",
+    "T58": "trigger-58",
+    "T59": "trigger-59",
+    "T60": "trigger-60",
+    "T61": "trigger-61",
+    "T62": "trigger-62",
+    "T63": "trigger-63",
+    "T64": "trigger-64",
+    "T65": "trigger-65",
+    "T66": "trigger-66",
+    "T67": "trigger-67",
+    "T68": "trigger-68",
+    "S01": "slide-movie-scene",
+    "S02": "slide-actor-scene-1",
+    "S03": "slide-actor-scene-2",
+    "S04": "slide-time",
+    "S05": "slide-game-loop-1",
+    "S06": "slide-game-loop-2",
+    "S07": "slide-game-loop-3",
+    "S08": "slide-game-loop-4",
+    "S09": "slide-game-loop-5",
+    "S10": "slide-elm-game-loop-1",
+    "S11": "slide-elm-game-loop-2",
+    "S12": "slide-elm-game-loop-3",
+    "S13": "slide-elm-game-loop-4",
+    "S14": "slide-elm-game-loop-5",
+    "S15": "slide-elm-game-loop-6",
+    "S16": "slide-goto-actors",
+    "S17": "slide-actor-component-1",
+    "S18": "slide-actor-component-2",
+    "S19": "slide-actor-component-3",
+    "S20": "slide-actor-component-4",
+    "S21": "slide-actor-component-5",
+    "S22": "slide-actor-component-6",
+    "S23": "slide-composition-over-inheritance",
+    "S24": "slide-elm-actor-component-1",
+    "S25": "slide-elm-actor-component-2",
+    "S26": "slide-elm-actor-component-3",
+    "S27": "slide-elm-actor-component-4",
+    "S28": "slide-goto-implementing-behaviour",
+    "S29": "slide-elm-component-implementation-1",
+    "S30": "slide-elm-component-implementation-2",
+    "S31": "slide-elm-component-implementation-3",
+    "S32": "slide-elm-component-implementation-4",
+    "S33": "slide-elm-component-implementation-5",
+    "S34": "slide-elm-component-implementation-6",
+    "S35": "slide-elm-component-implementation-7",
+    "S36": "slide-elm-component-implementation-8",
+    "S37": "slide-elm-component-implementation-9",
+    "S38": "slide-level-update",
+    "S39": "slide-demo",
+    "S40": "slide-demo-move-more",
+    "S41": "slide-demo-move-all",
+    "S42": "slide-demo-gol",
+    "S43": "slide-demo-advent",
+    "S44": "slide-advent-answer",
+    "S45": "slide-goto-serialization",
+    "S46": "slide-serialization-1",
+    "S47": "slide-serialization-2",
+    "S48": "slide-serialization-3",
+    "S49": "slide-serialization-4",
+    "S50": "slide-serialization-5",
+    "S51": "slide-goto-rendering",
+    "S52": "slide-ascii-canvas",
+    "S53": "slide-svg",
+    "S54": "slide-renderer-1",
+    "S55": "slide-renderer-2",
+    "S56": "slide-renderer-3",
+    "S57": "slide-4th-renderer",
+    "S58": "slide-renderer-4",
+    "S59": "slide-renderer-5",
+    "S60": "slide-demo-vr",
+    "S61": "slide-demo-ar",
+    "S62": "slide-demo-3d",
+    "S63": "slide-goto-performance",
+    "S64": "slide-game-loop",
+    "S65": "slide-simple-game-loop-demo",
+    "S66": "slide-game-loop-5",
+    "S68": "slide-ascii"
+  },
+  "images": {
+    "girl-00": {
+      "path": "./images/prehistoric/girl/girl-00.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-01": {
+      "path": "./images/prehistoric/girl/girl-01.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-02": {
+      "path": "./images/prehistoric/girl/girl-02.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-03": {
+      "path": "./images/prehistoric/girl/girl-03.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-04": {
+      "path": "./images/prehistoric/girl/girl-04.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-05": {
+      "path": "./images/prehistoric/girl/girl-05.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -13
+    },
+    "girl-06": {
+      "path": "./images/prehistoric/girl/girl-06.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-07": {
+      "path": "./images/prehistoric/girl/girl-07.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-08": {
+      "path": "./images/prehistoric/girl/girl-08.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-09": {
+      "path": "./images/prehistoric/girl/girl-09.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-10": {
+      "path": "./images/prehistoric/girl/girl-10.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-11": {
+      "path": "./images/prehistoric/girl/girl-11.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-12": {
+      "path": "./images/prehistoric/girl/girl-12.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-13": {
+      "path": "./images/prehistoric/girl/girl-13.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-14": {
+      "path": "./images/prehistoric/girl/girl-14.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-15": {
+      "path": "./images/prehistoric/girl/girl-15.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "girl-16": {
+      "path": "./images/prehistoric/girl/girl-16.png",
+      "width": 118,
+      "height": 128,
+      "yOffset": -15
+    },
+    "background-forest": {
+      "path": "./images/prehistoric/background/1920x1080/forest-double.png",
+      "width": 2880,
+      "height": 1080,
+      "imageType": {
+        "type": "pattern",
+        "data": {
+          "offsets": {
+            "x": [
+              {
+                "type": "view_x_multiplier",
+                "data": -0.5
+              }
+            ]
+          }
+        }
+      }
+    },
+    "background-mountain": {
+      "path": "./images/prehistoric/background/1920x1080/mountain-double.png",
+      "width": 2880,
+      "height": 1080,
+      "imageType": {
+        "type": "pattern",
+        "data": {
+          "offsets": {
+            "x": [
+              {
+                "type": "view_x_multiplier",
+                "data": -0.05
+              }
+            ]
+          }
+        }
+      }
+    },
+    "background-sky-1": {
+      "path": "./images/prehistoric/background/1920x1080/sky-1-double.png",
+      "width": 2880,
+      "height": 1080,
+      "imageType": {
+        "type": "pattern",
+        "data": {
+          "offsets": {
+            "x": [
+              {
+                "type": "view_x_multiplier",
+                "data": -0.005
+              }
+            ]
+          }
+        }
+      }
+    },
+    "background-grass-1": {
+      "path": "./images/prehistoric/background/1920x1080/grass-1-triple.png",
+      "width": 2400,
+      "height": 280,
+      "yOffset": 935,
+      "imageType": {
+        "type": "pattern",
+        "data": {
+          "offsets": {
+            "x": [
+              {
+                "type": "fixed",
+                "data": 170
+              },
+              {
+                "type": "view_x_multiplier",
+                "data": -0.9
+              }
+            ],
+            "y": [
+              {
+                "type": "fixed",
+                "data": 935
+              }
+            ]
+          }
+        }
+      }
+    },
+    "background-grass-2": {
+      "path": "./images/prehistoric/background/1920x1080/grass-2-triple.png",
+      "width": 2400,
+      "height": 337,
+      "yOffset": 900,
+      "imageType": {
+        "type": "pattern",
+        "data": {
+          "offsets": {
+            "x": [
+              {
+                "type": "view_x_multiplier",
+                "data": -0.6
+              }
+            ],
+            "y": [
+              {
+                "type": "fixed",
+                "data": 900
+              }
+            ]
+          }
+        }
+      }
+    },
+    "tree-fg-1": {
+      "path": "./images/prehistoric/environment/tree-fg-1.png",
+      "width": 112,
+      "height": 112,
+      "yOffset": 17
+    },
+    "tree-fg-2": {
+      "path": "./images/prehistoric/environment/tree-fg-2.png",
+      "width": 112,
+      "height": 192
+    },
+    "tree-fg-3": {
+      "path": "./images/prehistoric/environment/tree-fg-3.png",
+      "width": 112,
+      "height": 368,
+      "yOffset": 17
+    },
+    "4th-renderer": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/4th-renderer-border.png",
+      "xOffset": 338,
+      "height": 626,
+      "width": 1232
+    },
+    "actor-component-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-1-border.png",
+      "xOffset": 396,
+      "height": 736,
+      "width": 1117
+    },
+    "actor-component-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-2-border.png",
+      "xOffset": 463,
+      "height": 736,
+      "width": 982
+    },
+    "actor-component-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-3-border.png",
+      "xOffset": 623,
+      "height": 736,
+      "width": 662
+    },
+    "actor-component-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-4-border.png",
+      "xOffset": 636,
+      "height": 736,
+      "width": 637
+    },
+    "actor-component-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-5-border.png",
+      "xOffset": 338,
+      "height": 695,
+      "width": 1232
+    },
+    "actor-component-6": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-component-6-border.png",
+      "xOffset": 540,
+      "height": 736,
+      "width": 829
+    },
+    "actor-scene-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-scene-1-border.png",
+      "xOffset": 573,
+      "height": 736,
+      "width": 762
+    },
+    "actor-scene-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/actor-scene-2-border.png",
+      "xOffset": 585,
+      "height": 736,
+      "width": 738
+    },
+    "advent-answer": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/advent-answer-border.png",
+      "xOffset": 338,
+      "height": 417,
+      "width": 1232
+    },
+    "ascii": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/first-renderer.gif",
+      "xOffset": 510,
+      "height": 646,
+      "width": 900
+    },
+    "ascii-canvas": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/ascii-canvas-border.png",
+      "xOffset": 377,
+      "height": 736,
+      "width": 1154
+    },
+    "composition-over-inheritance": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/composition-over-inheritance-border.png",
+      "xOffset": 338,
+      "height": 689,
+      "width": 1232
+    },
+    "demo": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-border.png",
+      "xOffset": 338,
+      "height": 622,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-3d": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-3d-border.png",
+      "xOffset": 338,
+      "height": 712,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3003/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-advent": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-advent-border.png",
+      "xOffset": 338,
+      "height": 458,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/advent&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-ar": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-ar-border.png",
+      "xOffset": 338,
+      "height": 479,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3002/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-gol": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-gol-border.png",
+      "xOffset": 338,
+      "height": 534,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-of-life&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-move-all": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-move-all-border.png",
+      "xOffset": 338,
+      "height": 589,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-5&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-move-more": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-move-more-border.png",
+      "xOffset": 338,
+      "height": 537,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-4&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "demo-vr": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/demo-vr-border.png",
+      "xOffset": 338,
+      "height": 505,
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3001/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
+    },
+    "elm-actor-component-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-actor-component-1-border.png",
+      "xOffset": 382,
+      "height": 736,
+      "width": 1145
+    },
+    "elm-actor-component-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-actor-component-2-border.png",
+      "xOffset": 525,
+      "height": 736,
+      "width": 859
+    },
+    "elm-actor-component-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-actor-component-3-border.png",
+      "xOffset": 429,
+      "height": 736,
+      "width": 1051
+    },
+    "elm-actor-component-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-actor-component-4-border.png",
+      "xOffset": 338,
+      "height": 664,
+      "width": 1232
+    },
+    "elm-component-implementation-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-1-border.png",
+      "xOffset": 338,
+      "height": 435,
+      "width": 1232
+    },
+    "elm-component-implementation-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-2-border.png",
+      "xOffset": 338,
+      "height": 609,
+      "width": 1232
+    },
+    "elm-component-implementation-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-3-border.png",
+      "xOffset": 338,
+      "height": 502,
+      "width": 1232
+    },
+    "elm-component-implementation-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-4-border.png",
+      "xOffset": 338,
+      "height": 277,
+      "width": 1232
+    },
+    "elm-component-implementation-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-5-border.png",
+      "xOffset": 338,
+      "height": 610,
+      "width": 1232
+    },
+    "elm-component-implementation-6": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-6-border.png",
+      "xOffset": 482,
+      "height": 736,
+      "width": 945
+    },
+    "elm-component-implementation-7": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-7-border.png",
+      "xOffset": 387,
+      "height": 736,
+      "width": 1134
+    },
+    "elm-component-implementation-8": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-8-border.png",
+      "xOffset": 338,
+      "height": 387,
+      "width": 1232
+    },
+    "elm-component-implementation-9": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-component-implementation-9-border.png",
+      "xOffset": 338,
+      "height": 331,
+      "width": 1232
+    },
+    "elm-game-loop-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-1-border.png",
+      "xOffset": 429,
+      "height": 736,
+      "width": 1050
+    },
+    "elm-game-loop-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-2-border.png",
+      "xOffset": 349,
+      "height": 736,
+      "width": 1211
+    },
+    "elm-game-loop-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-3-border.png",
+      "xOffset": 384,
+      "height": 736,
+      "width": 1141
+    },
+    "elm-game-loop-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-4-border.png",
+      "xOffset": 392,
+      "height": 736,
+      "width": 1125
+    },
+    "elm-game-loop-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-5-border.png",
+      "xOffset": 338,
+      "height": 439,
+      "width": 1232
+    },
+    "elm-game-loop-6": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/elm-game-loop-6-border.png",
+      "xOffset": 338,
+      "height": 458,
+      "width": 1232
+    },
+    "game-loop-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-1-border.png",
+      "xOffset": 372,
+      "height": 736,
+      "width": 1164
+    },
+    "game-loop-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-2-border.png",
+      "xOffset": 370,
+      "height": 736,
+      "width": 1168
+    },
+    "game-loop-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-3-border.png",
+      "xOffset": 369,
+      "height": 736,
+      "width": 1170
+    },
+    "game-loop-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-4-border.png",
+      "xOffset": 338,
+      "height": 704,
+      "width": 1232
+    },
+    "game-loop-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-5-border.png",
+      "xOffset": 417,
+      "height": 736,
+      "width": 1074
+    },
+    "goto-actors": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/goto-actors-border.png",
+      "xOffset": 365,
+      "height": 736,
+      "width": 1179
+    },
+    "goto-implementing-behaviour": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/goto-implementing-behaviour-border.png",
+      "xOffset": 338,
+      "height": 469,
+      "width": 1232
+    },
+    "goto-performance": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/goto-performance-border.png",
+      "xOffset": 338,
+      "height": 628,
+      "width": 1232
+    },
+    "game-loop": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/game-loop-border.png",
+      "xOffset": 338,
+      "height": 704,
+      "width": 1232
+    },
+    "goto-rendering": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/goto-rendering-border.png",
+      "xOffset": 338,
+      "height": 672,
+      "width": 1232
+    },
+    "goto-serialization": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/goto-serialization-border.png",
+      "xOffset": 338,
+      "height": 582,
+      "width": 1232
+    },
+    "level-update": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/level-update-border.png",
+      "xOffset": 338,
+      "height": 535,
+      "width": 1232
+    },
+    "movie-scene": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/movie-scene-border.png",
+      "xOffset": 353,
+      "height": 736,
+      "width": 1202
+    },
+    "renderer-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/renderer-1-border.png",
+      "xOffset": 421,
+      "height": 736,
+      "width": 1066
+    },
+    "renderer-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/renderer-2-border.png",
+      "xOffset": 338,
+      "height": 435,
+      "width": 1232
+    },
+    "renderer-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/renderer-3-border.png",
+      "xOffset": 338,
+      "height": 648,
+      "width": 1232
+    },
+    "renderer-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/renderer-4-border.png",
+      "xOffset": 387,
+      "height": 736,
+      "width": 1135
+    },
+    "renderer-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/renderer-5-border.png",
+      "xOffset": 338,
+      "height": 505,
+      "width": 1232
+    },
+    "serialization-1": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/serialization-1-border.png",
+      "xOffset": 491,
+      "height": 736,
+      "width": 927
+    },
+    "serialization-2": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/serialization-2-border.png",
+      "xOffset": 714,
+      "height": 736,
+      "width": 481
+    },
+    "serialization-3": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/serialization-3-border.png",
+      "xOffset": 665,
+      "height": 736,
+      "width": 579
+    },
+    "serialization-4": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/serialization-4-border.png",
+      "xOffset": 338,
+      "height": 438,
+      "width": 1232
+    },
+    "serialization-5": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/serialization-5-border.png",
+      "xOffset": 338,
+      "height": 457,
+      "width": 1232
+    },
+    "svg": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/svg-border.png",
+      "xOffset": 356,
+      "height": 736,
+      "width": 1197
+    },
+    "time": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/time-border.png",
+      "xOffset": 338,
+      "height": 718,
+      "width": 1232
+    },
+    "simple-game-loop-demo": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/simlpe-game-loop.gif",
+      "xOffset": 612,
+      "height": 696,
+      "width": 696,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&gameSpeed=1000"
+        }
+      }
+    },
+    "house-01": {
+      "yOffset": 50,
+      "path": "./images/prehistoric/environment/house-01.png",
+      "xOffset": 0,
+      "height": 384,
+      "width": 624
+    },
+    "house-02": {
+      "yOffset": 146,
+      "path": "./images/prehistoric/environment/house-02.png",
+      "xOffset": 0,
+      "height": 384,
+      "width": 624
+    }
+  },
+  "backgrounds": [
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-sky-1"
+            ]
+          }
+        }
+      },
+      "layer": -2
+    },
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-mountain"
+            ]
+          }
+        }
+      },
+      "layer": -1
+    },
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-forest"
+            ]
+          }
+        }
+      },
+      "layer": 0
+    },
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-grass-1"
+            ]
+          }
+        }
+      },
+      "layer": 101
+    },
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-grass-2"
+            ]
+          }
+        }
+      },
+      "layer": 20
+    }
+  ],
+  "updateBorder": 3,
+  "scene": [
+    [
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "            PLA                                                      ",
+      "                                                                     ",
+      "                                                                     "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S01                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T01                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S02                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T02                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S03                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T03                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S04                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T04                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S64                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T64                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S05                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T05                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S65                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T65                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S06                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T06                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S07                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T07                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S08                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T08                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S09                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T09                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S10                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T10                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S11                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T11                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S66                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T66                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S12                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T12                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S13                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T13                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S14                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T14                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S15                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T15                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S16                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T16                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S17                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T17                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S18                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T18                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S19                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T19                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S20                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T20                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S21                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T21                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S22                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T22                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S23                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T23                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S24                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T24                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S25                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T25                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S26                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T26                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S27                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T27                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S28                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T28                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S29                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T29                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S30                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T30                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S32                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T32                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S33                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T33                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S34                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T34                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S35                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T35                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S36                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T36                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S37                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T37                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S38                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T38                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S39                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T39                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S40                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T40                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S41                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T41                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S42                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T42                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S43                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T43                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S44                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T44                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S45                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T45                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S46                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T46                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S47                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T47                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S48                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T48                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S49                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T49                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S50                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T50                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S51                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T51                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S68                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T68                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S52                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T52                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S53                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T53                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S54                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T54                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S55                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T55                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S56                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T56                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S57                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T57                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S58                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T58                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S59                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T59                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S60                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T60                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S61                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T61                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S62                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T62                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S63                                                               ",
+      "                                                                        ",
+      "                  E02                                                   ",
+      "                  E01                                                   ",
+      "                                                                        ",
+      "                                                                        ",
+      "T63                        KIL                                          ",
+      "                                                                        ",
+      "                                                                        "
+    ]
+  ],
+  "subscribers": [
+    {
+      "type": "onTagDied",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "tagDiedData": {
+        "tagName": "player",
+        "limit": 1
+      }
+    },
+    {
+      "type": "onInventoryUpdated",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "inventoryUpdatedData": {
+        "interestedIn": "diamond",
+        "minimumQuantity": 1
+      }
+    },
+    {
+      "type": "onTriggerActivated"
+    }
+  ],
+  "config": {
+    "width": 20,
+    "height": 12,
+    "pixelSize": 96,
+    "additionalViewBorder": 0
+  }
+}

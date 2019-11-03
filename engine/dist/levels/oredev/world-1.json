@@ -1,0 +1,2097 @@
+{
+  "entities": {
+    "player": [
+      {
+        "type": "tag",
+        "data": {
+          "name": "player"
+        }
+      },
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-03",
+                  "hero-66",
+                  "hero-67"
+                ],
+                "ticksPerImage": 6
+              },
+              "direction": {
+                "left": {
+                  "names": [
+                    "hero-06",
+                    "hero-07"
+                  ],
+                  "ticksPerImage": 6
+                },
+                "up": {
+                  "names": [
+                    "hero-32"
+                  ],
+                  "ticksPerImage": 6
+                },
+                "right": {
+                  "names": [
+                    "hero-18",
+                    "hero-19"
+                  ],
+                  "ticksPerImage": 6
+                },
+                "down": {
+                  "names": [
+                    "hero-00",
+                    "hero-01"
+                  ],
+                  "ticksPerImage": 6
+                }
+              }
+            }
+          },
+          "layer": 5
+        }
+      },
+      {
+        "type": "trigger-activator"
+      },
+      {
+        "type": "control",
+        "data": {
+          "settings": {
+            "pushStrength": 50,
+            "walkOverStrength": 50
+          },
+          "steps": 24,
+          "control": {
+            "type": "input",
+            "data": {
+              "allowedDirections": [
+                "left",
+                "right"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 2
+        }
+      },
+      {
+        "type": "collector",
+        "data": {
+          "interestedIn": [
+            "diamond",
+            "dirt"
+          ]
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "camera",
+        "data": {
+          "borderLeft": 3,
+          "borderUp": 9,
+          "borderRight": 16,
+          "borderDown": 2
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 10,
+          "shape": "square"
+        }
+      }
+    ],
+    "rock": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "rock-0"
+                ]
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "gravityAi"
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "smash-down",
+        "data": {
+          "explosionEntityName": "explosion"
+        }
+      }
+    ],
+    "dynamite": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "pixel",
+            "data": {
+              "colors": [
+                {
+                  "red": 204,
+                  "green": 0,
+                  "blue": 0
+                }
+              ]
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "gravityAi"
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "smash-down",
+        "data": {
+          "explosionEntityName": "explosion"
+        }
+      }
+    ],
+    "explosion": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "explosion-0",
+                  "explosion-1",
+                  "explosion-2",
+                  "explosion-3"
+                ],
+                "ticksPerImage": 4
+              }
+            }
+          },
+          "layer": 10
+        }
+      },
+      {
+        "type": "lifetime",
+        "data": {
+          "remainingTicks": 16
+        }
+      },
+      {
+        "type": "damage",
+        "data": {
+          "damageStrength": 80
+        }
+      }
+    ],
+    "enemy": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "enemy-a-0",
+                  "enemy-a-1",
+                  "enemy-a-2",
+                  "enemy-a-3"
+                ],
+                "ticksPerImage": 6
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "walkAroundAi",
+            "data": {
+              "previousDirection": "left",
+              "nextDirectionOffsets": [
+                -1,
+                0,
+                1,
+                2
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "trigger-explodable",
+        "data": {
+          "triggerStrength": 20,
+          "explosionEntityName": "explosion"
+        }
+      }
+    ],
+    "tough-enemy": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "enemy-c-0",
+                  "enemy-c-1",
+                  "enemy-c-2",
+                  "enemy-c-3"
+                ],
+                "ticksPerImage": 6
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 100,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "walkAroundAi",
+            "data": {
+              "previousDirection": "left",
+              "nextDirectionOffsets": [
+                -1,
+                0,
+                1,
+                2
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "trigger-explodable",
+        "data": {
+          "triggerStrength": 80,
+          "explosionEntityName": "explosion"
+        }
+      }
+    ],
+    "funny-enemy": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "enemy-d-0",
+                  "enemy-d-1",
+                  "enemy-d-2",
+                  "enemy-d-3"
+                ],
+                "ticksPerImage": 6
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "walkAroundAi",
+            "data": {
+              "previousDirection": "left",
+              "nextDirectionOffsets": [
+                1,
+                0,
+                -1,
+                2
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "explodable"
+      },
+      {
+        "type": "trigger-explodable",
+        "data": {
+          "triggerStrength": 20,
+          "explosionEntityName": "explosion"
+        }
+      }
+    ],
+    "pet": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "pet-a-0",
+                  "pet-a-1",
+                  "pet-a-2",
+                  "pet-a-3"
+                ],
+                "ticksPerImage": 6
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 10,
+          "shape": "circle"
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "walkAroundAi",
+            "data": {
+              "previousDirection": "left",
+              "nextDirectionOffsets": [
+                -1,
+                0,
+                1,
+                2
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "explodable"
+      }
+    ],
+    "dirt": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "dirt"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "collectible",
+        "data": {
+          "name": "dirt"
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 30,
+          "shape": "square"
+        }
+      }
+    ],
+    "wall": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "wall"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 50,
+          "shape": "square"
+        }
+      }
+    ],
+    "strongwall": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "strong-wall"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 100,
+          "shape": "square"
+        }
+      }
+    ],
+    "diamond": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "diamond-0",
+                  "diamond-1",
+                  "diamond-2",
+                  "diamond-3"
+                ],
+                "ticksPerImage": 8
+              }
+            }
+          },
+          "layer": 30
+        }
+      },
+      {
+        "type": "collectible",
+        "data": {
+          "name": "diamond"
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "control": {
+            "type": "gravityAi"
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 8
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      }
+    ],
+    "finish_diamond": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "diamond-0",
+                  "diamond-1",
+                  "diamond-2",
+                  "diamond-3"
+                ],
+                "ticksPerImage": 8
+              }
+            }
+          },
+          "layer": 3
+        }
+      },
+      {
+        "type": "collectible",
+        "data": {
+          "name": "diamond"
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 20,
+          "shape": "circle"
+        }
+      }
+    ],
+    "failed": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "pixel",
+            "data": {
+              "colors": [
+                {
+                  "red": 0,
+                  "green": 0,
+                  "blue": 0
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 1000,
+          "shape": "square"
+        }
+      },
+      {
+        "type": "damage",
+        "data": {
+          "damageStrength": 1000
+        }
+      }
+    ],
+    "trigger-01": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Every game programming book I have is in an imperative programming style.\n\nMost of them in c++ but other languages like Java follow the same patterns.\n\nI was learning the functional paradigm and played with Elm for a few years.\n\nAnd I wanted to try to see how it would be to create a game in Elm.\n\nTo learn from an experiment.\n\nWho has used elm?"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-02": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To better understand how the game written and to understand the samples we are going to take a crash course into Elm."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-03": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Elm is a bit different then javascript, where Elm transpiles to.\n\nWhich sometimes scare people off.\n\nBut I actually found Elm one of the easiest languages to learn."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-04": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Some of the characteristics of Elm is that it is a Pure Functional language, Its statically and stronly typed.\n\nWhich allows the compiler to complain when I'm doing things wrong again\n\nBut its complains are often so clear that you can learn a lot from the compiler\n\nAnd its a Frontend only language"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-05": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A simple function in elm looks like this\n\nWe have the name of the function `add`\n\nThe arguments `x` and `y`\n\nAnd then on the right side of the equal sign is the body of the function"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-06": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Now everything in Elm is typed and you can annotate the function with its types\n\nHere we say the type of `add` is:\n\nWe take a number, and a number. And then we will return a number."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-07": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Applying functions is done by spaces.\n\nAnd function arguments are also separated by spaces\n\nTherefor we call `add` like this"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-08": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Everything in Elm is curried. Therefor you can call a function with less then all arguments\n\nAnd you will get back a function that requires the remaining arguments.\n\nCalling `add` with just `5` will give us a function that requires another argument before computing a result"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-09": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Making these result into the same"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-10": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "The more important thing we need to known about Elm is its architecture\n\nIts something that enforces the flow of your application"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-11": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In Elm you always have a Model, which is the state of your application\n\nupdate which is a function that creates new states\n\nAnd a view. Which is a function to visualize your state.\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-12": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "In this case we define to be just an integer"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-13": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To update your state, or to create a new model, you need to have some intend\n\nThese you define as messages in Elm.\n\nThis example is a little counter which you can increment and decrement"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-14": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "A produced message together with your model will be given to the defined `update` function.\n\nWhich will return a new model\n\nAs we can see in the type of the update function as well.\n\nGiven a msg and a model will return a model"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-15": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To visualize your state. You have the view function.\n\nWhich received the model and returns some sort of html."
+            }
+          }
+        }
+      }
+    ],
+    "trigger-16": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To visualize the architecture in one picture\n\nThe puppets and their orientation is your Model\n\nThe theater is the result of the view\n\nThat is what you would see in the browser\n\nThe kids are producing messages\n\nWhich the `Update` person received and it adjust the model as requested\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-17": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Game programming"
+            }
+          }
+        }
+      }
+    ],
+    "slide-elm-logo": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "slide-elm-logo"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-crash-course-elm": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "slide-crash-course-elm"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-characteristics": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "slide-elm-characteristics"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-1": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-01"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-2": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-02"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-3": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-03"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-4": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-04"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-syntax-5": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-syntax-05"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-architecture": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "architecture"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture-1": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture-1"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture-2": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture-2"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture-3": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture-3"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture-4": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture-4"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture-5": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture-5"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-elm-architecture": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "elm-architecture"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ],
+    "slide-game-programming": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "image",
+            "data": {
+              "default": {
+                "names": [
+                  "game-programming"
+                ]
+              }
+            }
+          },
+          "layer": 20
+        }
+      }
+    ]
+  },
+  "signLength": 3,
+  "signs": {
+    "PLA": "player",
+    "ROC": "rock",
+    "DYN": "dynamite",
+    "E01": "enemy",
+    "E02": "tough-enemy",
+    "E03": "funny-enemy",
+    "E04": "pet",
+    "...": "dirt",
+    "|||": "wall",
+    "###": "strongwall",
+    "**1": "diamond",
+    "T01": "trigger-01",
+    "T02": "trigger-02",
+    "T03": "trigger-03",
+    "T04": "trigger-04",
+    "T05": "trigger-05",
+    "T06": "trigger-06",
+    "T07": "trigger-07",
+    "T08": "trigger-08",
+    "T09": "trigger-09",
+    "T10": "trigger-10",
+    "T11": "trigger-11",
+    "T12": "trigger-12",
+    "T13": "trigger-13",
+    "T14": "trigger-14",
+    "T15": "trigger-15",
+    "T16": "trigger-16",
+    "T17": "trigger-17",
+    "S01": "slide-elm-logo",
+    "S02": "slide-crash-course-elm",
+    "S03": "slide-elm-logo",
+    "S04": "slide-elm-characteristics",
+    "S05": "slide-elm-syntax-1",
+    "S06": "slide-elm-syntax-2",
+    "S07": "slide-elm-syntax-3",
+    "S08": "slide-elm-syntax-4",
+    "S09": "slide-elm-syntax-5",
+    "S10": "slide-architecture",
+    "S11": "slide-elm-architecture-1",
+    "S12": "slide-elm-architecture-2",
+    "S13": "slide-elm-architecture-3",
+    "S14": "slide-elm-architecture-4",
+    "S15": "slide-elm-architecture-5",
+    "S16": "slide-elm-architecture",
+    "S17": "slide-game-programming"
+  },
+  "images": {
+    "hero-00": {
+      "path": "./images/spriters-resource.com/hero/hero-00.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-01": {
+      "path": "./images/spriters-resource.com/hero/hero-01.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-03": {
+      "path": "./images/spriters-resource.com/hero/hero-03.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-06": {
+      "path": "./images/spriters-resource.com/hero/hero-06.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-07": {
+      "path": "./images/spriters-resource.com/hero/hero-07.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-18": {
+      "path": "./images/spriters-resource.com/hero/hero-18.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-19": {
+      "path": "./images/spriters-resource.com/hero/hero-19.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-32": {
+      "path": "./images/spriters-resource.com/hero/hero-32.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-43": {
+      "path": "./images/spriters-resource.com/hero/hero-43.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-44": {
+      "path": "./images/spriters-resource.com/hero/hero-44.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-66": {
+      "path": "./images/spriters-resource.com/hero/hero-66.png",
+      "width": 96,
+      "height": 96
+    },
+    "hero-67": {
+      "path": "./images/spriters-resource.com/hero/hero-67.png",
+      "width": 96,
+      "height": 96
+    },
+    "diamond-0": {
+      "path": "./images/spriters-resource.com/diamond-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "diamond-1": {
+      "path": "./images/spriters-resource.com/diamond-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "diamond-2": {
+      "path": "./images/spriters-resource.com/diamond-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "diamond-3": {
+      "path": "./images/spriters-resource.com/diamond-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "explosion-0": {
+      "path": "./images/spriters-resource.com/explosion-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "explosion-1": {
+      "path": "./images/spriters-resource.com/explosion-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "explosion-2": {
+      "path": "./images/spriters-resource.com/explosion-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "explosion-3": {
+      "path": "./images/spriters-resource.com/explosion-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "dirt": {
+      "path": "./images/spriters-resource.com/dirt.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-a-0": {
+      "path": "./images/spriters-resource.com/enemy-a-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-a-1": {
+      "path": "./images/spriters-resource.com/enemy-a-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-a-2": {
+      "path": "./images/spriters-resource.com/enemy-a-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-a-3": {
+      "path": "./images/spriters-resource.com/enemy-a-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-b-0": {
+      "path": "./images/spriters-resource.com/enemy-b-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-b-1": {
+      "path": "./images/spriters-resource.com/enemy-b-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-b-2": {
+      "path": "./images/spriters-resource.com/enemy-b-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-b-3": {
+      "path": "./images/spriters-resource.com/enemy-b-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-c-0": {
+      "path": "./images/spriters-resource.com/enemy-c-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-c-1": {
+      "path": "./images/spriters-resource.com/enemy-c-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-c-2": {
+      "path": "./images/spriters-resource.com/enemy-c-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-c-3": {
+      "path": "./images/spriters-resource.com/enemy-c-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-d-0": {
+      "path": "./images/spriters-resource.com/enemy-d-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-d-1": {
+      "path": "./images/spriters-resource.com/enemy-d-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-d-2": {
+      "path": "./images/spriters-resource.com/enemy-d-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "enemy-d-3": {
+      "path": "./images/spriters-resource.com/enemy-d-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "rock-0": {
+      "path": "./images/spriters-resource.com/rock-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "wall": {
+      "path": "./images/spriters-resource.com/wall.png",
+      "width": 96,
+      "height": 96
+    },
+    "strong-wall": {
+      "path": "./images/spriters-resource.com/strong-wall.png",
+      "width": 96,
+      "height": 96
+    },
+    "pet-a-0": {
+      "path": "./images/spriters-resource.com/pet-a-0.png",
+      "width": 96,
+      "height": 96
+    },
+    "pet-a-1": {
+      "path": "./images/spriters-resource.com/pet-a-1.png",
+      "width": 96,
+      "height": 96
+    },
+    "pet-a-2": {
+      "path": "./images/spriters-resource.com/pet-a-2.png",
+      "width": 96,
+      "height": 96
+    },
+    "pet-a-3": {
+      "path": "./images/spriters-resource.com/pet-a-3.png",
+      "width": 96,
+      "height": 96
+    },
+    "background-big": {
+      "path": "./images/spriters-resource.com/background-96.png",
+      "width": 1920,
+      "height": 1152
+    },
+    "slide-elm-logo": {
+      "path": "./images/oredev/world-1/elm-logo.png",
+      "width": 600,
+      "height": 600,
+      "xOffset": 658,
+      "yOffset": -110
+    },
+    "slide-crash-course-elm": {
+      "path": "./images/oredev/world-1/crash-course-elm-border.jpg",
+      "width": 1248,
+      "height": 744,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "slide-elm-characteristics": {
+      "path": "./images/oredev/world-1/elm-characteristics-border.png",
+      "width": 909,
+      "height": 544,
+      "xOffset": 504,
+      "yOffset": -227
+    },
+    "elm-syntax-01": {
+      "path": "./images/oredev/world-1/elm-syntax-01-border.png",
+      "width": 1248,
+      "height": 535,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-syntax-02": {
+      "path": "./images/oredev/world-1/elm-syntax-02-border.png",
+      "width": 1248,
+      "height": 382,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-syntax-03": {
+      "path": "./images/oredev/world-1/elm-syntax-03-border.png",
+      "width": 1248,
+      "height": 574,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-syntax-04": {
+      "path": "./images/oredev/world-1/elm-syntax-04-border.png",
+      "width": 1248,
+      "height": 389,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-syntax-05": {
+      "path": "./images/oredev/world-1/elm-syntax-05-border.png",
+      "width": 1248,
+      "height": 322,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "architecture": {
+      "path": "./images/oredev/world-1/architecture-border.jpg",
+      "width": 1090,
+      "height": 752,
+      "xOffset": 413,
+      "yOffset": -227
+    },
+    "elm-architecture-1": {
+      "path": "./images/oredev/world-1/elm-architecture-1-border.png",
+      "width": 1248,
+      "height": 740,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-architecture-2": {
+      "path": "./images/oredev/world-1/elm-architecture-2-border.png",
+      "width": 1214,
+      "height": 752,
+      "xOffset": 351,
+      "yOffset": -227
+    },
+    "elm-architecture-3": {
+      "path": "./images/oredev/world-1/elm-architecture-3-border.png",
+      "width": 1248,
+      "height": 727,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-architecture-4": {
+      "path": "./images/oredev/world-1/elm-architecture-4-border.png",
+      "width": 1155,
+      "height": 752,
+      "xOffset": 380,
+      "yOffset": -227
+    },
+    "elm-architecture-5": {
+      "path": "./images/oredev/world-1/elm-architecture-5-border.png",
+      "width": 1248,
+      "height": 476,
+      "xOffset": 334,
+      "yOffset": -227
+    },
+    "elm-architecture": {
+      "path": "./images/oredev/world-1/elm-architecture-border.jpg",
+      "width": 1155,
+      "height": 752,
+      "xOffset": 380,
+      "yOffset": -227
+    },
+    "game-programming": {
+      "path": "./images/oredev/world-1/goto-game-programming-border.png",
+      "width": 1248,
+      "height": 526,
+      "xOffset": 334,
+      "yOffset": -227
+    }
+  },
+  "backgrounds": [
+    {
+      "renderType": {
+        "type": "image",
+        "data": {
+          "default": {
+            "names": [
+              "background-big"
+            ]
+          }
+        }
+      },
+      "layer": -10
+    }
+  ],
+  "updateBorder": 2,
+  "scene": [
+    [
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############                                                         ",
+      "############PLA                                                      ",
+      "#####################################################################",
+      "#####################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S01                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T01                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S02                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T02                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S03                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T03                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S04                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T04                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S05                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T05                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S06                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T06                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S07                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T07                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S08                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T08                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S09                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T09                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S10                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T10                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S11                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T11                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S12                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T12                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S13                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T13                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S14                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T14                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S15                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T15                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S16                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T16                                                                     ",
+      "########################################################################",
+      "########################################################################"
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      S17                                                               ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "T17               **1                                                   ",
+      "########################################################################",
+      "########################################################################"
+    ]
+  ],
+  "subscribers": [
+    {
+      "type": "onTagDied",
+      "eventActionData": {
+        "type": "failed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "You died"
+            }
+          },
+          "entityNames": [
+            "explosion"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "tagDiedData": {
+        "tagName": "player",
+        "limit": 1
+      }
+    },
+    {
+      "type": "onInventoryUpdated",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-2",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "inventoryUpdatedData": {
+        "interestedIn": "diamond",
+        "minimumQuantity": 1
+      }
+    },
+    {
+      "type": "onTriggerActivated"
+    }
+  ],
+  "config": {
+    "width": 20,
+    "height": 12,
+    "pixelSize": 96,
+    "additionalViewBorder": 0
+  }
+}

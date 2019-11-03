@@ -1,0 +1,50 @@
+
+
+convert -size 671x32 tile:top.png top-long.png
+
+671x561
+
+convert -size 703x32 tile:top.png temp/top-long.png
+convert -size 703x32 tile:bottom.png temp/bottom-long.png
+convert -size 32x593 tile:left.png temp/left-long.png
+convert -size 32x593 tile:right.png temp/right-long.png
+
+convert -background None \
+    \( input.png -set page +32+32 \) \
+    \( temp/top-long.png -set page +16+0 \) \
+    \( temp/bottom-long.png -set page +16+593 \) \
+    \( temp/left-long.png -set page +0+16 \) \
+    \( temp/right-long.png -set page +703+16 \) \
+    \( top-left.png -set page +0+0 \) \
+    \( top-right.png -set page +719+0 \) \
+    \( bottom-left.png -set page +0+609 \) \
+    \( bottom-right.png -set page +719+609 \) \
+    -layers merge  temp/output.png
+
+
+
+
+
+
+
+
+convert input.png -border 32x32 output.png
+
+671x561
+
+
+convert lena.png -crop 50x50% lena_%d.png
+for ((i=0; i<4; i++)); do
+convert lena_$i.png -quality 80 lena_$i.jpg
+done
+convert \
+\( lena_0.jpg -set page +0+0 \) \
+\( lena_1.jpg -set page +128+0 \) \
+\( lena_2.jpg -set page +0+128 \) \
+\( lena_3.jpg -set page +128+128 \) \
+-layers merge lena_new.jpg
+
+
+
+convert serialization-5.png -bordercolor "#2b2b2b" -border 20 serialization-5.png
+

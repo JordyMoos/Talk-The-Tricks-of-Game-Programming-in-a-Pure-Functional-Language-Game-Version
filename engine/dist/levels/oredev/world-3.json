@@ -1,0 +1,2562 @@
+{
+  "entities": {
+    "player": [
+      {
+        "type": "tag",
+        "data": {
+          "name": "player"
+        }
+      },
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "robot-idle",
+              "direction": {
+                "right": "robot-walk-right",
+                "left": "robot-walk-left"
+              }
+            }
+          },
+          "layer": -100
+        }
+      },
+      {
+        "type": "control",
+        "data": {
+          "settings": {
+            "pushStrength": 50,
+            "walkOverStrength": 50
+          },
+          "steps": 24,
+          "control": {
+            "type": "input",
+            "data": {
+              "allowedDirections": [
+                "left",
+                "right"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "movement",
+        "data": {
+          "movingTicks": 2
+        }
+      },
+      {
+        "type": "collector",
+        "data": {
+          "interestedIn": [
+            "diamond",
+            "dirt"
+          ]
+        }
+      },
+      {
+        "type": "rigid"
+      },
+      {
+        "type": "camera",
+        "data": {
+          "borderLeft": 3,
+          "borderUp": 9,
+          "borderRight": 16,
+          "borderDown": 2
+        }
+      },
+      {
+        "type": "physics",
+        "data": {
+          "strength": 100,
+          "shape": "square"
+        }
+      },
+      {
+        "type": "trigger-activator"
+      }
+    ],
+    "aloe-01": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-01"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-02": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-02"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-03": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-03"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-04": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-04"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-05": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-05"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-06": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-06"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-07": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-07"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-08": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-08"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-09": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-09"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-10": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-10"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-11": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-11"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-12": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-12"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-13": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-13"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-14": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-14"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "aloe-15": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "aloe-15"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "rock-01": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "rock-01"
+            }
+          },
+          "layer": -18
+        }
+      }
+    ],
+    "rock-02": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "rock-02"
+            }
+          },
+          "layer": -18
+        }
+      }
+    ],
+    "rock-03": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "rock-03"
+            }
+          },
+          "layer": -18
+        }
+      }
+    ],
+    "rock-04": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "rock-04"
+            }
+          },
+          "layer": -18
+        }
+      }
+    ],
+    "rock-05": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "rock-05"
+            }
+          },
+          "layer": -18
+        }
+      }
+    ],
+    "tower-01": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "tower-01"
+            }
+          },
+          "layer": 5
+        }
+      }
+    ],
+    "slide-elm-performance-1-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-1-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-2-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-2-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-3-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-3-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-4-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-4-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-5-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-5-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-6-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-6-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-7-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-7-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-8-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-8-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-elm-performance-9-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "elm-performance-9-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-demo-update-narrow-actors-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "demo-update-narrow-actors-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-toughest-lesson-learned-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "toughest-lesson-learned-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-github-source-code-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "github-source-code-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-about-me-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "about-me-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-design-thanks-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "design-thanks-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-thank-you-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "thank-you-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "slide-image-sources-border": [
+      {
+        "type": "render",
+        "data": {
+          "renderType": {
+            "type": "object",
+            "data": {
+              "default": "image-sources-border"
+            }
+          },
+          "layer": -20
+        }
+      }
+    ],
+    "trigger-01": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I'm doing a lot of looking up actors therefor I gave the actors an Id\n\nAnd stored them in a Dict with their id as the key\n\nInstead of as a list"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-02": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I did the same for components which makes updating a certain component easier\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-03": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And I really often need to search actors by a position\n\nTherefor I created indices which are dicts from position to actor id\n\nNow all of these changes are to minimize the time needed searching for actors\n\nA dict loopup is faster then iterating over a large list"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-04": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "An other way to optimize performance is to not give \"update ticks\" to all actors\n\nIn the main loop I'm only updating actors which are in the view and some additional actors just outside the view"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-05": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To `update` even less actors\n Actors are split into two types. Static actors and dynamic actors\n\nWhere the difference is that dynamic actors hold components that needs update ticks\n\nWhile static actors does not.\n\nIn the boulder game things like dirt and wall are static. While rocks and the hero are dynamic actors"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-06": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "This is somewhere inside the game loop where I'm only getting actors which are dynamic"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-07": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Another performance optimization is that I'm not actually creating the view, when the view method of elm gets called\n\nThis view will get called by \"the elm engine\" every time that the model changes\n\nBut I know that certain messages do not change the game state and therefor not the visual output\n\nMessages like key inputs\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-08": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Therefor I create the view myself whenever I know it changed and store that as part of my model.\n\nTo be clear this happens in the elm `update` function"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-09": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And the last one, if someone comes up with a faster implementation for an operation you use a lot\n\nThen you proudly copy his implementation for your game"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-10": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-11": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To close I would like to share the toughest lesson learned which was most definitely keeping track of what your \"newest\" actor/level or model is\n\nI have had a few times that I was like wtf is going on why is not this working\n\nAnd then the conclusion was that I did not update the actor in the accumulated level and there for changes where lost etc\n\nThese are nifty bugs to find"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-12": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-13": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-14": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-15": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-16": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ]
+  },
+  "signLength": 3,
+  "signs": {
+    "PLA": "player",
+    "E01": "aloe-01",
+    "E02": "aloe-02",
+    "E03": "aloe-03",
+    "E04": "aloe-04",
+    "E05": "aloe-05",
+    "E06": "aloe-06",
+    "E07": "aloe-07",
+    "E08": "aloe-08",
+    "E09": "aloe-09",
+    "E10": "aloe-10",
+    "E11": "aloe-11",
+    "E12": "aloe-12",
+    "E13": "aloe-13",
+    "E14": "aloe-14",
+    "E15": "aloe-15",
+    "R01": "rock-01",
+    "R02": "rock-02",
+    "R03": "rock-03",
+    "R04": "rock-04",
+    "R05": "rock-05",
+    "E90": "tower-01",
+    "T01": "trigger-01",
+    "T02": "trigger-02",
+    "T03": "trigger-03",
+    "T04": "trigger-04",
+    "T05": "trigger-05",
+    "T06": "trigger-06",
+    "T07": "trigger-07",
+    "T08": "trigger-08",
+    "T09": "trigger-09",
+    "T10": "trigger-10",
+    "T11": "trigger-11",
+    "T12": "trigger-12",
+    "T13": "trigger-13",
+    "T14": "trigger-14",
+    "T15": "trigger-15",
+    "T16": "trigger-16",
+    "S01": "slide-elm-performance-1-border",
+    "S02": "slide-elm-performance-2-border",
+    "S03": "slide-elm-performance-3-border",
+    "S04": "slide-elm-performance-4-border",
+    "S05": "slide-elm-performance-5-border",
+    "S06": "slide-elm-performance-6-border",
+    "S07": "slide-elm-performance-7-border",
+    "S08": "slide-elm-performance-8-border",
+    "S09": "slide-elm-performance-9-border",
+    "S10": "slide-demo-update-narrow-actors-border",
+    "S11": "slide-toughest-lesson-learned-border",
+    "S12": "slide-github-source-code-border",
+    "S13": "slide-about-me-border",
+    "S14": "slide-design-thanks-border",
+    "S15": "slide-thank-you-border",
+    "S16": "slide-image-sources-border"
+  },
+  "images": {
+    "image-elm-performance-1-border": {
+      "path": "./images/oredev/world-3/elm-performance-1-border.png",
+      "width": 1232,
+      "height": 713
+    },
+    "image-elm-performance-2-border": {
+      "path": "./images/oredev/world-3/elm-performance-2-border.png",
+      "width": 1226,
+      "height": 736
+    },
+    "image-elm-performance-3-border": {
+      "path": "./images/oredev/world-3/elm-performance-3-border.png",
+      "width": 1232,
+      "height": 344
+    },
+    "image-elm-performance-4-border": {
+      "path": "./images/oredev/world-3/elm-performance-4-border.png",
+      "width": 1232,
+      "height": 446
+    },
+    "image-elm-performance-5-border": {
+      "path": "./images/oredev/world-3/elm-performance-5-border.png",
+      "width": 1232,
+      "height": 597
+    },
+    "image-elm-performance-6-border": {
+      "path": "./images/oredev/world-3/elm-performance-6-border.png",
+      "width": 1232,
+      "height": 243
+    },
+    "image-elm-performance-7-border": {
+      "path": "./images/oredev/world-3/elm-performance-7-border.png",
+      "width": 1232,
+      "height": 508
+    },
+    "image-elm-performance-8-border": {
+      "path": "./images/oredev/world-3/elm-performance-8-border.png",
+      "width": 1232,
+      "height": 277
+    },
+    "image-elm-performance-9-border": {
+      "path": "./images/oredev/world-3/elm-performance-9-border.png",
+      "width": 1232,
+      "height": 625
+    },
+    "image-demo-update-narrow-actors-border": {
+      "path": "./images/oredev/world-3/demo-update-narrow-actors-border.png",
+      "width": 1232,
+      "height": 489
+    },
+    "image-toughest-lesson-learned-border": {
+      "path": "./images/oredev/world-3/toughest-lesson-learned-border.png",
+      "width": 1232,
+      "height": 395
+    },
+    "image-github-source-code-border": {
+      "path": "./images/oredev/world-3/github-source-code-border.png",
+      "width": 1232,
+      "height": 462
+    },
+    "image-about-me-border": {
+      "path": "./images/oredev/world-3/about-me-border.png",
+      "width": 1232,
+      "height": 508
+    },
+    "image-design-thanks-border": {
+      "path": "./images/oredev/world-3/design-thanks-border.png",
+      "width": 1232,
+      "height": 724
+    },
+    "image-thank-you-border": {
+      "path": "./images/oredev/world-3/thank-you-border.png",
+      "width": 1232,
+      "height": 583
+    },
+    "image-image-sources-border": {
+      "path": "./images/oredev/world-3/image-sources-border.png",
+      "width": 1232,
+      "height": 540
+    }
+  },
+  "objects": {
+    "assets": {
+      "robot": "./objects/quaternius/robot/robot.glb",
+      "aloe": "./objects/quaternius/environment/aloe.glb",
+      "tower": "./objects/kenney/tower.glb",
+      "rock02": "./objects/quaternius/environment/rock02.glb",
+      "rock03": "./objects/quaternius/environment/rock03.glb"
+    },
+    "presets": {
+      "robot-walk-right": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/robot/robot.glb)",
+          "animation-mixer": "clip: RobotArmature|Robot_Running;",
+          "rotation": "0 90 0",
+          "scale": "0.2 0.2 0.2",
+          "shadow": "receive: false; cast: true"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": -3.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 13.0
+            }
+          ]
+        }
+      },
+      "robot-walk-left": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/robot/robot.glb)",
+          "animation-mixer": "clip: RobotArmature|Robot_Running;",
+          "rotation": "0 -90 0",
+          "scale": "0.2 0.2 0.2",
+          "shadow": "receive: false; cast: true"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": -3.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 13.0
+            }
+          ]
+        }
+      },
+      "robot-idle": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/robot/robot.glb)",
+          "animation-mixer": "clip: RobotArmature|Robot_Idle;",
+          "rotation": "0 90 0",
+          "scale": "0.2 0.2 0.2",
+          "shadow": "receive: false; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 5.0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": -3.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 13.0
+            }
+          ]
+        }
+      },
+      "light-ambient": {
+        "settings": {
+          "light": "type: ambient; color: #aaa;"
+        }
+      },
+      "light-spot": {
+        "settings": {
+          "light": "type: point; angle: 50; castShadow: true; color: #eee; intensity: 0.6",
+          "rotation": "0 20 0"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 14
+            }
+          ]
+        }
+      },
+      "sky": {
+        "settings": {
+          "geometry": "primitive: sphere; radius: 65",
+          "material": "color: #8bcff7; shader: flat; side: back;",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "90 0 0"
+        },
+        "offsets": {}
+      },
+      "ground": {
+        "settings": {
+          "geometry": "primitive: plane; height: 100; width: 100",
+          "material": "side: double; color: #e3c29d",
+          "shadow": "receive: true; cast: false;",
+          "rotation": "90 0 0"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 20
+            }
+          ]
+        }
+      },
+      "tower-01": {
+        "settings": {
+          "gltf-model": "url(./objects/kenney/tower.glb);",
+          "rotation": "-10 180 0",
+          "scale": "2 2 2",
+          "shadow": "receive: false; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 5
+            }
+          ]
+        }
+      },
+      "aloe-01": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 10 0",
+          "scale": "2 2 2",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ]
+        }
+      },
+      "aloe-02": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 25 0",
+          "scale": "2.5 1.5 2.5",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 2
+            }
+          ]
+        }
+      },
+      "aloe-03": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 40 0",
+          "scale": "2 2 2",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 8
+            }
+          ]
+        }
+      },
+      "aloe-04": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 80 0",
+          "scale": "1 1 1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 12
+            }
+          ]
+        }
+      },
+      "aloe-05": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 120 0",
+          "scale": "1 1 1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": -4
+            }
+          ]
+        }
+      },
+      "aloe-06": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 90 0",
+          "scale": "1 1 1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 14
+            }
+          ]
+        }
+      },
+      "aloe-07": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 111 0",
+          "scale": "1 1 1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 9
+            }
+          ]
+        }
+      },
+      "aloe-08": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 200 0",
+          "scale": "1 1 1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 3
+            }
+          ]
+        }
+      },
+      "aloe-09": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 300 0",
+          "scale": "0.7 0.7 0.7",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1.9
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ]
+        }
+      },
+      "aloe-10": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 90 0",
+          "scale": "0.25 0.25 0.25",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 14
+            }
+          ]
+        }
+      },
+      "aloe-11": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 120 0",
+          "scale": "0.5 0.5 0.5",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 12.5
+            }
+          ]
+        }
+      },
+      "aloe-12": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 18 0",
+          "scale": "0.3 0.3 0.3",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 12
+            }
+          ]
+        }
+      },
+      "aloe-13": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 32 0",
+          "scale": "0.2 0.2 0.2",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 14
+            }
+          ]
+        }
+      },
+      "aloe-14": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 280 0",
+          "scale": "0.1 0.1 0.1",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 13
+            }
+          ]
+        }
+      },
+      "aloe-15": {
+        "settings": {
+          "gltf-model": "#asset-aloe",
+          "rotation": "0 99 0",
+          "scale": "0.3 0.3 0.3",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "y": [
+            {
+              "type": "fixed",
+              "data": -2.0
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 14.2
+            }
+          ]
+        }
+      },
+      "rock-01": {
+        "settings": {
+          "gltf-model": "#asset-rock02",
+          "rotation": "0 150 0",
+          "scale": "1.5 1.5 1.5",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 5
+            }
+          ]
+        }
+      },
+      "rock-02": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/environment/rock02.glb)",
+          "rotation": "0 80 0",
+          "scale": "1.2 1.2 1.2",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 5
+            }
+          ]
+        }
+      },
+      "rock-03": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/environment/rock03.glb)",
+          "rotation": "0 80 0",
+          "scale": "1.2 1.2 1.2",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 5
+            }
+          ]
+        }
+      },
+      "rock-04": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/environment/rock03.glb)",
+          "rotation": "0 180 0",
+          "scale": "1.5 1.5 1.5",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 6
+            }
+          ]
+        }
+      },
+      "rock-05": {
+        "settings": {
+          "gltf-model": "url(./objects/quaternius/environment/rock03.glb)",
+          "rotation": "0 300 0",
+          "scale": "1.5 1.5 1.5",
+          "shadow": "receive: true; cast: true;"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ]
+        }
+      },
+      "elm-performance-1-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 7.13;",
+          "material": "src: #image-image-elm-performance-1-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-2-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.26; height: 7.36;",
+          "material": "src: #image-image-elm-performance-2-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-3-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 3.44;",
+          "material": "src: #image-image-elm-performance-3-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-4-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.46;",
+          "material": "src: #image-image-elm-performance-4-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-5-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.97;",
+          "material": "src: #image-image-elm-performance-5-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-6-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 2.43;",
+          "material": "src: #image-image-elm-performance-6-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-7-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.08;",
+          "material": "src: #image-image-elm-performance-7-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-8-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 2.77;",
+          "material": "src: #image-image-elm-performance-8-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "elm-performance-9-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 6.25;",
+          "material": "src: #image-image-elm-performance-9-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "demo-update-narrow-actors-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.89;",
+          "material": "src: #image-image-demo-update-narrow-actors-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "toughest-lesson-learned-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 3.95;",
+          "material": "src: #image-image-toughest-lesson-learned-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "github-source-code-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 4.62;",
+          "material": "src: #image-image-github-source-code-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "about-me-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.08;",
+          "material": "src: #image-image-about-me-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "design-thanks-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 7.24;",
+          "material": "src: #image-image-design-thanks-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "thank-you-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.83;",
+          "material": "src: #image-image-thank-you-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      },
+      "image-sources-border": {
+        "settings": {
+          "geometry": "primitive: plane; width: 12.32; height: 5.40;",
+          "material": "src: #image-image-image-sources-border; roughness: 0.9; transparent: true",
+          "shadow": "receive: false; cast: false;",
+          "rotation": "20 0 0",
+          "scale": "0.9 0.9 0.9"
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 7
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": 1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 10
+            }
+          ]
+        }
+      }
+    }
+  },
+  "backgrounds": [
+    {
+      "renderType": {
+        "type": "object",
+        "data": {
+          "default": "light-ambient"
+        }
+      },
+      "layer": -1
+    },
+    {
+      "renderType": {
+        "type": "object",
+        "data": {
+          "default": "light-spot"
+        }
+      },
+      "layer": -1
+    },
+    {
+      "renderType": {
+        "type": "object",
+        "data": {
+          "default": "ground"
+        }
+      },
+      "layer": -1
+    },
+    {
+      "renderType": {
+        "type": "object",
+        "data": {
+          "default": "sky"
+        }
+      },
+      "layer": -1
+    }
+  ],
+  "updateBorder": 3,
+  "scene": [
+    [
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "                                                                     ",
+      "            PLA                                                      ",
+      "                                                                     ",
+      "                                                                     "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S01                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               R03                                                      ",
+      "                                                                        ",
+      "               E14   E12E04               E04            E15      E15   ",
+      "T01                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S02                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "            E14               E11   E09         E12            E02   E90",
+      "T02                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S03                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "R02                                             R02                     ",
+      "                                                                        ",
+      "            E14E15      E10   E07                  E05                  ",
+      "T03                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S04                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "E15               E07                                 E05E04      E15E14",
+      "T04                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S10                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "   E09                        E14         E05E10      E10            E02",
+      "T10                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S05                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                        E09   E01      E04         E06   E05            ",
+      "T05                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S06                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                            R02         ",
+      "                                                                        ",
+      "E09E01      E02      E11            E07               E10      E10E11   ",
+      "T06                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S07                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "            R05                                                         ",
+      "                                                                        ",
+      "   E07E07               E09E08      E06   E13E12         E02E10      E01",
+      "T07                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S08                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                  R04                                                   ",
+      "                                                                        ",
+      "            E02                  E10      E06   E12                     ",
+      "T08                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S09                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "      E11      E06         E13            E03            E05            ",
+      "T09                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S11                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "E04   E10   E04   E09   E11E11         E02E04E08E07      E07         E04",
+      "T11                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S12                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "   E07   E10      E10E04E15               E13                     E08   ",
+      "T12                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S13                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "         R03                                                            ",
+      "                                                                        ",
+      "         E13   E06         E15   E09                           E01      ",
+      "T13                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S14                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               E08                     E05   E14E14      E09   E03      ",
+      "T14                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S15                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "R04                                                                     ",
+      "                                                                        ",
+      "   E13E11                        E05      E04E11   E03E15      E02E11E90",
+      "T15                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ],
+    [
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "               S16                                                      ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "                                                                        ",
+      "E08   E05         E15            E15                                 E08",
+      "T16                                                                     ",
+      "                                                                        ",
+      "                                                                        "
+    ]
+  ],
+  "renderer": {
+    "type": "aframe",
+    "data": {
+      "camera": {
+        "rotation": {
+          "x": 20,
+          "y": 0,
+          "z": 0
+        },
+        "offsets": {
+          "x": [
+            {
+              "type": "fixed",
+              "data": 0.5
+            }
+          ],
+          "y": [
+            {
+              "type": "fixed",
+              "data": -1
+            }
+          ],
+          "z": [
+            {
+              "type": "fixed",
+              "data": 15
+            }
+          ]
+        }
+      }
+    }
+  },
+  "subscribers": [
+    {
+      "type": "onTagDied",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "tagDiedData": {
+        "tagName": "player",
+        "limit": 1
+      }
+    },
+    {
+      "type": "onInventoryUpdated",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "inventoryUpdatedData": {
+        "interestedIn": "diamond",
+        "minimumQuantity": 1
+      }
+    },
+    {
+      "type": "onTriggerActivated"
+    }
+  ],
+  "config": {
+    "width": 20,
+    "height": 12,
+    "pixelSize": 96,
+    "additionalViewBorder": 16
+  }
+}
