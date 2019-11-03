@@ -49,7 +49,7 @@
               }
             }
           },
-          "layer": 100
+          "layer": 50
         }
       },
       {
@@ -1323,6 +1323,42 @@
         "type": "render"
       }
     ],
+    "house-01": [
+      {
+        "data": {
+          "layer": 21,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "house-01"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
+    "house-02": [
+      {
+        "data": {
+          "layer": 51,
+          "renderType": {
+            "data": {
+              "default": {
+                "names": [
+                  "house-02"
+                ]
+              }
+            },
+            "type": "image"
+          }
+        },
+        "type": "render"
+      }
+    ],
     "trigger-01": [
       {
         "type": "trigger",
@@ -2212,6 +2248,8 @@
   "signs": {
     "PLA": "player",
     "KIL": "kill-trigger",
+    "E01": "house-01",
+    "E02": "house-02",
     "T01": "trigger-01",
     "T02": "trigger-02",
     "T03": "trigger-03",
@@ -3091,6 +3129,20 @@
           "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&gameSpeed=1000"
         }
       }
+    },
+    "house-01": {
+      "yOffset": 50,
+      "path": "./images/prehistoric/environment/house-01.png",
+      "xOffset": 0,
+      "height": 384,
+      "width": 624
+    },
+    "house-02": {
+      "yOffset": 146,
+      "path": "./images/prehistoric/environment/house-02.png",
+      "xOffset": 0,
+      "height": 384,
+      "width": 624
     }
   },
   "backgrounds": [
@@ -4561,11 +4613,11 @@
       "                                                                        ",
       "      S63                                                               ",
       "                                                                        ",
+      "                  E02                                                   ",
+      "                  E01                                                   ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "T63                  KIL                                                ",
+      "T63                        KIL                                          ",
       "                                                                        ",
       "                                                                        "
     ]
