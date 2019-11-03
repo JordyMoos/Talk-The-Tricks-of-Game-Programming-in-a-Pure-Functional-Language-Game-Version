@@ -75,6 +75,9 @@
           "strength": 100,
           "shape": "square"
         }
+      },
+      {
+        "type": "trigger-activator"
       }
     ],
     "slide-elm-performance-1-border": [
@@ -300,11 +303,235 @@
           "layer": -20
         }
       }
+    ],
+    "trigger-01": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I'm doing a lot of looking up actors therefor I gave the actors an Id\n\nAnd stored them in a Dict with their id as the key\n\nInstead of as a list"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-02": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "I did the same for components which makes updating a certain component easier\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-03": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And I really often need to search actors by a position\n\nTherefor I created indices which are dicts from position to actor id\n\nNow all of these changes are to minimize the time needed searching for actors\n\nA dict loopup is faster then iterating over a large list"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-04": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "An other way to optimize performance is to not give \"update ticks\" to all actors\n\nIn the main loop I'm only updating actors which are in the view and some additional actors just outside the view"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-05": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To `update` even less actors\n Actors are split into two types. Static actors and dynamic actors\n\nWhere the difference is that dynamic actors hold components that needs update ticks\n\nWhile static actors does not.\n\nIn the boulder game things like dirt and wall are static. While rocks and the hero are dynamic actors"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-06": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "This is somewhere inside the game loop where I'm only getting actors which are dynamic"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-07": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Another performance optimization is that I'm not actually creating the view, when the view method of elm gets called\n\nThis view will get called by \"the elm engine\" every time that the model changes\n\nBut I know that certain messages do not change the game state and therefor not the visual output\n\nMessages like key inputs\n"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-08": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "Therefor I create the view myself whenever I know it changed and store that as part of my model.\n\nTo be clear this happens in the elm `update` function"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-09": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "And the last one, if someone comes up with a faster implementation for an operation you use a lot\n\nThen you proudly copy his implementation for your game"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-10": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-11": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": "To close I would like to share the toughest lesson learned which was most definitely keeping track of what your \"newest\" actor/level or model is\n\nI have had a few times that I was like wtf is going on why is not this working\n\nAnd then the conclusion was that I did not update the actor in the accumulated level and there for changes where lost etc\n\nThese are nifty bugs to find"
+            }
+          }
+        }
+      }
+    ],
+    "trigger-12": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-13": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-14": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-15": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
+    ],
+    "trigger-16": [
+      {
+        "type": "trigger",
+        "data": {
+          "action": {
+            "type": "send-text",
+            "data": {
+              "message": ""
+            }
+          }
+        }
+      }
     ]
   },
   "signLength": 3,
   "signs": {
     "PLA": "player",
+    "T01": "trigger-01",
+    "T02": "trigger-02",
+    "T03": "trigger-03",
+    "T04": "trigger-04",
+    "T05": "trigger-05",
+    "T06": "trigger-06",
+    "T07": "trigger-07",
+    "T08": "trigger-08",
+    "T09": "trigger-09",
+    "T10": "trigger-10",
+    "T11": "trigger-11",
+    "T12": "trigger-12",
+    "T13": "trigger-13",
+    "T14": "trigger-14",
+    "T15": "trigger-15",
+    "T16": "trigger-16",
     "S01": "slide-elm-performance-1-border",
     "S02": "slide-elm-performance-2-border",
     "S03": "slide-elm-performance-3-border",
@@ -1226,7 +1453,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T01                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1247,7 +1474,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T02                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1268,7 +1495,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T03                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1289,7 +1516,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T04                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1310,7 +1537,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T10                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1331,7 +1558,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T05                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1352,7 +1579,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T06                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1373,7 +1600,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T07                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1394,7 +1621,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T08                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1415,7 +1642,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T09                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1436,7 +1663,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T11                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1457,7 +1684,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T12                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1478,7 +1705,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T13                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1499,7 +1726,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T14                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1520,7 +1747,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T15                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],
@@ -1541,17 +1768,11 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "T16                                                                     ",
       "                                                                        ",
       "                                                                        "
     ]
   ],
-  "config": {
-    "width": 20,
-    "height": 12,
-    "pixelSize": 96,
-    "additionalViewBorder": 0
-  },
   "renderer": {
     "type": "aframe",
     "data": {
@@ -1583,5 +1804,66 @@
         }
       }
     }
+  },
+  "subscribers": [
+    {
+      "type": "onTagDied",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "tagDiedData": {
+        "tagName": "player",
+        "limit": 1
+      }
+    },
+    {
+      "type": "onInventoryUpdated",
+      "eventActionData": {
+        "type": "completed",
+        "data": {
+          "descriptionProvider": {
+            "type": "static",
+            "data": {
+              "text": "Level Completed"
+            }
+          },
+          "nextLevel": "oredev/world-3",
+          "entityNames": [
+            "diamond"
+          ],
+          "animation": {
+            "type": "currentTick"
+          }
+        }
+      },
+      "inventoryUpdatedData": {
+        "interestedIn": "diamond",
+        "minimumQuantity": 1
+      }
+    },
+    {
+      "type": "onTriggerActivated"
+    }
+  ],
+  "config": {
+    "width": 20,
+    "height": 12,
+    "pixelSize": 96,
+    "additionalViewBorder": 0
   }
 }
