@@ -290,174 +290,6 @@
         }
       }
     ],
-    "cactus-01": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-01"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-02": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-02"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-03": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-03"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-04": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-04"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-05": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-05"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-06": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-06"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-07": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-07"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-08": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-08"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-09": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-09"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-10": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-10"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-11": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-11"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
-    "cactus-12": [
-      {
-        "type": "render",
-        "data": {
-          "renderType": {
-            "type": "object",
-            "data": {
-              "default": "cactus-12"
-            }
-          },
-          "layer": -20
-        }
-      }
-    ],
     "rock-01": [
       {
         "type": "render",
@@ -538,7 +370,7 @@
               "default": "tower-01"
             }
           },
-          "layer": -19
+          "layer": 5
         }
       }
     ],
@@ -993,18 +825,6 @@
     "E13": "aloe-13",
     "E14": "aloe-14",
     "E15": "aloe-15",
-    "C01": "cactus-01",
-    "C02": "cactus-02",
-    "C03": "cactus-03",
-    "C04": "cactus-04",
-    "C05": "cactus-05",
-    "C06": "cactus-06",
-    "C07": "cactus-07",
-    "C08": "cactus-08",
-    "C09": "cactus-09",
-    "C10": "cactus-10",
-    "C11": "cactus-11",
-    "C12": "cactus-12",
     "R01": "rock-01",
     "R02": "rock-02",
     "R03": "rock-03",
@@ -1130,9 +950,6 @@
     "assets": {
       "robot": "./objects/quaternius/robot/robot.glb",
       "aloe": "./objects/quaternius/environment/aloe.glb",
-      "cactus01": "./objects/quaternius/environment/cactus01.glb",
-      "cactus02": "./objects/quaternius/environment/cactus02.glb",
-      "cactus03": "./objects/quaternius/environment/cactus03.glb",
       "tower": "./objects/kenney/tower.glb",
       "rock02": "./objects/quaternius/environment/rock02.glb",
       "rock03": "./objects/quaternius/environment/rock03.glb"
@@ -1295,7 +1112,7 @@
       },
       "tower-01": {
         "settings": {
-          "gltf-model": "#asset-tower",
+          "gltf-model": "url(./objects/kenney/tower.glb);",
           "rotation": "-10 180 0",
           "scale": "2 2 2",
           "shadow": "receive: false; cast: true;"
@@ -1317,7 +1134,7 @@
       },
       "aloe-01": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 10 0",
           "scale": "2 2 2",
           "shadow": "receive: true; cast: true;"
@@ -1339,7 +1156,7 @@
       },
       "aloe-02": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 25 0",
           "scale": "2.5 1.5 2.5",
           "shadow": "receive: true; cast: true;"
@@ -1361,7 +1178,7 @@
       },
       "aloe-03": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 40 0",
           "scale": "2 2 2",
           "shadow": "receive: true; cast: true;"
@@ -1383,7 +1200,7 @@
       },
       "aloe-04": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 80 0",
           "scale": "1 1 1",
           "shadow": "receive: true; cast: true;"
@@ -1405,7 +1222,7 @@
       },
       "aloe-05": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 120 0",
           "scale": "1 1 1",
           "shadow": "receive: true; cast: true;"
@@ -1427,7 +1244,7 @@
       },
       "aloe-06": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 90 0",
           "scale": "1 1 1",
           "shadow": "receive: true; cast: true;"
@@ -1449,7 +1266,7 @@
       },
       "aloe-07": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 111 0",
           "scale": "1 1 1",
           "shadow": "receive: true; cast: true;"
@@ -1471,7 +1288,7 @@
       },
       "aloe-08": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 200 0",
           "scale": "1 1 1",
           "shadow": "receive: true; cast: true;"
@@ -1493,7 +1310,7 @@
       },
       "aloe-09": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 300 0",
           "scale": "0.7 0.7 0.7",
           "shadow": "receive: true; cast: true;"
@@ -1515,7 +1332,7 @@
       },
       "aloe-10": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 90 0",
           "scale": "0.25 0.25 0.25",
           "shadow": "receive: true; cast: true;"
@@ -1537,7 +1354,7 @@
       },
       "aloe-11": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 120 0",
           "scale": "0.5 0.5 0.5",
           "shadow": "receive: true; cast: true;"
@@ -1559,7 +1376,7 @@
       },
       "aloe-12": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 18 0",
           "scale": "0.3 0.3 0.3",
           "shadow": "receive: true; cast: true;"
@@ -1581,7 +1398,7 @@
       },
       "aloe-13": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 32 0",
           "scale": "0.2 0.2 0.2",
           "shadow": "receive: true; cast: true;"
@@ -1603,7 +1420,7 @@
       },
       "aloe-14": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 280 0",
           "scale": "0.1 0.1 0.1",
           "shadow": "receive: true; cast: true;"
@@ -1625,7 +1442,7 @@
       },
       "aloe-15": {
         "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/aloe.glb)",
+          "gltf-model": "#asset-aloe",
           "rotation": "0 99 0",
           "scale": "0.3 0.3 0.3",
           "shadow": "receive: true; cast: true;"
@@ -1641,344 +1458,6 @@
             {
               "type": "fixed",
               "data": 14.2
-            }
-          ]
-        }
-      },
-      "cactus-01": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus01.glb)",
-          "rotation": "0 30 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 8
-            }
-          ]
-        }
-      },
-      "cactus-02": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus01.glb)",
-          "rotation": "0 140 0",
-          "scale": "2 2 3",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 10
-            }
-          ]
-        }
-      },
-      "cactus-03": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus01.glb)",
-          "rotation": "0 0 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 10
-            }
-          ]
-        }
-      },
-      "cactus-04": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus01.glb)",
-          "rotation": "0 200 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 6
-            }
-          ]
-        }
-      },
-      "cactus-05": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus01.glb)",
-          "rotation": "0 250 0",
-          "scale": "3 3 3",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 7
-            }
-          ]
-        }
-      },
-      "cactus-06": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus02.glb)",
-          "rotation": "0 250 0",
-          "scale": "2 2 2",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 7
-            }
-          ]
-        }
-      },
-      "cactus-07": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus02.glb)",
-          "rotation": "0 0 0",
-          "scale": "1 1 1",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 12
-            }
-          ]
-        }
-      },
-      "cactus-08": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus02.glb)",
-          "rotation": "20 50 0",
-          "scale": "0.5 0.5 0.5",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 10
-            }
-          ]
-        }
-      },
-      "cactus-09": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus02.glb)",
-          "rotation": "-35 180 0",
-          "scale": "1 1 1",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 9
-            }
-          ]
-        }
-      },
-      "cactus-10": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus02.glb)",
-          "rotation": "15 180 0",
-          "scale": "0.8 0.5 0.8",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 12
-            }
-          ]
-        }
-      },
-      "cactus-11": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus03.glb)",
-          "material": "roughness: 0.9;",
-          "rotation": "0 -90 0",
-          "scale": "1 1 1",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 11
-            }
-          ]
-        }
-      },
-      "cactus-12": {
-        "settings": {
-          "gltf-model": "url(./objects/quaternius/environment/cactus03.glb)",
-          "material": "roughness: 0.9;",
-          "rotation": "0 -50 0",
-          "scale": "0.8 0.8 0.8",
-          "shadow": "receive: true; cast: true;"
-        },
-        "offsets": {
-          "x": [
-            {
-              "type": "fixed",
-              "data": 0
-            }
-          ],
-          "y": [
-            {
-              "type": "fixed",
-              "data": -1
-            }
-          ],
-          "z": [
-            {
-              "type": "fixed",
-              "data": 9
             }
           ]
         }
@@ -2664,9 +2143,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "               R03                                                      ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "               E14   E12E04               E04            E15      E15   ",
       "T01                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2687,7 +2166,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "            E14               E11   E09         E12            E02   E90",
       "T02                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2706,9 +2185,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "R02                                             R02                     ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "            E14E15      E10   E07                  E05                  ",
       "T03                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2729,7 +2208,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "E15               E07                                 E05E04      E15E14",
       "T04                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2750,7 +2229,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "   E09                        E14         E05E10      E10            E02",
       "T10                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2771,7 +2250,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "                        E09   E01      E04         E06   E05            ",
       "T05                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2790,9 +2269,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "                                                            R02         ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "E09E01      E02      E11            E07               E10      E10E11   ",
       "T06                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2811,9 +2290,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "            R05                                                         ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "   E07E07               E09E08      E06   E13E12         E02E10      E01",
       "T07                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2832,9 +2311,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "                  R04                                                   ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "            E02                  E10      E06   E12                     ",
       "T08                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2855,7 +2334,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "      E11      E06         E13            E03            E05            ",
       "T09                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2876,7 +2355,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "E04   E10   E04   E09   E11E11         E02E04E08E07      E07         E04",
       "T11                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2897,7 +2376,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "   E07   E10      E10E04E15               E13                     E08   ",
       "T12                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2916,9 +2395,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "         R03                                                            ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "         E13   E06         E15   E09                           E01      ",
       "T13                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2939,7 +2418,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "               E08                     E05   E14E14      E09   E03      ",
       "T14                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2958,9 +2437,9 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
+      "R04                                                                     ",
       "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
+      "   E13E11                        E05      E04E11   E03E15      E02E11E90",
       "T15                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -2981,7 +2460,7 @@
       "                                                                        ",
       "                                                                        ",
       "                                                                        ",
-      "                                                                        ",
+      "E08   E05         E15            E15                                 E08",
       "T16                                                                     ",
       "                                                                        ",
       "                                                                        "
@@ -3078,6 +2557,6 @@
     "width": 20,
     "height": 12,
     "pixelSize": 96,
-    "additionalViewBorder": 15
+    "additionalViewBorder": 16
   }
 }
