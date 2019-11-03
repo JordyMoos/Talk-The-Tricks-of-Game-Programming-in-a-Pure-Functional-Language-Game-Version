@@ -2727,7 +2727,7 @@
       "imageType": {
         "type": "link",
         "data": {
-          "href": "http://localhost:3003/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+          "href": "../../demos/3003-3d/index.html?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
         }
       }
     },
@@ -2753,7 +2753,7 @@
       "imageType": {
         "type": "link",
         "data": {
-          "href": "http://localhost:3002/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+          "href": "../../demos/3002-ar/index.html?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
         }
       }
     },
@@ -2805,7 +2805,7 @@
       "imageType": {
         "type": "link",
         "data": {
-          "href": "http://localhost:3001/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+          "href": "../../demos/3001-vr/index.html?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
         }
       }
     },
