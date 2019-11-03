@@ -39,6 +39,7 @@ type alias Flags =
     , pixelSize : Int
     , additionalViewBorder : Int
     , debug : Bool
+    , gameSpeed : Int
     }
 
 
@@ -83,7 +84,7 @@ init flags =
             , flags = flags
             , inputModel = InputController.init
             , gameState = MainMenuState <| MainMenu.init config
-            , gameSpeed = Just 16
+            , gameSpeed = Just flags.gameSpeed
             , currentTick = 0
             , timeBuffer = 0
             , maxUpdatesPerView = 4

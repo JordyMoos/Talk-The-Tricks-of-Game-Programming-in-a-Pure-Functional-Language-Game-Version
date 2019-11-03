@@ -24,6 +24,14 @@ http://localhost:3000/?startLevel=oredev/world-3&hideDebug=1&hideControls=1&hide
 ### Demo's
 
 ```
+http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&gameSpeed=1000&lazy=1
+```
+
+```
+http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-2&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+```
+
+```
 http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
 ```
 

@@ -133,18 +133,6 @@
     "o": "alive",
     " ": "dead"
   },
-  "background": {
-    "type": "pixel",
-    "data": {
-      "colors": [
-        {
-          "red": 255,
-          "green": 0,
-          "blue": 0
-        }
-      ]
-    }
-  },
   "viewCoordinate": {
     "x": 0,
     "y": 0

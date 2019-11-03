@@ -131,23 +131,23 @@
   "images": {
     "hero-03": {
       "path": "./images/spriters-resource.com/hero/hero-03.png",
-      "width": 32,
-      "height": 32
+      "width": 90,
+      "height": 90
     },
     "enemy-a-0": {
       "path": "./images/spriters-resource.com/enemy-a-0.png",
-      "width": 32,
-      "height": 32
+      "width": 90,
+      "height": 90
     },
     "background-big": {
       "path": "./images/spriters-resource.com/background-big.png",
-      "width": 384,
-      "height": 384
+      "width": 1080,
+      "height": 1080
     },
     "strong-wall": {
       "path": "./images/spriters-resource.com/strong-wall.png",
-      "width": 32,
-      "height": 32
+      "width": 90,
+      "height": 90
     }
   },
   "backgrounds": [
@@ -161,7 +161,7 @@
             ]
           }
         }
-      }
+      }, "layer": -10
     }
   ],
   "scene": [
@@ -179,5 +179,11 @@
       "",
       "######"
     ]
-  ]
+  ],
+  "config": {
+    "width": 12,
+    "height": 12,
+    "pixelSize": 90,
+    "additionalViewBorder": 0
+  }
 }

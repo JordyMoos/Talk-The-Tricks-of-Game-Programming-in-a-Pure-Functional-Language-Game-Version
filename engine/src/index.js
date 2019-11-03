@@ -239,7 +239,8 @@ function runElm() {
         height: urlParams.get('height')|0 || 12,
         pixelSize: urlParams.get('pixelSize')|0 || 32,
         additionalViewBorder: urlParams.get('additionalViewBorder')|0 || 0,
-	      debug: ! hideDebug
+        debug: ! hideDebug,
+        gameSpeed: urlParams.get('gameSpeed')|0 || 16
       }
     });
 
