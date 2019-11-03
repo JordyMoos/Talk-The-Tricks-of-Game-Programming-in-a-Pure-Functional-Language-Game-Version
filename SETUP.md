@@ -2,75 +2,43 @@
 # Setup
 
 - [ ] Open hotspot
+
 - [ ] Start speaker notes
 ```
 cd speaker-notes
 python3.6 echo.py
 ```
+
 - [ ] Start the game engine
 ```
 cd engine/dist
 python3.6 -m http.server 3000
 ```
+
+- [ ] Alternative engines
+```
+cd demos/3001-vr
+python3.6 -m http.server 3001
+```
+
+```
+cd demos/3002-ar
+python3.6 -m http.server 3002
+```
+
+```
+cd demos/3003-3d
+python3.6 -m http.server 3003
+```
+
+- [ ] Open editor with the "LevelUpdate.elm"
+- [ ] Make sure the editor has big font
+
 - [ ] Start the slides
 ```
 cd slides
 npm start
 ```
-
-### Backup games
-
-```
-http://localhost:3000/?startLevel=oredev/official-001-in-pixel&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:3000/?startLevel=oredev/official-001-with-cheats&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:3000/?startLevel=oredev/world-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:3000/?startLevel=oredev/world-2&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:8001/?startLevel=talk/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:8001/?startLevel=test/game-of-life&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&width=20&height=16&lazy=1
-```
-
-```
-http://localhost:8001/?startLevel=advent/official&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&width=25&height=25&lazy=1
-```
-
-```
-http://localhost:8001/?startLevel=talk/optimization-1&hideDebug=1&hideControls=1&hideEdit=1&additionalViewBorder=10&lazy=1
-```
-
-```
-http://localhost:8002/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:8003/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-```
-http://localhost:8004/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1&lazy=1
-```
-
-
-### Open editor Elm Pixel Boulder Game
-
-Then open file "LevelUpdate.elm"
-
-Make sure font is big
-
 
 ### Develop
 
