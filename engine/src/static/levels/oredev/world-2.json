@@ -2648,10 +2648,10 @@
     },
     "ascii": {
       "yOffset": -227,
-      "path": "./images/oredev/world-2/ascii-border.png",
-      "xOffset": 452,
-      "height": 736,
-      "width": 1013
+      "path": "./images/oredev/world-2/first-renderer.gif",
+      "xOffset": 510,
+      "height": 646,
+      "width": 900
     },
     "ascii-canvas": {
       "yOffset": -227,
@@ -2672,56 +2672,104 @@
       "path": "./images/oredev/world-2/demo-border.png",
       "xOffset": 338,
       "height": 622,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-3&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-3d": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-3d-border.png",
       "xOffset": 338,
       "height": 712,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3003/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-advent": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-advent-border.png",
       "xOffset": 338,
       "height": 458,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/advent&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-ar": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-ar-border.png",
       "xOffset": 338,
       "height": 479,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3002/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-gol": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-gol-border.png",
       "xOffset": 338,
       "height": 534,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-of-life&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-move-all": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-move-all-border.png",
       "xOffset": 338,
       "height": 589,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-5&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-move-more": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-move-more-border.png",
       "xOffset": 338,
       "height": 537,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-4&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "demo-vr": {
       "yOffset": -227,
       "path": "./images/oredev/world-2/demo-vr-border.png",
       "xOffset": 338,
       "height": 505,
-      "width": 1232
+      "width": 1232,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3001/?startLevel=official/001&hideDebug=1&hideControls=1&hideEdit=1"
+        }
+      }
     },
     "elm-actor-component-1": {
       "yOffset": -227,
@@ -3030,6 +3078,19 @@
       "xOffset": 338,
       "height": 718,
       "width": 1232
+    },
+    "simple-game-loop-demo": {
+      "yOffset": -227,
+      "path": "./images/oredev/world-2/simlpe-game-loop.gif",
+      "xOffset": 612,
+      "height": 696,
+      "width": 696,
+      "imageType": {
+        "type": "link",
+        "data": {
+          "href": "http://localhost:3000/?startLevel=oredev/demo/game-loop-walking-1&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&gameSpeed=1000"
+        }
+      }
     }
   },
   "backgrounds": [
@@ -3959,27 +4020,6 @@
       "                                                                        ",
       "                                                                        ",
       "T38                                                                     ",
-      "                                                                        ",
-      "                                                                        "
-    ],
-    [
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "                                                                        ",
-      "T67                                                                     ",
       "                                                                        ",
       "                                                                        "
     ],

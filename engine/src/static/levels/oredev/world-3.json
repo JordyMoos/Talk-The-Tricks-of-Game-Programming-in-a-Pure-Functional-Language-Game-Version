@@ -742,26 +742,26 @@
       },
       "light-spot": {
         "settings": {
-          "light": "type: point; angle: 50; castShadow: true; color: #ccc",
+          "light": "type: point; angle: 50; castShadow: true; color: #eee; intensity: 0.6",
           "rotation": "0 20 0"
         },
         "offsets": {
           "x": [
             {
               "type": "fixed",
-              "data": 1
+              "data": 0
             }
           ],
           "y": [
             {
               "type": "fixed",
-              "data": -3
+              "data": -2
             }
           ],
           "z": [
             {
               "type": "fixed",
-              "data": 15
+              "data": 14
             }
           ]
         }
