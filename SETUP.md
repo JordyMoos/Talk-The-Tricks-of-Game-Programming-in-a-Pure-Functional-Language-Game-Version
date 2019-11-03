@@ -34,6 +34,13 @@ python3.6 -m http.server 3003
 - [ ] Open editor with the "LevelUpdate.elm"
 - [ ] Make sure the editor has big font
 
+- [ ] Open the narrow actor demo as the first tab
+
+```
+http://localhost:3000/?startLevel=oredev/demo/update-border&hideDebug=1&hideControls=1&hideControls=1&hideEdit=1&lazy=1
+
+```
+
 - [ ] Start the slides
 ```
 cd slides
