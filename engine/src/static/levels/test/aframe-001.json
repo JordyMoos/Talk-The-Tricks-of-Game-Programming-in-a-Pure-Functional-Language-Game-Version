@@ -187,7 +187,10 @@
         }
       },
       {
-        "type":"smash-down"
+        "type":"smash-down",
+        "data": {
+          "explosionEntityName": "explosion"
+        }
       }
     ],
     "explosion":[
@@ -284,7 +287,8 @@
       {
         "type":"trigger-explodable",
         "data":{
-          "triggerStrength":20
+          "triggerStrength":20,
+          "explosionEntityName": "explosion"
         }
       }
     ],
